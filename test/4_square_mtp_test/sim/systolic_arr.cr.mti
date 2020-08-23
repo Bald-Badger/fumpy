@@ -1,0 +1,185 @@
+{C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/FSM_top/param.vh} {1 {vlog -work work -vopt -stats=none {C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/FSM_top/param.vh}
+Model Technology ModelSim SE-64 vlog 2019.2 Compiler 2019.04 Apr 17 2019
+
+} {} {}} {C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/FSM_top/FSM_wire_define.sv} {0 {vlog -work work -vopt -sv -stats=none {C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/FSM_top/FSM_wire_define.sv}
+Model Technology ModelSim SE-64 vlog 2019.2 Compiler 2019.04 Apr 17 2019
+** Error: (vlog-13069) C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/FSM_top/FSM_wire_define.sv(76): near "assign": syntax error, unexpected assign, expecting class.
+
+} {3.0 4.0} {}} {C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/param.vh} {1 {vlog -work work -vopt -stats=none {C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/param.vh}
+Model Technology ModelSim SE-64 vlog 2019.2 Compiler 2019.04 Apr 17 2019
+
+} {} {}} {C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/FSM_top/FSM_counter_update.sv} {0 {vlog -work work -vopt -sv -stats=none {C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/FSM_top/FSM_counter_update.sv}
+Model Technology ModelSim SE-64 vlog 2019.2 Compiler 2019.04 Apr 17 2019
+** Error: (vlog-13069) C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/FSM_top/FSM_counter_update.sv(5): near "always_ff": syntax error, unexpected "SystemVerilog keyword 'always_ff'", expecting class.
+
+} {3.0 4.0} {}} {C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/RAM/RAM_32b_256.v} {1 {vlog -work work -vopt -stats=none {C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/RAM/RAM_32b_256.v}
+Model Technology ModelSim SE-64 vlog 2019.2 Compiler 2019.04 Apr 17 2019
+-- Compiling module RAM_32b_256
+
+Top level modules:
+	RAM_32b_256
+
+} {} {}} {C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/PE/mult.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/PE/mult.sv}
+Model Technology ModelSim SE-64 vlog 2019.2 Compiler 2019.04 Apr 17 2019
+-- Compiling module mult
+
+Top level modules:
+	mult
+
+} {} {}} {C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/FP/FP32_mult.v} {1 {vlog -work work -vopt -stats=none {C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/FP/FP32_mult.v}
+Model Technology ModelSim SE-64 vlog 2019.2 Compiler 2019.04 Apr 17 2019
+-- Compiling module FP32_mult_altfp_mult_buo
+-- Compiling module FP32_mult
+
+Top level modules:
+	FP32_mult
+
+} {} {}} {C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/sim/tb/clkrst.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/sim/tb/clkrst.sv}
+Model Technology ModelSim SE-64 vlog 2019.2 Compiler 2019.04 Apr 17 2019
+-- Compiling module clkrst
+
+Top level modules:
+	clkrst
+
+} {} {}} {C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/FSM_top/FSM_uart_data_load.sv} {0 {vlog -work work -vopt -sv -stats=none {C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/FSM_top/FSM_uart_data_load.sv}
+Model Technology ModelSim SE-64 vlog 2019.2 Compiler 2019.04 Apr 17 2019
+** Error: (vlog-13069) C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/FSM_top/FSM_uart_data_load.sv(5): near "always_ff": syntax error, unexpected "SystemVerilog keyword 'always_ff'", expecting class.
+
+} {3.0 4.0} {}} {C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/FSM_top/FSM_ram_interface_ctrl.sv} {0 {vlog -work work -vopt -sv -stats=none {C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/FSM_top/FSM_ram_interface_ctrl.sv}
+Model Technology ModelSim SE-64 vlog 2019.2 Compiler 2019.04 Apr 17 2019
+** Error: (vlog-13069) C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/FSM_top/FSM_ram_interface_ctrl.sv(2): near "assign": syntax error, unexpected assign, expecting class.
+
+} {3.0 4.0} {}} {C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/FSM_top/FSM_body.sv} {0 {vlog -work work -vopt -sv -stats=none {C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/FSM_top/FSM_body.sv}
+Model Technology ModelSim SE-64 vlog 2019.2 Compiler 2019.04 Apr 17 2019
+** Error: (vlog-13069) C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/FSM_top/FSM_body.sv(2): near "always_ff": syntax error, unexpected "SystemVerilog keyword 'always_ff'", expecting class.
+
+} {3.0 4.0} {}} {C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/PE/FPmult.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/PE/FPmult.sv}
+Model Technology ModelSim SE-64 vlog 2019.2 Compiler 2019.04 Apr 17 2019
+-- Compiling module FPmult
+
+Top level modules:
+	FPmult
+
+} {} {}} {C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/PLL/pll.v} {1 {vlog -work work -vopt -stats=none {C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/PLL/pll.v}
+Model Technology ModelSim SE-64 vlog 2019.2 Compiler 2019.04 Apr 17 2019
+-- Compiling module pll
+
+Top level modules:
+	pll
+
+} {} {}} {C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/FSM_top/debug_seg.sv} {0 {vlog -work work -vopt -sv -stats=none {C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/FSM_top/debug_seg.sv}
+Model Technology ModelSim SE-64 vlog 2019.2 Compiler 2019.04 Apr 17 2019
+** Error: (vlog-13069) C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/FSM_top/debug_seg.sv(2): near "assign": syntax error, unexpected assign, expecting class.
+
+} {3.0 4.0} {}} {C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/sim/tb/top_tb.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/sim/tb/top_tb.sv}
+Model Technology ModelSim SE-64 vlog 2019.2 Compiler 2019.04 Apr 17 2019
+-- Compiling module top_tb
+
+Top level modules:
+	top_tb
+
+} {} {}} {C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/DFF/dff_32b.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/DFF/dff_32b.sv}
+Model Technology ModelSim SE-64 vlog 2019.2 Compiler 2019.04 Apr 17 2019
+-- Compiling module dff_32b
+
+Top level modules:
+	dff_32b
+
+} {} {}} {C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/FP/FP32_add.v} {1 {vlog -work work -vopt -stats=none {C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/FP/FP32_add.v}
+Model Technology ModelSim SE-64 vlog 2019.2 Compiler 2019.04 Apr 17 2019
+-- Compiling module FP32_add_altbarrel_shift_35e
+-- Compiling module FP32_add_altbarrel_shift_olb
+-- Compiling module FP32_add_altpriority_encoder_3v7
+-- Compiling module FP32_add_altpriority_encoder_3e8
+-- Compiling module FP32_add_altpriority_encoder_6v7
+-- Compiling module FP32_add_altpriority_encoder_6e8
+-- Compiling module FP32_add_altpriority_encoder_bv7
+-- Compiling module FP32_add_altpriority_encoder_be8
+-- Compiling module FP32_add_altpriority_encoder_r08
+-- Compiling module FP32_add_altpriority_encoder_rf8
+-- Compiling module FP32_add_altpriority_encoder_qb6
+-- Compiling module FP32_add_altpriority_encoder_nh8
+-- Compiling module FP32_add_altpriority_encoder_qh8
+-- Compiling module FP32_add_altpriority_encoder_vh8
+-- Compiling module FP32_add_altpriority_encoder_fj8
+-- Compiling module FP32_add_altpriority_encoder_n28
+-- Compiling module FP32_add_altpriority_encoder_q28
+-- Compiling module FP32_add_altpriority_encoder_v28
+-- Compiling module FP32_add_altpriority_encoder_f48
+-- Compiling module FP32_add_altpriority_encoder_e48
+-- Compiling module FP32_add_altfp_add_sub_s3k
+-- Compiling module FP32_add
+
+Top level modules:
+	FP32_add
+
+} {} {}} {C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/PE/accum.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/PE/accum.sv}
+Model Technology ModelSim SE-64 vlog 2019.2 Compiler 2019.04 Apr 17 2019
+-- Compiling module accum
+
+Top level modules:
+	accum
+
+} {} {}} {C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/PE/MAC.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/PE/MAC.sv}
+Model Technology ModelSim SE-64 vlog 2019.2 Compiler 2019.04 Apr 17 2019
+-- Compiling module MAC
+
+Top level modules:
+	MAC
+
+} {} {}} {C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/FSM_top/FSM.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/FSM_top/FSM.sv}
+Model Technology ModelSim SE-64 vlog 2019.2 Compiler 2019.04 Apr 17 2019
+-- Compiling module FSM
+
+Top level modules:
+	FSM
+
+} {} {}} {C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/PE/systolic_arr_ctrl.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/PE/systolic_arr_ctrl.sv}
+Model Technology ModelSim SE-64 vlog 2019.2 Compiler 2019.04 Apr 17 2019
+-- Compiling module systolic_arr_ctrl
+
+Top level modules:
+	systolic_arr_ctrl
+
+} {} {}} {C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/Seg/seg_led_static.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/Seg/seg_led_static.sv}
+Model Technology ModelSim SE-64 vlog 2019.2 Compiler 2019.04 Apr 17 2019
+-- Compiling module seg_led_static
+
+Top level modules:
+	seg_led_static
+
+} {} {}} {C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/PE/systolic_arr.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/PE/systolic_arr.sv}
+Model Technology ModelSim SE-64 vlog 2019.2 Compiler 2019.04 Apr 17 2019
+-- Compiling module systolic_arr
+
+Top level modules:
+	systolic_arr
+
+} {} {}} {C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/PE/param.vh} {1 {vlog -work work -vopt -stats=none {C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/PE/param.vh}
+Model Technology ModelSim SE-64 vlog 2019.2 Compiler 2019.04 Apr 17 2019
+
+} {} {}} {C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/PE/FPadd.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/PE/FPadd.sv}
+Model Technology ModelSim SE-64 vlog 2019.2 Compiler 2019.04 Apr 17 2019
+-- Compiling module FPadd
+
+Top level modules:
+	FPadd
+
+} {} {}} {C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/top.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/top.sv}
+Model Technology ModelSim SE-64 vlog 2019.2 Compiler 2019.04 Apr 17 2019
+-- Compiling module square_mpt_test
+
+Top level modules:
+	square_mpt_test
+
+} {} {}} {C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/sim/tb/my_tb_tasks.sv} {0 {vlog -work work -vopt -sv -stats=none {C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/sim/tb/my_tb_tasks.sv}
+Model Technology ModelSim SE-64 vlog 2019.2 Compiler 2019.04 Apr 17 2019
+** Error: C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/sim/tb/my_tb_tasks.sv(19): (vlog-2730) Undefined variable: 'clk'.
+** Error: C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/sim/tb/my_tb_tasks.sv(20): (vlog-2730) Undefined variable: 'rst_n'.
+** Error: C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/sim/tb/my_tb_tasks.sv(21): (vlog-2730) Undefined variable: 'REF_CLK'.
+** Error: C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/sim/tb/my_tb_tasks.sv(27): (vlog-2730) Undefined variable: 'uart_tx_data'.
+** Error: C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/sim/tb/my_tb_tasks.sv(28): (vlog-2730) Undefined variable: 'clk'.
+** Error: C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/sim/tb/my_tb_tasks.sv(32): (vlog-2730) Undefined variable: 'uart_tx_done'.
+** Error (suppressible): C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/sim/tb/my_tb_tasks.sv(25): (vlog-13364) Mixing of ansi and non-ansi style port declaration is not legal.
+
+} {3.0 9.0} {}}

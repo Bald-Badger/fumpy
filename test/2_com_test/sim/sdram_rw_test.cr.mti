@@ -1,0 +1,123 @@
+{C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/com_test/rtl/sdram_test.v} {1 {vlog -work work -vopt -stats=none {C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/com_test/rtl/sdram_test.v}
+Model Technology ModelSim SE-64 vlog 2019.2 Compiler 2019.04 Apr 17 2019
+-- Compiling module sdram_test
+
+Top level modules:
+	sdram_test
+
+} {} {}} {C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/com_test/rtl/sdram/sdram_top.v} {1 {vlog -work work -vopt -stats=none {C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/com_test/rtl/sdram/sdram_top.v}
+Model Technology ModelSim SE-64 vlog 2019.2 Compiler 2019.04 Apr 17 2019
+-- Compiling module sdram_top
+
+Top level modules:
+	sdram_top
+
+} {} {}} {C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/com_test/rtl/sdram/sdram_para.v} {1 {vlog -work work -vopt -stats=none {C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/com_test/rtl/sdram/sdram_para.v}
+Model Technology ModelSim SE-64 vlog 2019.2 Compiler 2019.04 Apr 17 2019
+
+} {} {}} {C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/com_test/rtl/sdram/rdfifo.v} {1 {vlog -work work -vopt -stats=none {C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/com_test/rtl/sdram/rdfifo.v}
+Model Technology ModelSim SE-64 vlog 2019.2 Compiler 2019.04 Apr 17 2019
+-- Compiling module rdfifo
+
+Top level modules:
+	rdfifo
+
+} {} {}} {C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/com_test/rtl/sdram/sdram_cmd.v} {1 {vlog -work work -vopt -stats=none {C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/com_test/rtl/sdram/sdram_cmd.v}
+Model Technology ModelSim SE-64 vlog 2019.2 Compiler 2019.04 Apr 17 2019
+-- Compiling module sdram_cmd
+
+Top level modules:
+	sdram_cmd
+
+} {} {}} {C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/com_test/rtl/sdram/sdram_controller.v} {1 {vlog -work work -vopt -stats=none {C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/com_test/rtl/sdram/sdram_controller.v}
+Model Technology ModelSim SE-64 vlog 2019.2 Compiler 2019.04 Apr 17 2019
+-- Compiling module sdram_controller
+
+Top level modules:
+	sdram_controller
+
+} {} {}} {C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/com_test/rtl/pll_clk.v} {1 {vlog -work work -vopt -stats=none {C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/com_test/rtl/pll_clk.v}
+Model Technology ModelSim SE-64 vlog 2019.2 Compiler 2019.04 Apr 17 2019
+-- Compiling module pll_clk
+
+Top level modules:
+	pll_clk
+
+} {} {}} {C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/com_test/rtl/UART/posedgeDect.v} {1 {vlog -work work -vopt -stats=none {C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/com_test/rtl/UART/posedgeDect.v}
+Model Technology ModelSim SE-64 vlog 2019.2 Compiler 2019.04 Apr 17 2019
+-- Compiling module posedgeDect
+
+Top level modules:
+	posedgeDect
+
+} {} {}} {C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/com_test/rtl/sdram/sdram_fifo_ctrl.v} {1 {vlog -work work -vopt -stats=none {C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/com_test/rtl/sdram/sdram_fifo_ctrl.v}
+Model Technology ModelSim SE-64 vlog 2019.2 Compiler 2019.04 Apr 17 2019
+-- Compiling module sdram_fifo_ctrl
+
+Top level modules:
+	sdram_fifo_ctrl
+
+} {} {}} {C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/com_test/rtl/sdram/sdram_data.v} {1 {vlog -work work -vopt -stats=none {C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/com_test/rtl/sdram/sdram_data.v}
+Model Technology ModelSim SE-64 vlog 2019.2 Compiler 2019.04 Apr 17 2019
+-- Compiling module sdram_data
+
+Top level modules:
+	sdram_data
+
+} {} {}} {C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/com_test/rtl/UART/uart_RX.v} {1 {vlog -work work -vopt -stats=none {C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/com_test/rtl/UART/uart_RX.v}
+Model Technology ModelSim SE-64 vlog 2019.2 Compiler 2019.04 Apr 17 2019
+-- Compiling module uart_RX
+
+Top level modules:
+	uart_RX
+
+} {} {}} {C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/com_test/rtl/sdram_rw_test.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/com_test/rtl/sdram_rw_test.sv}
+Model Technology ModelSim SE-64 vlog 2019.2 Compiler 2019.04 Apr 17 2019
+-- Compiling module sdram_rw_test
+
+Top level modules:
+	sdram_rw_test
+
+} {} {}} {C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/com_test/rtl/sdram/sdram_ctrl.v} {1 {vlog -work work -vopt -stats=none {C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/com_test/rtl/sdram/sdram_ctrl.v}
+Model Technology ModelSim SE-64 vlog 2019.2 Compiler 2019.04 Apr 17 2019
+-- Compiling module sdram_ctrl
+
+Top level modules:
+	sdram_ctrl
+
+} {} {}} {C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/com_test/rtl/UART/uart_TX.v} {1 {vlog -work work -vopt -stats=none {C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/com_test/rtl/UART/uart_TX.v}
+Model Technology ModelSim SE-64 vlog 2019.2 Compiler 2019.04 Apr 17 2019
+-- Compiling module uart_TX
+
+Top level modules:
+	uart_TX
+
+} {} {}} {C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/com_test/rtl/UART/uart.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/com_test/rtl/UART/uart.sv}
+Model Technology ModelSim SE-64 vlog 2019.2 Compiler 2019.04 Apr 17 2019
+-- Compiling module uart
+
+Top level modules:
+	uart
+
+} {} {}} {C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/com_test/rtl/UART/negedgeDect.v} {1 {vlog -work work -vopt -stats=none {C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/com_test/rtl/UART/negedgeDect.v}
+Model Technology ModelSim SE-64 vlog 2019.2 Compiler 2019.04 Apr 17 2019
+-- Compiling module negedgeDect
+
+Top level modules:
+	negedgeDect
+
+} {} {}} {C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/com_test/rtl/sdram/wrfifo.v} {1 {vlog -work work -vopt -stats=none {C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/com_test/rtl/sdram/wrfifo.v}
+Model Technology ModelSim SE-64 vlog 2019.2 Compiler 2019.04 Apr 17 2019
+-- Compiling module wrfifo
+
+Top level modules:
+	wrfifo
+
+} {} {}} {C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/com_test/rtl/led_disp.v} {1 {vlog -work work -vopt -stats=none {C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/com_test/rtl/led_disp.v}
+Model Technology ModelSim SE-64 vlog 2019.2 Compiler 2019.04 Apr 17 2019
+-- Compiling module led_disp
+
+Top level modules:
+	led_disp
+
+} {} {}}

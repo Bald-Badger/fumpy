@@ -1,0 +1,695 @@
+m255
+K4
+z2
+!s11f vlog 2019.2 2019.04, Apr 17 2019
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/uart_test/par/simulation/modelsim
+T_opt
+Z1 !s110 1591438390
+V42`D>glJ15@:gK6a39YLK0
+04 8 4 work adder_tb fast 0
+=1-04d9f57cecd6-5edb6c36-291-12d88
+o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work +acc
+Z2 tCvgOpt 0
+n@_opt
+OL;O;2019.2;69
+vadder
+Z3 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z4 !s110 1591438389
+!i10b 1
+!s100 IdUGkbGmI;:9a28z:EeG21
+!s11b nXF<EThz@Fz7?D?C_o5Fj2
+IZ<UDS;D@l@=RI9:?MMEKi2
+Z5 VDg1SIo80bB@j0V0VzS_@n1
+S1
+R0
+w1591437553
+8C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/uart_test/rtl/adder.sv
+FC:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/uart_test/rtl/adder.sv
+L0 3
+Z6 OL;L;2019.2;69
+r1
+!s85 0
+31
+Z7 !s108 1591438389.000000
+!s107 C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/uart_test/rtl/adder.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/uart_test/rtl|C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/uart_test/rtl/adder.sv|
+!i113 0
+Z8 o-sv -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z9 !s92 -sv -work work {+incdir+C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/uart_test/rtl} -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+vadder_tb
+R3
+R1
+!i10b 1
+!s100 4:4bLmD>QO0T9mQ`NUfRZ1
+!s11b ;k^T7==gna^?5hh2@Jo]d3
+IKK6^K6D1h7j`3F1`CVL]N1
+R5
+S1
+R0
+w1591436224
+8C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/uart_test/par/../rtl/adder_tb.sv
+FC:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/uart_test/par/../rtl/adder_tb.sv
+L0 3
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/uart_test/par/../rtl/adder_tb.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/uart_test/par/../rtl|C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/uart_test/par/../rtl/adder_tb.sv|
+!i113 0
+R8
+!s92 -sv -work work {+incdir+C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/uart_test/par/../rtl} -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+vFP_add_sub
+R4
+!i10b 1
+!s100 EX7KoQ>=]NzAQnOSg`[<`1
+!s11b :]HV99RX_P1Ob1LfZani83
+IKk;zYIRZCZSFcHem<Jkd10
+R5
+R0
+Z10 w1591432108
+Z11 8C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/uart_test/par/ip_core/FP_add_sub.v
+Z12 FC:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/uart_test/par/ip_core/FP_add_sub.v
+L0 3315
+R6
+r1
+!s85 0
+31
+R7
+Z13 !s107 C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/uart_test/par/ip_core/FP_add_sub.v|
+Z14 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/uart_test/par/ip_core|C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/uart_test/par/ip_core/FP_add_sub.v|
+!i113 0
+Z15 o-vlog01compat -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z16 !s92 -vlog01compat -work work {+incdir+C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/uart_test/par/ip_core} -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+n@f@p_add_sub
+vFP_add_sub_altbarrel_shift_35e
+R4
+!i10b 1
+!s100 9m]jSCEF]lLDoLlOXcGV`0
+!s11b ]m@8@b<kCNMOghAX^6[KN0
+IY=BkbQ=V5R@_3cQo>?1PA3
+R5
+R0
+R10
+R11
+R12
+L0 50
+R6
+r1
+!s85 0
+31
+R7
+R13
+R14
+!i113 0
+R15
+R16
+R2
+n@f@p_add_sub_altbarrel_shift_35e
+vFP_add_sub_altbarrel_shift_98g
+R4
+!i10b 1
+!s100 V<B<n0TYnO<l=o6Th2M>=2
+!s11b QKnb[cCDI3A4<eZmG=o5C0
+IbAR8FEX<^MDPlhVO[>zlD0
+R5
+R0
+R10
+R11
+R12
+L0 115
+R6
+r1
+!s85 0
+31
+R7
+R13
+R14
+!i113 0
+R15
+R16
+R2
+n@f@p_add_sub_altbarrel_shift_98g
+vFP_add_sub_altfp_add_sub_lkj
+R4
+!i10b 1
+!s100 Mm4BM:nLEeLT7mMD2a>BY3
+!s11b ]CzjZDK;S__LfHKK`;[ia1
+I>WQe^co;hSQMRf<hz5jRU1
+R5
+R0
+R10
+R11
+R12
+L0 806
+R6
+r1
+!s85 0
+31
+R7
+R13
+R14
+!i113 0
+R15
+R16
+R2
+n@f@p_add_sub_altfp_add_sub_lkj
+vFP_add_sub_altpriority_encoder_3e8
+R4
+!i10b 1
+!s100 8nUQaMVJ`hXJ3an92k;S^0
+!s11b jzR0mG9]7;IY=4KX?8O;U0
+IQ5^lFGKeDhTKbaLA6d;mc0
+R5
+R0
+R10
+R11
+R12
+L0 212
+R6
+r1
+!s85 0
+31
+R7
+R13
+R14
+!i113 0
+R15
+R16
+R2
+n@f@p_add_sub_altpriority_encoder_3e8
+vFP_add_sub_altpriority_encoder_3v7
+R4
+!i10b 1
+!s100 IPaA[3dIAIK<SWlD>aSM70
+!s11b :?gHk5RlXeA]A>KNoHcC_3
+Ibn08mJ9]_T]i5D=OH4dzI2
+R5
+R0
+R10
+R11
+R12
+L0 309
+R6
+r1
+!s85 0
+31
+R7
+R13
+R14
+!i113 0
+R15
+R16
+R2
+n@f@p_add_sub_altpriority_encoder_3v7
+vFP_add_sub_altpriority_encoder_6e8
+R4
+!i10b 1
+!s100 2A5:SHia`mm261SNM0L1?3
+!s11b QMXZ^1I?:Dc:8bMHee>L_0
+IbkPd`3Pn[9`9jIKjdTHId2
+R5
+R0
+R10
+R11
+R12
+L0 231
+R6
+r1
+!s85 0
+31
+R7
+R13
+R14
+!i113 0
+R15
+R16
+R2
+n@f@p_add_sub_altpriority_encoder_6e8
+vFP_add_sub_altpriority_encoder_6v7
+R4
+!i10b 1
+!s100 >K]4XzHC<3n:=4mb^TNTb3
+!s11b =3DE[e4i=<EegSTZ>]fac1
+I1n@;b3`>:mW6cO;4NEWn43
+R5
+R0
+R10
+R11
+R12
+L0 325
+R6
+r1
+!s85 0
+31
+R7
+R13
+R14
+!i113 0
+R15
+R16
+R2
+n@f@p_add_sub_altpriority_encoder_6v7
+vFP_add_sub_altpriority_encoder_be8
+R4
+!i10b 1
+!s100 Zo[7YJ[VbdnagaibnhNQZ0
+!s11b 4MU76<@9hVMjLK^XSm8[`3
+Im4=f6a?JUDXST@L@Um0M<2
+R5
+R0
+R10
+R11
+R12
+L0 264
+R6
+r1
+!s85 0
+31
+R7
+R13
+R14
+!i113 0
+R15
+R16
+R2
+n@f@p_add_sub_altpriority_encoder_be8
+vFP_add_sub_altpriority_encoder_bv7
+R4
+!i10b 1
+!s100 2bg2=c=21U0=oeg@>`[n91
+!s11b 3`aZNJ[68o3S3Ocb>5M3[3
+IFR2XPN3Qe`AHf@GjUP2l^0
+R5
+R0
+R10
+R11
+R12
+L0 353
+R6
+r1
+!s85 0
+31
+R7
+R13
+R14
+!i113 0
+R15
+R16
+R2
+n@f@p_add_sub_altpriority_encoder_bv7
+vFP_add_sub_altpriority_encoder_cna
+R4
+!i10b 1
+!s100 m`bKZcOF5banJ<2hGiz3O0
+!s11b UOoFHCdDik?]Rh9ihGZW40
+IfZzoSV3kWS>6Ta>T]PE;k0
+R5
+R0
+R10
+R11
+R12
+L0 753
+R6
+r1
+!s85 0
+31
+R7
+R13
+R14
+!i113 0
+R15
+R16
+R2
+n@f@p_add_sub_altpriority_encoder_cna
+vFP_add_sub_altpriority_encoder_i39
+R4
+!i10b 1
+!s100 dai>7g7:l`G_ML31JUAF82
+!s11b 3F?D11QgnO3=JYCUM95XJ3
+In5fk3<APl37:[[OL9`dUm0
+R5
+R0
+R10
+R11
+R12
+L0 725
+R6
+r1
+!s85 0
+31
+R7
+R13
+R14
+!i113 0
+R15
+R16
+R2
+n@f@p_add_sub_altpriority_encoder_i39
+vFP_add_sub_altpriority_encoder_ii9
+R4
+!i10b 1
+!s100 3gJ4XFCY:<SX4=Ef[L_kQ0
+!s11b eQYHjzL2fhDSA=Oli:=OL1
+I9;ZH>TJiBGUF=o:I=Ec7@1
+R5
+R0
+R10
+R11
+R12
+L0 604
+R6
+r1
+!s85 0
+31
+R7
+R13
+R14
+!i113 0
+R15
+R16
+R2
+n@f@p_add_sub_altpriority_encoder_ii9
+vFP_add_sub_altpriority_encoder_n28
+R4
+!i10b 1
+!s100 71LOCQefXc`E^Wo>FUko02
+!s11b Xdl>d8kWVA]Y5g6W5?liP0
+I?N01FIR0:Tn<L:JIceO:@3
+R5
+R0
+R10
+R11
+R12
+L0 653
+R6
+r1
+!s85 0
+31
+R7
+R13
+R14
+!i113 0
+R15
+R16
+R2
+n@f@p_add_sub_altpriority_encoder_n28
+vFP_add_sub_altpriority_encoder_nh8
+R4
+!i10b 1
+!s100 TIU=C3`>1?F5G0N4<7J^G1
+!s11b edm2SKAPoG3G]FOD`bTV:2
+ISCbe9K>L[`LM99gXmR6Di0
+R5
+R0
+R10
+R11
+R12
+L0 519
+R6
+r1
+!s85 0
+31
+R7
+R13
+R14
+!i113 0
+R15
+R16
+R2
+n@f@p_add_sub_altpriority_encoder_nh8
+vFP_add_sub_altpriority_encoder_ou8
+R4
+!i10b 1
+!s100 TF=d2W0U=k7@dnO;OYTZa0
+!s11b T9zznJ2:;bnPM?coDiI2G0
+IU:_OzcQzI9@Yf<MV]d3I[2
+R5
+R0
+R10
+R11
+R12
+L0 446
+R6
+r1
+!s85 0
+31
+R7
+R13
+R14
+!i113 0
+R15
+R16
+R2
+n@f@p_add_sub_altpriority_encoder_ou8
+vFP_add_sub_altpriority_encoder_q28
+R4
+!i10b 1
+!s100 ZR^zH8jQ2lUPE9DAFWWW90
+!s11b hVVDIk2i@?X[3caOdH@b62
+I8LGBO>b^mMR:4T@kD?6iU0
+R5
+R0
+R10
+R11
+R12
+L0 669
+R6
+r1
+!s85 0
+31
+R7
+R13
+R14
+!i113 0
+R15
+R16
+R2
+n@f@p_add_sub_altpriority_encoder_q28
+vFP_add_sub_altpriority_encoder_qh8
+R4
+!i10b 1
+!s100 cDV;D]^6F:Dz>8K@STZ7`3
+!s11b =X0a3BoWL=N2oVmg^iL3k0
+I=H3Jm]m7P7X2LXXNeeBRL2
+R5
+R0
+R10
+R11
+R12
+L0 538
+R6
+r1
+!s85 0
+31
+R7
+R13
+R14
+!i113 0
+R15
+R16
+R2
+n@f@p_add_sub_altpriority_encoder_qh8
+vFP_add_sub_altpriority_encoder_ue9
+R4
+!i10b 1
+!s100 ]c^FzdIWH3]Xcj582zJdm0
+!s11b RomIZ8K^3A7VlIneOSn[a2
+IH7><4NHa:ITT_SASRm9d30
+R5
+R0
+R10
+R11
+R12
+L0 413
+R6
+r1
+!s85 0
+31
+R7
+R13
+R14
+!i113 0
+R15
+R16
+R2
+n@f@p_add_sub_altpriority_encoder_ue9
+vFP_add_sub_altpriority_encoder_uv8
+R4
+!i10b 1
+!s100 jWDE?KK>Wc8DEl<39]HYD2
+!s11b 4g4h>R;?4k^9FJH]VnzSB0
+I;f[V5X@=VT@HBFVGMCO_W1
+R5
+R0
+R10
+R11
+R12
+L0 381
+R6
+r1
+!s85 0
+31
+R7
+R13
+R14
+!i113 0
+R15
+R16
+R2
+n@f@p_add_sub_altpriority_encoder_uv8
+vFP_add_sub_altpriority_encoder_v28
+R4
+!i10b 1
+!s100 LLYB2AUE=Dj@[7m;[^JhH3
+!s11b `:PKABkMlf?6R>N>8PS:K1
+IOTBV0;Wf>=MbYhV=n^oSJ0
+R5
+R0
+R10
+R11
+R12
+L0 697
+R6
+r1
+!s85 0
+31
+R7
+R13
+R14
+!i113 0
+R15
+R16
+R2
+n@f@p_add_sub_altpriority_encoder_v28
+vFP_add_sub_altpriority_encoder_vh8
+R4
+!i10b 1
+!s100 _Emmi@08KE>Q7YP^lJBSd2
+!s11b fBZR@Dd;jnL=A8Xg4^h4o3
+I]inWiD1^MIWF1>KhmUVH]1
+R5
+R0
+R10
+R11
+R12
+L0 571
+R6
+r1
+!s85 0
+31
+R7
+R13
+R14
+!i113 0
+R15
+R16
+R2
+n@f@p_add_sub_altpriority_encoder_vh8
+vposedgeDect
+R4
+!i10b 1
+!s100 B=<<m6?zHaDLEnE7@3Vk=3
+!s11b 4Z=F9>1N8R3Z8K9Tiz4R63
+I1hYTWzzMAA9dDDn]aS?HL1
+R5
+R0
+w1591419882
+8C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/uart_test/rtl/posedgeDect.v
+FC:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/uart_test/rtl/posedgeDect.v
+L0 5
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/uart_test/rtl/posedgeDect.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/uart_test/rtl|C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/uart_test/rtl/posedgeDect.v|
+!i113 0
+R15
+Z17 !s92 -vlog01compat -work work {+incdir+C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/uart_test/rtl} -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+nposedge@dect
+vuart
+R3
+R4
+!i10b 1
+!s100 `FV6INddCF]H=VQWnjm6j2
+!s11b @5PHdncJB3=8z_Kj[aTH72
+I5^994eP96DT:M=lmDTQd11
+R5
+S1
+R0
+w1591430238
+8C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/uart_test/rtl/uart.sv
+FC:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/uart_test/rtl/uart.sv
+L0 1
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/uart_test/rtl/uart.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/uart_test/rtl|C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/uart_test/rtl/uart.sv|
+!i113 0
+R8
+R9
+R2
+vuart_RX
+R4
+!i10b 1
+!s100 0d=CN<52^]41fj=GZ3_f;2
+!s11b 8MVW5J>ekd26E94m6YnId1
+IKDJziR9eTB^U?l32EEF<d1
+R5
+R0
+w1591415338
+8C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/uart_test/rtl/uart_RX.v
+FC:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/uart_test/rtl/uart_RX.v
+L0 1
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/uart_test/rtl/uart_RX.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/uart_test/rtl|C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/uart_test/rtl/uart_RX.v|
+!i113 0
+R15
+R17
+R2
+nuart_@r@x
+vuart_TX
+R4
+!i10b 1
+!s100 z]dJEDzeZF<L3MCRGmDR51
+!s11b NB9]l`jR9HPC0Q<>MALfN0
+IzMe<^h]I3z]MD9;J4FE=B1
+R5
+R0
+w1591426267
+8C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/uart_test/rtl/uart_TX.v
+FC:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/uart_test/rtl/uart_TX.v
+L0 1
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/uart_test/rtl/uart_TX.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/uart_test/rtl|C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/uart_test/rtl/uart_TX.v|
+!i113 0
+R15
+R17
+R2
+nuart_@t@x

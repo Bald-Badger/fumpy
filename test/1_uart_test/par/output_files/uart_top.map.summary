@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Mon Aug 10 21:40:41 2020
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Standard Edition
+Revision Name : uart_top
+Top-level Entity Name : adder
+Family : Cyclone IV E
+Total logic elements : 624
+    Total combinational functions : 413
+    Dedicated logic registers : 483
+Total registers : 483
+Total pins : 6
+Total virtual pins : 0
+Total memory bits : 173
+Embedded Multiplier 9-bit elements : 7
+Total PLLs : 0

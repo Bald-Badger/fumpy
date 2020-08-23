@@ -1,0 +1,1174 @@
+Analysis & Synthesis report for uart_top
+Mon Aug 10 21:40:41 2020
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis RAM Summary
+  9. Analysis & Synthesis DSP Block Usage Summary
+ 10. Analysis & Synthesis IP Cores Summary
+ 11. State Machine - |adder|state
+ 12. Registers Removed During Synthesis
+ 13. General Register Statistics
+ 14. Inverted Register Statistics
+ 15. Registers Packed Into Inferred Megafunctions
+ 16. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 17. Source assignments for FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|lpm_mult:man_product2_mult|mult_a2t:auto_generated
+ 18. Source assignments for FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|altshift_taps:delay_man_product_msb_p0_rtl_0|shift_taps_9km:auto_generated|altsyncram_g1b1:altsyncram2
+ 19. Source assignments for FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|altshift_taps:delay_exp2_bias_rtl_0|shift_taps_dkm:auto_generated|altsyncram_v861:altsyncram4
+ 20. Parameter Settings for User Entity Instance: Top-level Entity: |adder
+ 21. Parameter Settings for User Entity Instance: uart:myUART
+ 22. Parameter Settings for User Entity Instance: uart:myUART|uart_RX:myRX
+ 23. Parameter Settings for User Entity Instance: uart:myUART|uart_TX:myTX
+ 24. Parameter Settings for User Entity Instance: FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|lpm_add_sub:exp_add_adder
+ 25. Parameter Settings for User Entity Instance: FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|lpm_add_sub:exp_adj_adder
+ 26. Parameter Settings for User Entity Instance: FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|lpm_add_sub:exp_bias_subtr
+ 27. Parameter Settings for User Entity Instance: FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|lpm_add_sub:man_round_adder
+ 28. Parameter Settings for User Entity Instance: FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|lpm_mult:man_product2_mult
+ 29. Parameter Settings for Inferred Entity Instance: FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|altshift_taps:delay_man_product_msb_p0_rtl_0
+ 30. Parameter Settings for Inferred Entity Instance: FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|altshift_taps:delay_exp2_bias_rtl_0
+ 31. lpm_mult Parameter Settings by Entity Instance
+ 32. altshift_taps Parameter Settings by Entity Instance
+ 33. Post-Synthesis Netlist Statistics for Top Partition
+ 34. Elapsed Time Per Partition
+ 35. Analysis & Synthesis Messages
+ 36. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                         ;
++------------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Mon Aug 10 21:40:41 2020           ;
+; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
+; Revision Name                      ; uart_top                                        ;
+; Top-level Entity Name              ; adder                                           ;
+; Family                             ; Cyclone IV E                                    ;
+; Total logic elements               ; 624                                             ;
+;     Total combinational functions  ; 413                                             ;
+;     Dedicated logic registers      ; 483                                             ;
+; Total registers                    ; 483                                             ;
+; Total pins                         ; 6                                               ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 173                                             ;
+; Embedded Multiplier 9-bit elements ; 7                                               ;
+; Total PLLs                         ; 0                                               ;
++------------------------------------+-------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; EP4CE10F17C8       ;                    ;
+; Top-level entity name                                            ; adder              ; uart_top           ;
+; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 24          ;
+; Maximum allowed            ; 16          ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 16          ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processor 3            ;   0.0%      ;
+;     Processor 4            ;   0.0%      ;
+;     Processor 5            ;   0.0%      ;
+;     Processor 6            ;   0.0%      ;
+;     Processor 7            ;   0.0%      ;
+;     Processor 8            ;   0.0%      ;
+;     Processors 9-16        ;   0.0%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                               ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                           ; Library ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------+---------+
+; ../rtl/adder.sv                  ; yes             ; User SystemVerilog HDL File  ; C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/1_uart_test/rtl/adder.sv               ;         ;
+; ../rtl/posedgeDect.v             ; yes             ; User Verilog HDL File        ; C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/1_uart_test/rtl/posedgeDect.v          ;         ;
+; ../rtl/uart.sv                   ; yes             ; User SystemVerilog HDL File  ; C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/1_uart_test/rtl/uart.sv                ;         ;
+; ../rtl/uart_RX.v                 ; yes             ; User Verilog HDL File        ; C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/1_uart_test/rtl/uart_RX.v              ;         ;
+; ../rtl/uart_TX.v                 ; yes             ; User Verilog HDL File        ; C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/1_uart_test/rtl/uart_TX.v              ;         ;
+; ip_core/FP_mult.v                ; yes             ; User Wizard-Generated File   ; C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/1_uart_test/par/ip_core/FP_mult.v      ;         ;
+; lpm_add_sub.tdf                  ; yes             ; Megafunction                 ; c:/intelfpga/18.1/quartus/libraries/megafunctions/lpm_add_sub.tdf                      ;         ;
+; addcore.inc                      ; yes             ; Megafunction                 ; c:/intelfpga/18.1/quartus/libraries/megafunctions/addcore.inc                          ;         ;
+; look_add.inc                     ; yes             ; Megafunction                 ; c:/intelfpga/18.1/quartus/libraries/megafunctions/look_add.inc                         ;         ;
+; bypassff.inc                     ; yes             ; Megafunction                 ; c:/intelfpga/18.1/quartus/libraries/megafunctions/bypassff.inc                         ;         ;
+; altshift.inc                     ; yes             ; Megafunction                 ; c:/intelfpga/18.1/quartus/libraries/megafunctions/altshift.inc                         ;         ;
+; alt_stratix_add_sub.inc          ; yes             ; Megafunction                 ; c:/intelfpga/18.1/quartus/libraries/megafunctions/alt_stratix_add_sub.inc              ;         ;
+; aglobal181.inc                   ; yes             ; Megafunction                 ; c:/intelfpga/18.1/quartus/libraries/megafunctions/aglobal181.inc                       ;         ;
+; db/add_sub_e4e.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/1_uart_test/par/db/add_sub_e4e.tdf     ;         ;
+; db/add_sub_d8c.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/1_uart_test/par/db/add_sub_d8c.tdf     ;         ;
+; db/add_sub_0lg.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/1_uart_test/par/db/add_sub_0lg.tdf     ;         ;
+; db/add_sub_ptb.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/1_uart_test/par/db/add_sub_ptb.tdf     ;         ;
+; lpm_mult.tdf                     ; yes             ; Megafunction                 ; c:/intelfpga/18.1/quartus/libraries/megafunctions/lpm_mult.tdf                         ;         ;
+; lpm_add_sub.inc                  ; yes             ; Megafunction                 ; c:/intelfpga/18.1/quartus/libraries/megafunctions/lpm_add_sub.inc                      ;         ;
+; multcore.inc                     ; yes             ; Megafunction                 ; c:/intelfpga/18.1/quartus/libraries/megafunctions/multcore.inc                         ;         ;
+; db/mult_a2t.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/1_uart_test/par/db/mult_a2t.tdf        ;         ;
+; altshift_taps.tdf                ; yes             ; Megafunction                 ; c:/intelfpga/18.1/quartus/libraries/megafunctions/altshift_taps.tdf                    ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                 ; c:/intelfpga/18.1/quartus/libraries/megafunctions/altdpram.inc                         ;         ;
+; lpm_counter.inc                  ; yes             ; Megafunction                 ; c:/intelfpga/18.1/quartus/libraries/megafunctions/lpm_counter.inc                      ;         ;
+; lpm_compare.inc                  ; yes             ; Megafunction                 ; c:/intelfpga/18.1/quartus/libraries/megafunctions/lpm_compare.inc                      ;         ;
+; lpm_constant.inc                 ; yes             ; Megafunction                 ; c:/intelfpga/18.1/quartus/libraries/megafunctions/lpm_constant.inc                     ;         ;
+; db/shift_taps_9km.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/1_uart_test/par/db/shift_taps_9km.tdf  ;         ;
+; db/altsyncram_g1b1.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/1_uart_test/par/db/altsyncram_g1b1.tdf ;         ;
+; db/cntr_4pf.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/1_uart_test/par/db/cntr_4pf.tdf        ;         ;
+; db/cntr_r8h.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/1_uart_test/par/db/cntr_r8h.tdf        ;         ;
+; db/shift_taps_dkm.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/1_uart_test/par/db/shift_taps_dkm.tdf  ;         ;
+; db/altsyncram_v861.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/1_uart_test/par/db/altsyncram_v861.tdf ;         ;
+; db/add_sub_24e.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/1_uart_test/par/db/add_sub_24e.tdf     ;         ;
+; db/cntr_6pf.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/1_uart_test/par/db/cntr_6pf.tdf        ;         ;
+; db/cmpr_ogc.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/1_uart_test/par/db/cmpr_ogc.tdf        ;         ;
+; db/cntr_p8h.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/1_uart_test/par/db/cntr_p8h.tdf        ;         ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 624       ;
+;                                             ;           ;
+; Total combinational functions               ; 413       ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 117       ;
+;     -- 3 input functions                    ; 173       ;
+;     -- <=2 input functions                  ; 123       ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 276       ;
+;     -- arithmetic mode                      ; 137       ;
+;                                             ;           ;
+; Total registers                             ; 483       ;
+;     -- Dedicated logic registers            ; 483       ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 6         ;
+; Total memory bits                           ; 173       ;
+;                                             ;           ;
+; Embedded Multiplier 9-bit elements          ; 7         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 552       ;
+; Total fan-out                               ; 3337      ;
+; Average fan-out                             ; 3.42      ;
++---------------------------------------------+-----------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                                                                      ;
++-----------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------+--------------+
+; Compilation Hierarchy Node                                      ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                 ; Entity Name            ; Library Name ;
++-----------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------+--------------+
+; |adder                                                          ; 413 (41)            ; 483 (121)                 ; 173         ; 7            ; 1       ; 3         ; 6    ; 0            ; |adder                                                                                                                                                                              ; adder                  ; work         ;
+;    |FP_mult:myfpm|                                              ; 256 (0)             ; 286 (0)                   ; 173         ; 7            ; 1       ; 3         ; 0    ; 0            ; |adder|FP_mult:myfpm                                                                                                                                                                ; FP_mult                ; work         ;
+;       |FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component| ; 256 (179)           ; 286 (152)                 ; 173         ; 7            ; 1       ; 3         ; 0    ; 0            ; |adder|FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component                                                                                                        ; FP_mult_altfp_mult_cbo ; work         ;
+;          |altshift_taps:delay_exp2_bias_rtl_0|                  ; 9 (0)               ; 6 (0)                     ; 153         ; 0            ; 0       ; 0         ; 0    ; 0            ; |adder|FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|altshift_taps:delay_exp2_bias_rtl_0                                                                    ; altshift_taps          ; work         ;
+;             |shift_taps_dkm:auto_generated|                     ; 9 (2)               ; 6 (3)                     ; 153         ; 0            ; 0       ; 0         ; 0    ; 0            ; |adder|FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|altshift_taps:delay_exp2_bias_rtl_0|shift_taps_dkm:auto_generated                                      ; shift_taps_dkm         ; work         ;
+;                |altsyncram_v861:altsyncram4|                    ; 0 (0)               ; 0 (0)                     ; 153         ; 0            ; 0       ; 0         ; 0    ; 0            ; |adder|FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|altshift_taps:delay_exp2_bias_rtl_0|shift_taps_dkm:auto_generated|altsyncram_v861:altsyncram4          ; altsyncram_v861        ; work         ;
+;                |cntr_6pf:cntr1|                                 ; 5 (5)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |adder|FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|altshift_taps:delay_exp2_bias_rtl_0|shift_taps_dkm:auto_generated|cntr_6pf:cntr1                       ; cntr_6pf               ; work         ;
+;                |cntr_p8h:cntr5|                                 ; 2 (2)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |adder|FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|altshift_taps:delay_exp2_bias_rtl_0|shift_taps_dkm:auto_generated|cntr_p8h:cntr5                       ; cntr_p8h               ; work         ;
+;          |altshift_taps:delay_man_product_msb_p0_rtl_0|         ; 4 (0)               ; 4 (0)                     ; 20          ; 0            ; 0       ; 0         ; 0    ; 0            ; |adder|FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|altshift_taps:delay_man_product_msb_p0_rtl_0                                                           ; altshift_taps          ; work         ;
+;             |shift_taps_9km:auto_generated|                     ; 4 (0)               ; 4 (1)                     ; 20          ; 0            ; 0       ; 0         ; 0    ; 0            ; |adder|FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|altshift_taps:delay_man_product_msb_p0_rtl_0|shift_taps_9km:auto_generated                             ; shift_taps_9km         ; work         ;
+;                |altsyncram_g1b1:altsyncram2|                    ; 0 (0)               ; 0 (0)                     ; 20          ; 0            ; 0       ; 0         ; 0    ; 0            ; |adder|FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|altshift_taps:delay_man_product_msb_p0_rtl_0|shift_taps_9km:auto_generated|altsyncram_g1b1:altsyncram2 ; altsyncram_g1b1        ; work         ;
+;                |cntr_4pf:cntr1|                                 ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |adder|FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|altshift_taps:delay_man_product_msb_p0_rtl_0|shift_taps_9km:auto_generated|cntr_4pf:cntr1              ; cntr_4pf               ; work         ;
+;                |cntr_r8h:cntr3|                                 ; 3 (3)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |adder|FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|altshift_taps:delay_man_product_msb_p0_rtl_0|shift_taps_9km:auto_generated|cntr_r8h:cntr3              ; cntr_r8h               ; work         ;
+;          |lpm_add_sub:exp_add_adder|                            ; 9 (0)               ; 9 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |adder|FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|lpm_add_sub:exp_add_adder                                                                              ; lpm_add_sub            ; work         ;
+;             |add_sub_e4e:auto_generated|                        ; 9 (9)               ; 9 (9)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |adder|FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|lpm_add_sub:exp_add_adder|add_sub_e4e:auto_generated                                                   ; add_sub_e4e            ; work         ;
+;          |lpm_mult:man_product2_mult|                           ; 55 (0)              ; 115 (0)                   ; 0           ; 7            ; 1       ; 3         ; 0    ; 0            ; |adder|FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|lpm_mult:man_product2_mult                                                                             ; lpm_mult               ; work         ;
+;             |mult_a2t:auto_generated|                           ; 55 (55)             ; 115 (115)                 ; 0           ; 7            ; 1       ; 3         ; 0    ; 0            ; |adder|FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|lpm_mult:man_product2_mult|mult_a2t:auto_generated                                                     ; mult_a2t               ; work         ;
+;    |posedgeDect:pd1|                                            ; 1 (1)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |adder|posedgeDect:pd1                                                                                                                                                              ; posedgeDect            ; work         ;
+;    |uart:myUART|                                                ; 115 (0)             ; 74 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |adder|uart:myUART                                                                                                                                                                  ; uart                   ; work         ;
+;       |uart_RX:myRX|                                            ; 62 (62)             ; 40 (40)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |adder|uart:myUART|uart_RX:myRX                                                                                                                                                     ; uart_RX                ; work         ;
+;       |uart_TX:myTX|                                            ; 53 (53)             ; 34 (34)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |adder|uart:myUART|uart_TX:myTX                                                                                                                                                     ; uart_TX                ; work         ;
++-----------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                                                                                                            ;
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
+; Name                                                                                                                                                                                    ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF  ;
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
+; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|altshift_taps:delay_exp2_bias_rtl_0|shift_taps_dkm:auto_generated|altsyncram_v861:altsyncram4|ALTSYNCRAM          ; AUTO ; Simple Dual Port ; 3            ; 51           ; 3            ; 51           ; 153  ; None ;
+; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|altshift_taps:delay_man_product_msb_p0_rtl_0|shift_taps_9km:auto_generated|altsyncram_g1b1:altsyncram2|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 2            ; 10           ; 2            ; 10           ; 20   ; None ;
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis DSP Block Usage Summary        ;
++---------------------------------------+-------------+
+; Statistic                             ; Number Used ;
++---------------------------------------+-------------+
+; Simple Multipliers (9-bit)            ; 1           ;
+; Simple Multipliers (18-bit)           ; 3           ;
+; Embedded Multiplier Blocks            ; --          ;
+; Embedded Multiplier 9-bit elements    ; 7           ;
+; Signed Embedded Multipliers           ; 0           ;
+; Unsigned Embedded Multipliers         ; 4           ;
+; Mixed Sign Embedded Multipliers       ; 0           ;
+; Variable Sign Embedded Multipliers    ; 0           ;
+; Dedicated Input Shift Register Chains ; 0           ;
++---------------------------------------+-------------+
+Note: number of Embedded Multiplier Blocks used is only available after a successful fit.
+
+
++----------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                    ;
++--------+--------------+---------+--------------+--------------+----------------------+-------------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance      ; IP Include File   ;
++--------+--------------+---------+--------------+--------------+----------------------+-------------------+
+; Altera ; ALTFP_MULT   ; 18.1    ; N/A          ; N/A          ; |adder|FP_mult:myfpm ; ip_core/FP_mult.v ;
++--------+--------------+---------+--------------+--------------+----------------------+-------------------+
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |adder|state                                                                                                                                         ;
++------------+----------+----------+----------+----------+------------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+------------+
+; Name       ; state.c4 ; state.c3 ; state.c2 ; state.c1 ; state.CALC ; state.f23 ; state.f22 ; state.f21 ; state.f14 ; state.f13 ; state.f12 ; state.f11 ; state.IDLE ;
++------------+----------+----------+----------+----------+------------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+------------+
+; state.IDLE ; 0        ; 0        ; 0        ; 0        ; 0          ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0          ;
+; state.f11  ; 0        ; 0        ; 0        ; 0        ; 0          ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ; 1          ;
+; state.f12  ; 0        ; 0        ; 0        ; 0        ; 0          ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ; 0         ; 1          ;
+; state.f13  ; 0        ; 0        ; 0        ; 0        ; 0          ; 0         ; 0         ; 0         ; 0         ; 1         ; 0         ; 0         ; 1          ;
+; state.f14  ; 0        ; 0        ; 0        ; 0        ; 0          ; 0         ; 0         ; 0         ; 1         ; 0         ; 0         ; 0         ; 1          ;
+; state.f21  ; 0        ; 0        ; 0        ; 0        ; 0          ; 0         ; 0         ; 1         ; 0         ; 0         ; 0         ; 0         ; 1          ;
+; state.f22  ; 0        ; 0        ; 0        ; 0        ; 0          ; 0         ; 1         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1          ;
+; state.f23  ; 0        ; 0        ; 0        ; 0        ; 0          ; 1         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1          ;
+; state.CALC ; 0        ; 0        ; 0        ; 0        ; 1          ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1          ;
+; state.c1   ; 0        ; 0        ; 0        ; 1        ; 0          ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1          ;
+; state.c2   ; 0        ; 0        ; 1        ; 0        ; 0          ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1          ;
+; state.c3   ; 0        ; 1        ; 0        ; 0        ; 0          ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1          ;
+; state.c4   ; 1        ; 0        ; 0        ; 0        ; 0          ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1          ;
++------------+----------+----------+----------+----------+------------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                                                                ;
++--------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------+
+; Register name                                                                        ; Reason for Removal                                                                         ;
++--------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------+
+; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|man_round_p[0] ; Merged with FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|lsb_dffe ;
+; state~4                                                                              ; Lost fanout                                                                                ;
+; state~5                                                                              ; Lost fanout                                                                                ;
+; state~6                                                                              ; Lost fanout                                                                                ;
+; state~7                                                                              ; Lost fanout                                                                                ;
+; Total Number of Removed Registers = 5                                                ;                                                                                            ;
++--------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 483   ;
+; Number of registers using Synchronous Clear  ; 32    ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 478   ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 133   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Inverted Register Statistics                                                                                                                                     ;
++--------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; Inverted Register                                                                                                                                      ; Fan out ;
++--------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; uart:myUART|uart_TX:myTX|TX                                                                                                                            ; 4       ;
+; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|altshift_taps:delay_exp2_bias_rtl_0|shift_taps_dkm:auto_generated|dffe6          ; 51      ;
+; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|altshift_taps:delay_man_product_msb_p0_rtl_0|shift_taps_9km:auto_generated|dffe4 ; 10      ;
+; Total number of inverted registers = 3                                                                                                                 ;         ;
++--------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Packed Into Inferred Megafunctions                                                                                                                                                                                                        ;
++---------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------+------------+
+; Register Name                                                                                                                   ; Megafunction                                                                                         ; Type       ;
++---------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------+------------+
+; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|delay_man_product_msb2                                    ; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|delay_man_product_msb_p0_rtl_0 ; SHIFT_TAPS ;
+; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|delay_man_product_msb                                     ; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|delay_man_product_msb_p0_rtl_0 ; SHIFT_TAPS ;
+; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|delay_man_product_msb_p1                                  ; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|delay_man_product_msb_p0_rtl_0 ; SHIFT_TAPS ;
+; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|delay_man_product_msb_p0                                  ; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|delay_man_product_msb_p0_rtl_0 ; SHIFT_TAPS ;
+; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|exp_adj_p1[0]                                             ; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|delay_man_product_msb_p0_rtl_0 ; SHIFT_TAPS ;
+; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|delay_exp3_bias[0]                                        ; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|delay_man_product_msb_p0_rtl_0 ; SHIFT_TAPS ;
+; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|delay_exp2_bias[0]                                        ; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|delay_man_product_msb_p0_rtl_0 ; SHIFT_TAPS ;
+; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|delay_exp_bias[0]                                         ; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|delay_man_product_msb_p0_rtl_0 ; SHIFT_TAPS ;
+; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|exp_bias_p3[1..8]                                         ; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|delay_man_product_msb_p0_rtl_0 ; SHIFT_TAPS ;
+; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|exp_bias_p2[1..8]                                         ; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|delay_man_product_msb_p0_rtl_0 ; SHIFT_TAPS ;
+; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|exp_bias_p1[1..8]                                         ; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|delay_man_product_msb_p0_rtl_0 ; SHIFT_TAPS ;
+; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|exp_add_p1[1..8]                                          ; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|delay_man_product_msb_p0_rtl_0 ; SHIFT_TAPS ;
+; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|exp_adj_p1[1..9]                                          ; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|delay_exp2_bias_rtl_0          ; SHIFT_TAPS ;
+; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|delay_exp3_bias[1..9]                                     ; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|delay_exp2_bias_rtl_0          ; SHIFT_TAPS ;
+; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|delay_exp2_bias[1..9]                                     ; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|delay_exp2_bias_rtl_0          ; SHIFT_TAPS ;
+; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|man_round_p1[1..23]                                       ; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|delay_exp2_bias_rtl_0          ; SHIFT_TAPS ;
+; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|man_round_p0[1..23]                                       ; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|delay_exp2_bias_rtl_0          ; SHIFT_TAPS ;
+; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|man_round_p[1..23]                                        ; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|delay_exp2_bias_rtl_0          ; SHIFT_TAPS ;
+; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|lpm_mult:man_product2_mult|mult_a2t:auto_generated|dffe10 ; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|delay_exp2_bias_rtl_0          ; SHIFT_TAPS ;
+; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|lpm_mult:man_product2_mult|mult_a2t:auto_generated|dffe9  ; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|delay_exp2_bias_rtl_0          ; SHIFT_TAPS ;
+; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|lpm_mult:man_product2_mult|mult_a2t:auto_generated|dffe11 ; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|delay_exp2_bias_rtl_0          ; SHIFT_TAPS ;
+; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|lpm_mult:man_product2_mult|mult_a2t:auto_generated|dffe13 ; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|delay_exp2_bias_rtl_0          ; SHIFT_TAPS ;
+; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|lpm_mult:man_product2_mult|mult_a2t:auto_generated|dffe12 ; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|delay_exp2_bias_rtl_0          ; SHIFT_TAPS ;
+; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|lpm_mult:man_product2_mult|mult_a2t:auto_generated|dffe14 ; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|delay_exp2_bias_rtl_0          ; SHIFT_TAPS ;
+; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|lpm_mult:man_product2_mult|mult_a2t:auto_generated|dffe16 ; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|delay_exp2_bias_rtl_0          ; SHIFT_TAPS ;
+; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|lpm_mult:man_product2_mult|mult_a2t:auto_generated|dffe15 ; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|delay_exp2_bias_rtl_0          ; SHIFT_TAPS ;
+; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|lpm_mult:man_product2_mult|mult_a2t:auto_generated|dffe17 ; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|delay_exp2_bias_rtl_0          ; SHIFT_TAPS ;
+; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|lpm_mult:man_product2_mult|mult_a2t:auto_generated|dffe19 ; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|delay_exp2_bias_rtl_0          ; SHIFT_TAPS ;
+; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|lpm_mult:man_product2_mult|mult_a2t:auto_generated|dffe18 ; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|delay_exp2_bias_rtl_0          ; SHIFT_TAPS ;
+; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|lpm_mult:man_product2_mult|mult_a2t:auto_generated|dffe20 ; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|delay_exp2_bias_rtl_0          ; SHIFT_TAPS ;
+; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|lpm_mult:man_product2_mult|mult_a2t:auto_generated|dffe22 ; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|delay_exp2_bias_rtl_0          ; SHIFT_TAPS ;
+; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|lpm_mult:man_product2_mult|mult_a2t:auto_generated|dffe21 ; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|delay_exp2_bias_rtl_0          ; SHIFT_TAPS ;
+; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|lpm_mult:man_product2_mult|mult_a2t:auto_generated|dffe23 ; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|delay_exp2_bias_rtl_0          ; SHIFT_TAPS ;
+; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|lpm_mult:man_product2_mult|mult_a2t:auto_generated|dffe25 ; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|delay_exp2_bias_rtl_0          ; SHIFT_TAPS ;
+; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|lpm_mult:man_product2_mult|mult_a2t:auto_generated|dffe24 ; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|delay_exp2_bias_rtl_0          ; SHIFT_TAPS ;
+; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|lpm_mult:man_product2_mult|mult_a2t:auto_generated|dffe26 ; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|delay_exp2_bias_rtl_0          ; SHIFT_TAPS ;
+; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|lpm_mult:man_product2_mult|mult_a2t:auto_generated|dffe28 ; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|delay_exp2_bias_rtl_0          ; SHIFT_TAPS ;
+; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|lpm_mult:man_product2_mult|mult_a2t:auto_generated|dffe27 ; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|delay_exp2_bias_rtl_0          ; SHIFT_TAPS ;
+; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|lpm_mult:man_product2_mult|mult_a2t:auto_generated|dffe29 ; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|delay_exp2_bias_rtl_0          ; SHIFT_TAPS ;
+; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|lpm_mult:man_product2_mult|mult_a2t:auto_generated|dffe31 ; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|delay_exp2_bias_rtl_0          ; SHIFT_TAPS ;
+; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|lpm_mult:man_product2_mult|mult_a2t:auto_generated|dffe30 ; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|delay_exp2_bias_rtl_0          ; SHIFT_TAPS ;
+; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|lpm_mult:man_product2_mult|mult_a2t:auto_generated|dffe32 ; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|delay_exp2_bias_rtl_0          ; SHIFT_TAPS ;
+; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|lpm_mult:man_product2_mult|mult_a2t:auto_generated|dffe34 ; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|delay_exp2_bias_rtl_0          ; SHIFT_TAPS ;
+; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|lpm_mult:man_product2_mult|mult_a2t:auto_generated|dffe33 ; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|delay_exp2_bias_rtl_0          ; SHIFT_TAPS ;
+; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|lpm_mult:man_product2_mult|mult_a2t:auto_generated|dffe35 ; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|delay_exp2_bias_rtl_0          ; SHIFT_TAPS ;
+; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|lpm_mult:man_product2_mult|mult_a2t:auto_generated|dffe37 ; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|delay_exp2_bias_rtl_0          ; SHIFT_TAPS ;
+; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|lpm_mult:man_product2_mult|mult_a2t:auto_generated|dffe36 ; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|delay_exp2_bias_rtl_0          ; SHIFT_TAPS ;
+; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|lpm_mult:man_product2_mult|mult_a2t:auto_generated|dffe38 ; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|delay_exp2_bias_rtl_0          ; SHIFT_TAPS ;
+; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|lpm_mult:man_product2_mult|mult_a2t:auto_generated|dffe40 ; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|delay_exp2_bias_rtl_0          ; SHIFT_TAPS ;
+; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|lpm_mult:man_product2_mult|mult_a2t:auto_generated|dffe39 ; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|delay_exp2_bias_rtl_0          ; SHIFT_TAPS ;
+; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|lpm_mult:man_product2_mult|mult_a2t:auto_generated|dffe41 ; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|delay_exp2_bias_rtl_0          ; SHIFT_TAPS ;
+; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|lpm_mult:man_product2_mult|mult_a2t:auto_generated|dffe43 ; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|delay_exp2_bias_rtl_0          ; SHIFT_TAPS ;
+; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|lpm_mult:man_product2_mult|mult_a2t:auto_generated|dffe42 ; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|delay_exp2_bias_rtl_0          ; SHIFT_TAPS ;
+; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|lpm_mult:man_product2_mult|mult_a2t:auto_generated|dffe44 ; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|delay_exp2_bias_rtl_0          ; SHIFT_TAPS ;
+; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|lpm_mult:man_product2_mult|mult_a2t:auto_generated|dffe46 ; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|delay_exp2_bias_rtl_0          ; SHIFT_TAPS ;
+; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|lpm_mult:man_product2_mult|mult_a2t:auto_generated|dffe45 ; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|delay_exp2_bias_rtl_0          ; SHIFT_TAPS ;
+; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|lpm_mult:man_product2_mult|mult_a2t:auto_generated|dffe47 ; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|delay_exp2_bias_rtl_0          ; SHIFT_TAPS ;
+; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|lpm_mult:man_product2_mult|mult_a2t:auto_generated|dffe49 ; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|delay_exp2_bias_rtl_0          ; SHIFT_TAPS ;
+; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|lpm_mult:man_product2_mult|mult_a2t:auto_generated|dffe48 ; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|delay_exp2_bias_rtl_0          ; SHIFT_TAPS ;
+; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|lpm_mult:man_product2_mult|mult_a2t:auto_generated|dffe50 ; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|delay_exp2_bias_rtl_0          ; SHIFT_TAPS ;
+; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|lpm_mult:man_product2_mult|mult_a2t:auto_generated|dffe52 ; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|delay_exp2_bias_rtl_0          ; SHIFT_TAPS ;
+; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|lpm_mult:man_product2_mult|mult_a2t:auto_generated|dffe51 ; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|delay_exp2_bias_rtl_0          ; SHIFT_TAPS ;
+; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|lpm_mult:man_product2_mult|mult_a2t:auto_generated|dffe53 ; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|delay_exp2_bias_rtl_0          ; SHIFT_TAPS ;
+; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|lpm_mult:man_product2_mult|mult_a2t:auto_generated|dffe55 ; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|delay_exp2_bias_rtl_0          ; SHIFT_TAPS ;
+; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|lpm_mult:man_product2_mult|mult_a2t:auto_generated|dffe54 ; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|delay_exp2_bias_rtl_0          ; SHIFT_TAPS ;
+; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|lpm_mult:man_product2_mult|mult_a2t:auto_generated|dffe56 ; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|delay_exp2_bias_rtl_0          ; SHIFT_TAPS ;
+; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|lpm_mult:man_product2_mult|mult_a2t:auto_generated|dffe58 ; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|delay_exp2_bias_rtl_0          ; SHIFT_TAPS ;
+; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|lpm_mult:man_product2_mult|mult_a2t:auto_generated|dffe57 ; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|delay_exp2_bias_rtl_0          ; SHIFT_TAPS ;
+; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|lpm_mult:man_product2_mult|mult_a2t:auto_generated|dffe59 ; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|delay_exp2_bias_rtl_0          ; SHIFT_TAPS ;
+; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|lpm_mult:man_product2_mult|mult_a2t:auto_generated|dffe61 ; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|delay_exp2_bias_rtl_0          ; SHIFT_TAPS ;
+; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|lpm_mult:man_product2_mult|mult_a2t:auto_generated|dffe60 ; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|delay_exp2_bias_rtl_0          ; SHIFT_TAPS ;
+; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|lpm_mult:man_product2_mult|mult_a2t:auto_generated|dffe62 ; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|delay_exp2_bias_rtl_0          ; SHIFT_TAPS ;
+; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|exp_bias_p2[0]                                            ; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|delay_exp2_bias_rtl_0          ; SHIFT_TAPS ;
+; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|exp_bias_p1[0]                                            ; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|delay_exp2_bias_rtl_0          ; SHIFT_TAPS ;
+; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|exp_add_p1[0]                                             ; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|delay_exp2_bias_rtl_0          ; SHIFT_TAPS ;
++---------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------+
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |adder|uart:myUART|uart_TX:myTX|tx_data[3]  ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |adder|uart:myUART|uart_TX:myTX|clk_cnt[14] ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |adder|uart:myUART|uart_TX:myTX|tx_cnt[0]   ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |adder|uart:myUART|uart_RX:myRX|clk_cnt[4]  ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |adder|uart:myUART|uart_RX:myRX|rx_cnt[0]   ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |adder|count_14[3]                          ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |adder|tx_data[7]                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|lpm_mult:man_product2_mult|mult_a2t:auto_generated ;
++----------------+-------+------+-----------------------------------------------------------------------------------------------------------------+
+; Assignment     ; Value ; From ; To                                                                                                              ;
++----------------+-------+------+-----------------------------------------------------------------------------------------------------------------+
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe10                                                                                                          ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe100                                                                                                         ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe101                                                                                                         ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe102                                                                                                         ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe103                                                                                                         ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe104                                                                                                         ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe105                                                                                                         ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe106                                                                                                         ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe107                                                                                                         ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe108                                                                                                         ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe109                                                                                                         ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe11                                                                                                          ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe110                                                                                                         ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe111                                                                                                         ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe112                                                                                                         ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe113                                                                                                         ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe114                                                                                                         ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe115                                                                                                         ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe116                                                                                                         ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe117                                                                                                         ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe118                                                                                                         ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe119                                                                                                         ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe12                                                                                                          ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe120                                                                                                         ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe121                                                                                                         ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe122                                                                                                         ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe123                                                                                                         ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe124                                                                                                         ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe125                                                                                                         ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe126                                                                                                         ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe127                                                                                                         ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe128                                                                                                         ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe129                                                                                                         ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe13                                                                                                          ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe130                                                                                                         ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe131                                                                                                         ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe132                                                                                                         ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe133                                                                                                         ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe134                                                                                                         ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe135                                                                                                         ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe136                                                                                                         ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe137                                                                                                         ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe138                                                                                                         ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe139                                                                                                         ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe14                                                                                                          ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe140                                                                                                         ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe141                                                                                                         ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe142                                                                                                         ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe143                                                                                                         ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe144                                                                                                         ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe145                                                                                                         ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe146                                                                                                         ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe147                                                                                                         ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe148                                                                                                         ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe149                                                                                                         ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe15                                                                                                          ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe150                                                                                                         ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe151                                                                                                         ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe152                                                                                                         ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe153                                                                                                         ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe154                                                                                                         ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe155                                                                                                         ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe156                                                                                                         ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe157                                                                                                         ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe158                                                                                                         ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe159                                                                                                         ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe16                                                                                                          ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe160                                                                                                         ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe161                                                                                                         ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe162                                                                                                         ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe163                                                                                                         ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe164                                                                                                         ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe165                                                                                                         ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe166                                                                                                         ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe167                                                                                                         ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe168                                                                                                         ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe169                                                                                                         ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe17                                                                                                          ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe170                                                                                                         ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe171                                                                                                         ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe172                                                                                                         ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe173                                                                                                         ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe174                                                                                                         ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe175                                                                                                         ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe176                                                                                                         ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe177                                                                                                         ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe178                                                                                                         ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe179                                                                                                         ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe18                                                                                                          ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe19                                                                                                          ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe20                                                                                                          ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe21                                                                                                          ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe22                                                                                                          ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe23                                                                                                          ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe24                                                                                                          ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe25                                                                                                          ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe26                                                                                                          ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe27                                                                                                          ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe28                                                                                                          ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe29                                                                                                          ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe30                                                                                                          ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe31                                                                                                          ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe32                                                                                                          ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe33                                                                                                          ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe34                                                                                                          ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe35                                                                                                          ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe36                                                                                                          ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe37                                                                                                          ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe38                                                                                                          ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe39                                                                                                          ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe40                                                                                                          ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe41                                                                                                          ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe42                                                                                                          ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe43                                                                                                          ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe44                                                                                                          ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe45                                                                                                          ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe46                                                                                                          ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe47                                                                                                          ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe48                                                                                                          ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe49                                                                                                          ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe50                                                                                                          ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe51                                                                                                          ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe52                                                                                                          ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe53                                                                                                          ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe54                                                                                                          ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe55                                                                                                          ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe56                                                                                                          ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe57                                                                                                          ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe58                                                                                                          ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe59                                                                                                          ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe60                                                                                                          ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe61                                                                                                          ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe62                                                                                                          ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe63                                                                                                          ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe64                                                                                                          ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe65                                                                                                          ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe66                                                                                                          ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe67                                                                                                          ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe68                                                                                                          ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe69                                                                                                          ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe70                                                                                                          ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe71                                                                                                          ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe72                                                                                                          ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe73                                                                                                          ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe74                                                                                                          ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe75                                                                                                          ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe76                                                                                                          ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe77                                                                                                          ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe78                                                                                                          ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe79                                                                                                          ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe80                                                                                                          ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe81                                                                                                          ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe82                                                                                                          ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe83                                                                                                          ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe84                                                                                                          ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe85                                                                                                          ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe86                                                                                                          ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe87                                                                                                          ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe88                                                                                                          ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe89                                                                                                          ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe9                                                                                                           ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe90                                                                                                          ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe91                                                                                                          ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe92                                                                                                          ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe93                                                                                                          ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe94                                                                                                          ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe95                                                                                                          ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe96                                                                                                          ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe97                                                                                                          ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe98                                                                                                          ;
+; POWER_UP_LEVEL ; LOW   ; -    ; dffe99                                                                                                          ;
++----------------+-------+------+-----------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|altshift_taps:delay_man_product_msb_p0_rtl_0|shift_taps_9km:auto_generated|altsyncram_g1b1:altsyncram2 ;
++---------------------------------+--------------------+------+---------------------------------------------------------------------------------------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                                                                                                    ;
++---------------------------------+--------------------+------+---------------------------------------------------------------------------------------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                                                                                                     ;
++---------------------------------+--------------------+------+---------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|altshift_taps:delay_exp2_bias_rtl_0|shift_taps_dkm:auto_generated|altsyncram_v861:altsyncram4 ;
++---------------------------------+--------------------+------+------------------------------------------------------------------------------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                                                                                           ;
++---------------------------------+--------------------+------+------------------------------------------------------------------------------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                                                                                            ;
++---------------------------------+--------------------+------+------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |adder ;
++----------------+----------+-------------------------------------------+
+; Parameter Name ; Value    ; Type                                      ;
++----------------+----------+-------------------------------------------+
+; CLK_FREQ       ; 50000000 ; Signed Integer                            ;
+; UART_BPS       ; 9600     ; Signed Integer                            ;
++----------------+----------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: uart:myUART ;
++----------------+----------+------------------------------+
+; Parameter Name ; Value    ; Type                         ;
++----------------+----------+------------------------------+
+; CLK_FREQ       ; 50000000 ; Signed Integer               ;
+; UART_BPS       ; 9600     ; Signed Integer               ;
++----------------+----------+------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: uart:myUART|uart_RX:myRX ;
++----------------+----------+-------------------------------------------+
+; Parameter Name ; Value    ; Type                                      ;
++----------------+----------+-------------------------------------------+
+; CLK_FREQ       ; 50000000 ; Signed Integer                            ;
+; UART_BPS       ; 9600     ; Signed Integer                            ;
++----------------+----------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: uart:myUART|uart_TX:myTX ;
++----------------+----------+-------------------------------------------+
+; Parameter Name ; Value    ; Type                                      ;
++----------------+----------+-------------------------------------------+
+; CLK_FREQ       ; 50000000 ; Signed Integer                            ;
+; UART_BPS       ; 9600     ; Signed Integer                            ;
++----------------+----------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|lpm_add_sub:exp_add_adder ;
++------------------------+--------------+------------------------------------------------------------------------------------------------------+
+; Parameter Name         ; Value        ; Type                                                                                                 ;
++------------------------+--------------+------------------------------------------------------------------------------------------------------+
+; LPM_WIDTH              ; 9            ; Signed Integer                                                                                       ;
+; LPM_REPRESENTATION     ; SIGNED       ; Untyped                                                                                              ;
+; LPM_DIRECTION          ; DEFAULT      ; Untyped                                                                                              ;
+; ONE_INPUT_IS_CONSTANT  ; NO           ; Untyped                                                                                              ;
+; LPM_PIPELINE           ; 1            ; Signed Integer                                                                                       ;
+; MAXIMIZE_SPEED         ; 5            ; Untyped                                                                                              ;
+; REGISTERED_AT_END      ; 0            ; Untyped                                                                                              ;
+; OPTIMIZE_FOR_SPEED     ; 5            ; Untyped                                                                                              ;
+; USE_CS_BUFFERS         ; 1            ; Untyped                                                                                              ;
+; CARRY_CHAIN            ; MANUAL       ; Untyped                                                                                              ;
+; CARRY_CHAIN_LENGTH     ; 48           ; CARRY_CHAIN_LENGTH                                                                                   ;
+; DEVICE_FAMILY          ; Cyclone IV E ; Untyped                                                                                              ;
+; USE_WYS                ; OFF          ; Untyped                                                                                              ;
+; STYLE                  ; FAST         ; Untyped                                                                                              ;
+; CBXI_PARAMETER         ; add_sub_e4e  ; Untyped                                                                                              ;
+; AUTO_CARRY_CHAINS      ; ON           ; AUTO_CARRY                                                                                           ;
+; IGNORE_CARRY_BUFFERS   ; OFF          ; IGNORE_CARRY                                                                                         ;
+; AUTO_CASCADE_CHAINS    ; ON           ; AUTO_CASCADE                                                                                         ;
+; IGNORE_CASCADE_BUFFERS ; OFF          ; IGNORE_CASCADE                                                                                       ;
++------------------------+--------------+------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|lpm_add_sub:exp_adj_adder ;
++------------------------+--------------+------------------------------------------------------------------------------------------------------+
+; Parameter Name         ; Value        ; Type                                                                                                 ;
++------------------------+--------------+------------------------------------------------------------------------------------------------------+
+; LPM_WIDTH              ; 10           ; Signed Integer                                                                                       ;
+; LPM_REPRESENTATION     ; SIGNED       ; Untyped                                                                                              ;
+; LPM_DIRECTION          ; DEFAULT      ; Untyped                                                                                              ;
+; ONE_INPUT_IS_CONSTANT  ; NO           ; Untyped                                                                                              ;
+; LPM_PIPELINE           ; 0            ; Signed Integer                                                                                       ;
+; MAXIMIZE_SPEED         ; 5            ; Untyped                                                                                              ;
+; REGISTERED_AT_END      ; 0            ; Untyped                                                                                              ;
+; OPTIMIZE_FOR_SPEED     ; 5            ; Untyped                                                                                              ;
+; USE_CS_BUFFERS         ; 1            ; Untyped                                                                                              ;
+; CARRY_CHAIN            ; MANUAL       ; Untyped                                                                                              ;
+; CARRY_CHAIN_LENGTH     ; 48           ; CARRY_CHAIN_LENGTH                                                                                   ;
+; DEVICE_FAMILY          ; Cyclone IV E ; Untyped                                                                                              ;
+; USE_WYS                ; OFF          ; Untyped                                                                                              ;
+; STYLE                  ; FAST         ; Untyped                                                                                              ;
+; CBXI_PARAMETER         ; add_sub_d8c  ; Untyped                                                                                              ;
+; AUTO_CARRY_CHAINS      ; ON           ; AUTO_CARRY                                                                                           ;
+; IGNORE_CARRY_BUFFERS   ; OFF          ; IGNORE_CARRY                                                                                         ;
+; AUTO_CASCADE_CHAINS    ; ON           ; AUTO_CASCADE                                                                                         ;
+; IGNORE_CASCADE_BUFFERS ; OFF          ; IGNORE_CASCADE                                                                                       ;
++------------------------+--------------+------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|lpm_add_sub:exp_bias_subtr ;
++------------------------+--------------+-------------------------------------------------------------------------------------------------------+
+; Parameter Name         ; Value        ; Type                                                                                                  ;
++------------------------+--------------+-------------------------------------------------------------------------------------------------------+
+; LPM_WIDTH              ; 10           ; Signed Integer                                                                                        ;
+; LPM_REPRESENTATION     ; UNSIGNED     ; Untyped                                                                                               ;
+; LPM_DIRECTION          ; SUB          ; Untyped                                                                                               ;
+; ONE_INPUT_IS_CONSTANT  ; NO           ; Untyped                                                                                               ;
+; LPM_PIPELINE           ; 0            ; Signed Integer                                                                                        ;
+; MAXIMIZE_SPEED         ; 5            ; Untyped                                                                                               ;
+; REGISTERED_AT_END      ; 0            ; Untyped                                                                                               ;
+; OPTIMIZE_FOR_SPEED     ; 5            ; Untyped                                                                                               ;
+; USE_CS_BUFFERS         ; 1            ; Untyped                                                                                               ;
+; CARRY_CHAIN            ; MANUAL       ; Untyped                                                                                               ;
+; CARRY_CHAIN_LENGTH     ; 48           ; CARRY_CHAIN_LENGTH                                                                                    ;
+; DEVICE_FAMILY          ; Cyclone IV E ; Untyped                                                                                               ;
+; USE_WYS                ; OFF          ; Untyped                                                                                               ;
+; STYLE                  ; FAST         ; Untyped                                                                                               ;
+; CBXI_PARAMETER         ; add_sub_0lg  ; Untyped                                                                                               ;
+; AUTO_CARRY_CHAINS      ; ON           ; AUTO_CARRY                                                                                            ;
+; IGNORE_CARRY_BUFFERS   ; OFF          ; IGNORE_CARRY                                                                                          ;
+; AUTO_CASCADE_CHAINS    ; ON           ; AUTO_CASCADE                                                                                          ;
+; IGNORE_CASCADE_BUFFERS ; OFF          ; IGNORE_CASCADE                                                                                        ;
++------------------------+--------------+-------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|lpm_add_sub:man_round_adder ;
++------------------------+--------------+--------------------------------------------------------------------------------------------------------+
+; Parameter Name         ; Value        ; Type                                                                                                   ;
++------------------------+--------------+--------------------------------------------------------------------------------------------------------+
+; LPM_WIDTH              ; 25           ; Signed Integer                                                                                         ;
+; LPM_REPRESENTATION     ; SIGNED       ; Untyped                                                                                                ;
+; LPM_DIRECTION          ; DEFAULT      ; Untyped                                                                                                ;
+; ONE_INPUT_IS_CONSTANT  ; NO           ; Untyped                                                                                                ;
+; LPM_PIPELINE           ; 0            ; Signed Integer                                                                                         ;
+; MAXIMIZE_SPEED         ; 5            ; Untyped                                                                                                ;
+; REGISTERED_AT_END      ; 0            ; Untyped                                                                                                ;
+; OPTIMIZE_FOR_SPEED     ; 5            ; Untyped                                                                                                ;
+; USE_CS_BUFFERS         ; 1            ; Untyped                                                                                                ;
+; CARRY_CHAIN            ; MANUAL       ; Untyped                                                                                                ;
+; CARRY_CHAIN_LENGTH     ; 48           ; CARRY_CHAIN_LENGTH                                                                                     ;
+; DEVICE_FAMILY          ; Cyclone IV E ; Untyped                                                                                                ;
+; USE_WYS                ; OFF          ; Untyped                                                                                                ;
+; STYLE                  ; FAST         ; Untyped                                                                                                ;
+; CBXI_PARAMETER         ; add_sub_ptb  ; Untyped                                                                                                ;
+; AUTO_CARRY_CHAINS      ; ON           ; AUTO_CARRY                                                                                             ;
+; IGNORE_CARRY_BUFFERS   ; OFF          ; IGNORE_CARRY                                                                                           ;
+; AUTO_CASCADE_CHAINS    ; ON           ; AUTO_CASCADE                                                                                           ;
+; IGNORE_CASCADE_BUFFERS ; OFF          ; IGNORE_CASCADE                                                                                         ;
++------------------------+--------------+--------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|lpm_mult:man_product2_mult ;
++------------------------------------------------+--------------+-------------------------------------------------------------------------------+
+; Parameter Name                                 ; Value        ; Type                                                                          ;
++------------------------------------------------+--------------+-------------------------------------------------------------------------------+
+; AUTO_CARRY_CHAINS                              ; ON           ; AUTO_CARRY                                                                    ;
+; IGNORE_CARRY_BUFFERS                           ; OFF          ; IGNORE_CARRY                                                                  ;
+; AUTO_CASCADE_CHAINS                            ; ON           ; AUTO_CASCADE                                                                  ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF          ; IGNORE_CASCADE                                                                ;
+; LPM_WIDTHA                                     ; 24           ; Signed Integer                                                                ;
+; LPM_WIDTHB                                     ; 24           ; Signed Integer                                                                ;
+; LPM_WIDTHP                                     ; 48           ; Signed Integer                                                                ;
+; LPM_WIDTHR                                     ; 0            ; Untyped                                                                       ;
+; LPM_WIDTHS                                     ; 1            ; Signed Integer                                                                ;
+; LPM_REPRESENTATION                             ; UNSIGNED     ; Untyped                                                                       ;
+; LPM_PIPELINE                                   ; 5            ; Signed Integer                                                                ;
+; LATENCY                                        ; 0            ; Untyped                                                                       ;
+; INPUT_A_IS_CONSTANT                            ; NO           ; Untyped                                                                       ;
+; INPUT_B_IS_CONSTANT                            ; NO           ; Untyped                                                                       ;
+; USE_EAB                                        ; OFF          ; Untyped                                                                       ;
+; MAXIMIZE_SPEED                                 ; 5            ; Untyped                                                                       ;
+; DEVICE_FAMILY                                  ; Cyclone IV E ; Untyped                                                                       ;
+; CARRY_CHAIN                                    ; MANUAL       ; Untyped                                                                       ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT          ; TECH_MAPPER_APEX20K                                                           ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; YES          ; Untyped                                                                       ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0            ; Untyped                                                                       ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0            ; Untyped                                                                       ;
+; CBXI_PARAMETER                                 ; mult_a2t     ; Untyped                                                                       ;
+; INPUT_A_FIXED_VALUE                            ; Bx           ; Untyped                                                                       ;
+; INPUT_B_FIXED_VALUE                            ; Bx           ; Untyped                                                                       ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF          ; Untyped                                                                       ;
++------------------------------------------------+--------------+-------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|altshift_taps:delay_man_product_msb_p0_rtl_0 ;
++----------------+----------------+-----------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value          ; Type                                                                                                                              ;
++----------------+----------------+-----------------------------------------------------------------------------------------------------------------------------------+
+; WIDTH_BYTEENA  ; 1              ; Untyped                                                                                                                           ;
+; NUMBER_OF_TAPS ; 1              ; Untyped                                                                                                                           ;
+; TAP_DISTANCE   ; 4              ; Untyped                                                                                                                           ;
+; WIDTH          ; 10             ; Untyped                                                                                                                           ;
+; POWER_UP_STATE ; CLEARED        ; Untyped                                                                                                                           ;
+; CBXI_PARAMETER ; shift_taps_9km ; Untyped                                                                                                                           ;
++----------------+----------------+-----------------------------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|altshift_taps:delay_exp2_bias_rtl_0 ;
++----------------+----------------+--------------------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value          ; Type                                                                                                                     ;
++----------------+----------------+--------------------------------------------------------------------------------------------------------------------------+
+; WIDTH_BYTEENA  ; 1              ; Untyped                                                                                                                  ;
+; NUMBER_OF_TAPS ; 1              ; Untyped                                                                                                                  ;
+; TAP_DISTANCE   ; 3              ; Untyped                                                                                                                  ;
+; WIDTH          ; 51             ; Untyped                                                                                                                  ;
+; POWER_UP_STATE ; CLEARED        ; Untyped                                                                                                                  ;
+; CBXI_PARAMETER ; shift_taps_dkm ; Untyped                                                                                                                  ;
++----------------+----------------+--------------------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; lpm_mult Parameter Settings by Entity Instance                                                                                           ;
++---------------------------------------+--------------------------------------------------------------------------------------------------+
+; Name                                  ; Value                                                                                            ;
++---------------------------------------+--------------------------------------------------------------------------------------------------+
+; Number of entity instances            ; 1                                                                                                ;
+; Entity Instance                       ; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|lpm_mult:man_product2_mult ;
+;     -- LPM_WIDTHA                     ; 24                                                                                               ;
+;     -- LPM_WIDTHB                     ; 24                                                                                               ;
+;     -- LPM_WIDTHP                     ; 48                                                                                               ;
+;     -- LPM_REPRESENTATION             ; UNSIGNED                                                                                         ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                                                                                               ;
+;     -- INPUT_B_IS_CONSTANT            ; NO                                                                                               ;
+;     -- USE_EAB                        ; OFF                                                                                              ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; YES                                                                                              ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                                                                                               ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                                                                                               ;
++---------------------------------------+--------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; altshift_taps Parameter Settings by Entity Instance                                                                                             ;
++----------------------------+--------------------------------------------------------------------------------------------------------------------+
+; Name                       ; Value                                                                                                              ;
++----------------------------+--------------------------------------------------------------------------------------------------------------------+
+; Number of entity instances ; 2                                                                                                                  ;
+; Entity Instance            ; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|altshift_taps:delay_man_product_msb_p0_rtl_0 ;
+;     -- NUMBER_OF_TAPS      ; 1                                                                                                                  ;
+;     -- TAP_DISTANCE        ; 4                                                                                                                  ;
+;     -- WIDTH               ; 10                                                                                                                 ;
+; Entity Instance            ; FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|altshift_taps:delay_exp2_bias_rtl_0          ;
+;     -- NUMBER_OF_TAPS      ; 1                                                                                                                  ;
+;     -- TAP_DISTANCE        ; 3                                                                                                                  ;
+;     -- WIDTH               ; 51                                                                                                                 ;
++----------------------------+--------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 6                           ;
+; cycloneiii_ff         ; 483                         ;
+;     CLR               ; 313                         ;
+;     CLR SCLR          ; 32                          ;
+;     ENA CLR           ; 133                         ;
+;     plain             ; 5                           ;
+; cycloneiii_lcell_comb ; 414                         ;
+;     arith             ; 137                         ;
+;         1 data inputs ; 1                           ;
+;         2 data inputs ; 75                          ;
+;         3 data inputs ; 61                          ;
+;     normal            ; 277                         ;
+;         0 data inputs ; 7                           ;
+;         1 data inputs ; 10                          ;
+;         2 data inputs ; 31                          ;
+;         3 data inputs ; 112                         ;
+;         4 data inputs ; 117                         ;
+; cycloneiii_mac_mult   ; 4                           ;
+; cycloneiii_mac_out    ; 4                           ;
+; cycloneiii_ram_block  ; 61                          ;
+;                       ;                             ;
+; Max LUT depth         ; 5.00                        ;
+; Average LUT depth     ; 1.84                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:02     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
+    Info: Processing started: Mon Aug 10 21:40:27 2020
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off uart_test -c uart_top
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 16 of the 24 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file /users/shuai/onedrive - uw-madison/fumpy/test/1_uart_test/rtl/adder.sv
+    Info (12023): Found entity 1: adder File: C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/1_uart_test/rtl/adder.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /users/shuai/onedrive - uw-madison/fumpy/test/1_uart_test/rtl/alu.sv
+    Info (12023): Found entity 1: ALU File: C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/1_uart_test/rtl/ALU.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /users/shuai/onedrive - uw-madison/fumpy/test/1_uart_test/rtl/negedgedect.v
+    Info (12023): Found entity 1: negedgeDect File: C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/1_uart_test/rtl/negedgeDect.v Line: 5
+Info (12021): Found 1 design units, including 1 entities, in source file /users/shuai/onedrive - uw-madison/fumpy/test/1_uart_test/rtl/posedgedect.v
+    Info (12023): Found entity 1: posedgeDect File: C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/1_uart_test/rtl/posedgeDect.v Line: 5
+Info (12021): Found 1 design units, including 1 entities, in source file /users/shuai/onedrive - uw-madison/fumpy/test/1_uart_test/rtl/uart.sv
+    Info (12023): Found entity 1: uart File: C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/1_uart_test/rtl/uart.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /users/shuai/onedrive - uw-madison/fumpy/test/1_uart_test/rtl/uart_rx.v
+    Info (12023): Found entity 1: uart_RX File: C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/1_uart_test/rtl/uart_RX.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /users/shuai/onedrive - uw-madison/fumpy/test/1_uart_test/rtl/uart_tx.v
+    Info (12023): Found entity 1: uart_TX File: C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/1_uart_test/rtl/uart_TX.v Line: 1
+Info (12021): Found 22 design units, including 22 entities, in source file ip_core/fp_add_sub.v
+    Info (12023): Found entity 1: FP_add_sub_altbarrel_shift_35e File: C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/1_uart_test/par/ip_core/FP_add_sub.v Line: 50
+    Info (12023): Found entity 2: FP_add_sub_altbarrel_shift_98g File: C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/1_uart_test/par/ip_core/FP_add_sub.v Line: 115
+    Info (12023): Found entity 3: FP_add_sub_altpriority_encoder_3e8 File: C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/1_uart_test/par/ip_core/FP_add_sub.v Line: 212
+    Info (12023): Found entity 4: FP_add_sub_altpriority_encoder_6e8 File: C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/1_uart_test/par/ip_core/FP_add_sub.v Line: 231
+    Info (12023): Found entity 5: FP_add_sub_altpriority_encoder_be8 File: C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/1_uart_test/par/ip_core/FP_add_sub.v Line: 264
+    Info (12023): Found entity 6: FP_add_sub_altpriority_encoder_3v7 File: C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/1_uart_test/par/ip_core/FP_add_sub.v Line: 309
+    Info (12023): Found entity 7: FP_add_sub_altpriority_encoder_6v7 File: C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/1_uart_test/par/ip_core/FP_add_sub.v Line: 325
+    Info (12023): Found entity 8: FP_add_sub_altpriority_encoder_bv7 File: C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/1_uart_test/par/ip_core/FP_add_sub.v Line: 353
+    Info (12023): Found entity 9: FP_add_sub_altpriority_encoder_uv8 File: C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/1_uart_test/par/ip_core/FP_add_sub.v Line: 381
+    Info (12023): Found entity 10: FP_add_sub_altpriority_encoder_ue9 File: C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/1_uart_test/par/ip_core/FP_add_sub.v Line: 413
+    Info (12023): Found entity 11: FP_add_sub_altpriority_encoder_ou8 File: C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/1_uart_test/par/ip_core/FP_add_sub.v Line: 446
+    Info (12023): Found entity 12: FP_add_sub_altpriority_encoder_nh8 File: C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/1_uart_test/par/ip_core/FP_add_sub.v Line: 519
+    Info (12023): Found entity 13: FP_add_sub_altpriority_encoder_qh8 File: C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/1_uart_test/par/ip_core/FP_add_sub.v Line: 538
+    Info (12023): Found entity 14: FP_add_sub_altpriority_encoder_vh8 File: C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/1_uart_test/par/ip_core/FP_add_sub.v Line: 571
+    Info (12023): Found entity 15: FP_add_sub_altpriority_encoder_ii9 File: C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/1_uart_test/par/ip_core/FP_add_sub.v Line: 604
+    Info (12023): Found entity 16: FP_add_sub_altpriority_encoder_n28 File: C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/1_uart_test/par/ip_core/FP_add_sub.v Line: 653
+    Info (12023): Found entity 17: FP_add_sub_altpriority_encoder_q28 File: C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/1_uart_test/par/ip_core/FP_add_sub.v Line: 669
+    Info (12023): Found entity 18: FP_add_sub_altpriority_encoder_v28 File: C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/1_uart_test/par/ip_core/FP_add_sub.v Line: 697
+    Info (12023): Found entity 19: FP_add_sub_altpriority_encoder_i39 File: C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/1_uart_test/par/ip_core/FP_add_sub.v Line: 725
+    Info (12023): Found entity 20: FP_add_sub_altpriority_encoder_cna File: C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/1_uart_test/par/ip_core/FP_add_sub.v Line: 753
+    Info (12023): Found entity 21: FP_add_sub_altfp_add_sub_lkj File: C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/1_uart_test/par/ip_core/FP_add_sub.v Line: 806
+    Info (12023): Found entity 22: FP_add_sub File: C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/1_uart_test/par/ip_core/FP_add_sub.v Line: 3315
+Info (12021): Found 2 design units, including 2 entities, in source file ip_core/fp_mult.v
+    Info (12023): Found entity 1: FP_mult_altfp_mult_cbo File: C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/1_uart_test/par/ip_core/FP_mult.v Line: 46
+    Info (12023): Found entity 2: FP_mult File: C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/1_uart_test/par/ip_core/FP_mult.v Line: 812
+Info (12127): Elaborating entity "adder" for the top level hierarchy
+Warning (10230): Verilog HDL assignment warning at adder.sv(80): truncated value with size 32 to match size of target (4) File: C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/1_uart_test/rtl/adder.sv Line: 80
+Warning (10230): Verilog HDL assignment warning at adder.sv(84): truncated value with size 32 to match size of target (4) File: C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/1_uart_test/rtl/adder.sv Line: 84
+Info (12128): Elaborating entity "uart" for hierarchy "uart:myUART" File: C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/1_uart_test/rtl/adder.sv Line: 47
+Info (12128): Elaborating entity "uart_RX" for hierarchy "uart:myUART|uart_RX:myRX" File: C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/1_uart_test/rtl/uart.sv Line: 28
+Info (12128): Elaborating entity "uart_TX" for hierarchy "uart:myUART|uart_TX:myTX" File: C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/1_uart_test/rtl/uart.sv Line: 41
+Info (12128): Elaborating entity "posedgeDect" for hierarchy "posedgeDect:pd1" File: C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/1_uart_test/rtl/adder.sv Line: 54
+Info (12128): Elaborating entity "FP_mult" for hierarchy "FP_mult:myfpm" File: C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/1_uart_test/rtl/adder.sv Line: 72
+Info (12128): Elaborating entity "FP_mult_altfp_mult_cbo" for hierarchy "FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component" File: C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/1_uart_test/par/ip_core/FP_mult.v Line: 833
+Info (12128): Elaborating entity "lpm_add_sub" for hierarchy "FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|lpm_add_sub:exp_add_adder" File: C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/1_uart_test/par/ip_core/FP_mult.v Line: 678
+Info (12130): Elaborated megafunction instantiation "FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|lpm_add_sub:exp_add_adder" File: C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/1_uart_test/par/ip_core/FP_mult.v Line: 678
+Info (12133): Instantiated megafunction "FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|lpm_add_sub:exp_add_adder" with the following parameter: File: C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/1_uart_test/par/ip_core/FP_mult.v Line: 678
+    Info (12134): Parameter "lpm_pipeline" = "1"
+    Info (12134): Parameter "lpm_width" = "9"
+    Info (12134): Parameter "lpm_type" = "lpm_add_sub"
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_e4e.tdf
+    Info (12023): Found entity 1: add_sub_e4e File: C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/1_uart_test/par/db/add_sub_e4e.tdf Line: 22
+Info (12128): Elaborating entity "add_sub_e4e" for hierarchy "FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|lpm_add_sub:exp_add_adder|add_sub_e4e:auto_generated" File: c:/intelfpga/18.1/quartus/libraries/megafunctions/lpm_add_sub.tdf Line: 118
+Info (12128): Elaborating entity "lpm_add_sub" for hierarchy "FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|lpm_add_sub:exp_adj_adder" File: C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/1_uart_test/par/ip_core/FP_mult.v Line: 702
+Info (12130): Elaborated megafunction instantiation "FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|lpm_add_sub:exp_adj_adder" File: C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/1_uart_test/par/ip_core/FP_mult.v Line: 702
+Info (12133): Instantiated megafunction "FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|lpm_add_sub:exp_adj_adder" with the following parameter: File: C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/1_uart_test/par/ip_core/FP_mult.v Line: 702
+    Info (12134): Parameter "lpm_pipeline" = "0"
+    Info (12134): Parameter "lpm_width" = "10"
+    Info (12134): Parameter "lpm_type" = "lpm_add_sub"
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_d8c.tdf
+    Info (12023): Found entity 1: add_sub_d8c File: C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/1_uart_test/par/db/add_sub_d8c.tdf Line: 22
+Info (12128): Elaborating entity "add_sub_d8c" for hierarchy "FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|lpm_add_sub:exp_adj_adder|add_sub_d8c:auto_generated" File: c:/intelfpga/18.1/quartus/libraries/megafunctions/lpm_add_sub.tdf Line: 118
+Info (12128): Elaborating entity "lpm_add_sub" for hierarchy "FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|lpm_add_sub:exp_bias_subtr" File: C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/1_uart_test/par/ip_core/FP_mult.v Line: 726
+Info (12130): Elaborated megafunction instantiation "FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|lpm_add_sub:exp_bias_subtr" File: C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/1_uart_test/par/ip_core/FP_mult.v Line: 726
+Info (12133): Instantiated megafunction "FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|lpm_add_sub:exp_bias_subtr" with the following parameter: File: C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/1_uart_test/par/ip_core/FP_mult.v Line: 726
+    Info (12134): Parameter "lpm_direction" = "SUB"
+    Info (12134): Parameter "lpm_pipeline" = "0"
+    Info (12134): Parameter "lpm_representation" = "UNSIGNED"
+    Info (12134): Parameter "lpm_width" = "10"
+    Info (12134): Parameter "lpm_type" = "lpm_add_sub"
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_0lg.tdf
+    Info (12023): Found entity 1: add_sub_0lg File: C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/1_uart_test/par/db/add_sub_0lg.tdf Line: 22
+Info (12128): Elaborating entity "add_sub_0lg" for hierarchy "FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|lpm_add_sub:exp_bias_subtr|add_sub_0lg:auto_generated" File: c:/intelfpga/18.1/quartus/libraries/megafunctions/lpm_add_sub.tdf Line: 118
+Info (12128): Elaborating entity "lpm_add_sub" for hierarchy "FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|lpm_add_sub:man_round_adder" File: C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/1_uart_test/par/ip_core/FP_mult.v Line: 752
+Info (12130): Elaborated megafunction instantiation "FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|lpm_add_sub:man_round_adder" File: C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/1_uart_test/par/ip_core/FP_mult.v Line: 752
+Info (12133): Instantiated megafunction "FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|lpm_add_sub:man_round_adder" with the following parameter: File: C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/1_uart_test/par/ip_core/FP_mult.v Line: 752
+    Info (12134): Parameter "lpm_pipeline" = "0"
+    Info (12134): Parameter "lpm_width" = "25"
+    Info (12134): Parameter "lpm_type" = "lpm_add_sub"
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_ptb.tdf
+    Info (12023): Found entity 1: add_sub_ptb File: C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/1_uart_test/par/db/add_sub_ptb.tdf Line: 22
+Info (12128): Elaborating entity "add_sub_ptb" for hierarchy "FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|lpm_add_sub:man_round_adder|add_sub_ptb:auto_generated" File: c:/intelfpga/18.1/quartus/libraries/megafunctions/lpm_add_sub.tdf Line: 118
+Info (12128): Elaborating entity "lpm_mult" for hierarchy "FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|lpm_mult:man_product2_mult" File: C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/1_uart_test/par/ip_core/FP_mult.v Line: 774
+Info (12130): Elaborated megafunction instantiation "FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|lpm_mult:man_product2_mult" File: C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/1_uart_test/par/ip_core/FP_mult.v Line: 774
+Info (12133): Instantiated megafunction "FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|lpm_mult:man_product2_mult" with the following parameter: File: C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/1_uart_test/par/ip_core/FP_mult.v Line: 774
+    Info (12134): Parameter "lpm_pipeline" = "5"
+    Info (12134): Parameter "lpm_representation" = "UNSIGNED"
+    Info (12134): Parameter "lpm_widtha" = "24"
+    Info (12134): Parameter "lpm_widthb" = "24"
+    Info (12134): Parameter "lpm_widthp" = "48"
+    Info (12134): Parameter "lpm_widths" = "1"
+    Info (12134): Parameter "lpm_type" = "lpm_mult"
+    Info (12134): Parameter "lpm_hint" = "DEDICATED_MULTIPLIER_CIRCUITRY=YES"
+Info (12021): Found 1 design units, including 1 entities, in source file db/mult_a2t.tdf
+    Info (12023): Found entity 1: mult_a2t File: C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/1_uart_test/par/db/mult_a2t.tdf Line: 35
+Info (12128): Elaborating entity "mult_a2t" for hierarchy "FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|lpm_mult:man_product2_mult|mult_a2t:auto_generated" File: c:/intelfpga/18.1/quartus/libraries/megafunctions/lpm_mult.tdf Line: 376
+Info (13014): Ignored 158 buffer(s)
+    Info (13019): Ignored 158 SOFT buffer(s)
+Info (19000): Inferred 2 megafunctions from design logic
+    Info (276034): Inferred altshift_taps megafunction from the following design logic: "FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|delay_man_product_msb_p0_rtl_0"
+        Info (286033): Parameter NUMBER_OF_TAPS set to 1
+        Info (286033): Parameter TAP_DISTANCE set to 4
+        Info (286033): Parameter WIDTH set to 10
+    Info (276034): Inferred altshift_taps megafunction from the following design logic: "FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|delay_exp2_bias_rtl_0"
+        Info (286033): Parameter NUMBER_OF_TAPS set to 1
+        Info (286033): Parameter TAP_DISTANCE set to 3
+        Info (286033): Parameter WIDTH set to 51
+Info (12130): Elaborated megafunction instantiation "FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|altshift_taps:delay_man_product_msb_p0_rtl_0"
+Info (12133): Instantiated megafunction "FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|altshift_taps:delay_man_product_msb_p0_rtl_0" with the following parameter:
+    Info (12134): Parameter "NUMBER_OF_TAPS" = "1"
+    Info (12134): Parameter "TAP_DISTANCE" = "4"
+    Info (12134): Parameter "WIDTH" = "10"
+Info (12021): Found 1 design units, including 1 entities, in source file db/shift_taps_9km.tdf
+    Info (12023): Found entity 1: shift_taps_9km File: C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/1_uart_test/par/db/shift_taps_9km.tdf Line: 28
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_g1b1.tdf
+    Info (12023): Found entity 1: altsyncram_g1b1 File: C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/1_uart_test/par/db/altsyncram_g1b1.tdf Line: 27
+Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_4pf.tdf
+    Info (12023): Found entity 1: cntr_4pf File: C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/1_uart_test/par/db/cntr_4pf.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_r8h.tdf
+    Info (12023): Found entity 1: cntr_r8h File: C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/1_uart_test/par/db/cntr_r8h.tdf Line: 25
+Info (12130): Elaborated megafunction instantiation "FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|altshift_taps:delay_exp2_bias_rtl_0"
+Info (12133): Instantiated megafunction "FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|altshift_taps:delay_exp2_bias_rtl_0" with the following parameter:
+    Info (12134): Parameter "NUMBER_OF_TAPS" = "1"
+    Info (12134): Parameter "TAP_DISTANCE" = "3"
+    Info (12134): Parameter "WIDTH" = "51"
+Info (12021): Found 1 design units, including 1 entities, in source file db/shift_taps_dkm.tdf
+    Info (12023): Found entity 1: shift_taps_dkm File: C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/1_uart_test/par/db/shift_taps_dkm.tdf Line: 30
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_v861.tdf
+    Info (12023): Found entity 1: altsyncram_v861 File: C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/1_uart_test/par/db/altsyncram_v861.tdf Line: 27
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_24e.tdf
+    Info (12023): Found entity 1: add_sub_24e File: C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/1_uart_test/par/db/add_sub_24e.tdf Line: 22
+Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_6pf.tdf
+    Info (12023): Found entity 1: cntr_6pf File: C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/1_uart_test/par/db/cntr_6pf.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_ogc.tdf
+    Info (12023): Found entity 1: cmpr_ogc File: C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/1_uart_test/par/db/cmpr_ogc.tdf Line: 22
+Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_p8h.tdf
+    Info (12023): Found entity 1: cntr_p8h File: C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/1_uart_test/par/db/cntr_p8h.tdf Line: 25
+Info (13000): Registers with preset signals will power-up high File: C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/1_uart_test/rtl/uart_TX.v Line: 7
+Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 4 registers lost all their fanouts during netlist optimizations.
+Info (144001): Generated suppressed messages file C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/1_uart_test/par/output_files/uart_top.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 702 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 3 input pins
+    Info (21059): Implemented 3 output pins
+    Info (21061): Implemented 628 logic cells
+    Info (21064): Implemented 61 RAM segments
+    Info (21062): Implemented 7 DSP elements
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 4864 megabytes
+    Info: Processing ended: Mon Aug 10 21:40:41 2020
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:23
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/1_uart_test/par/output_files/uart_top.map.smsg.
+
+

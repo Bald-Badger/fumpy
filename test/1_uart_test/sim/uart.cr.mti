@@ -1,0 +1,57 @@
+{C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/uart_test/rtl/adder_tb.sv} {1 {vlog -work work -sv -stats=none {C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/uart_test/rtl/adder_tb.sv}
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module adder_tb
+
+Top level modules:
+	adder_tb
+
+} {} {}} {C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/uart_test/rtl/uart_RX.v} {1 {vlog -work work -stats=none {C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/uart_test/rtl/uart_RX.v}
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module uart_RX
+
+Top level modules:
+	uart_RX
+
+} {} {}} {C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/uart_test/rtl/ALU.sv} {1 {vlog -work work -sv -stats=none {C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/uart_test/rtl/ALU.sv}
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module ALU
+
+Top level modules:
+	ALU
+
+} {} {}} {C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/uart_test/rtl/edgeTB.sv} {1 {vlog -work work -sv -stats=none {C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/uart_test/rtl/edgeTB.sv}
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module edgeTB
+
+Top level modules:
+	edgeTB
+
+} {} {}} {C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/uart_test/rtl/posedgeDect.v} {1 {vlog -work work -stats=none {C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/uart_test/rtl/posedgeDect.v}
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module posedgeDect
+
+Top level modules:
+	posedgeDect
+
+} {} {}} {C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/uart_test/rtl/negedgeDect.v} {1 {vlog -work work -stats=none {C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/uart_test/rtl/negedgeDect.v}
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module negedgeDect
+
+Top level modules:
+	negedgeDect
+
+} {} {}} {C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/uart_test/rtl/uart_TX.v} {1 {vlog -work work -stats=none {C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/uart_test/rtl/uart_TX.v}
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module uart_TX
+
+Top level modules:
+	uart_TX
+
+} {} {}} {C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/uart_test/rtl/uart.sv} {1 {vlog -work work -sv -stats=none {C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/uart_test/rtl/uart.sv}
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module uart
+
+Top level modules:
+	uart
+
+} {} {}}

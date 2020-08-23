@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Fri Aug 07 04:46:33 2020
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Standard Edition
+Revision Name : sdram_rw_test
+Top-level Entity Name : sdram_rw_test
+Family : Cyclone IV E
+Total logic elements : 783
+    Total combinational functions : 635
+    Dedicated logic registers : 465
+Total registers : 465
+Total pins : 59
+Total virtual pins : 0
+Total memory bits : 24,576
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 1

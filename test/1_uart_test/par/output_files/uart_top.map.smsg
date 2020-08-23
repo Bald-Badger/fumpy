@@ -1,0 +1,1 @@
+Info (10281): Verilog HDL Declaration information at adder.sv(20): object "calc" differs only in case from object "CALC" in the same scope File: C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/1_uart_test/rtl/adder.sv Line: 20

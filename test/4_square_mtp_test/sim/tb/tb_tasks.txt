@@ -1,0 +1,213 @@
+/*
+task ;
+begin
+
+end
+endtask
+*/
+task init;
+begin
+	fptr1 = $fopen("CH1dmp.txt","w");			// open file to write CH1 dumps to
+	fptr2 = $fopen("CH2dmp.txt","w");			// open file to write CH2 dumps to
+	fptr3 = $fopen("CH3dmp.txt","w");			// open file to write CH3 dumps to
+	fptr4 = $fopen("CH4dmp.txt","w");			// open file to write CH4 dumps to
+	fptr5 = $fopen("CH5dmp.txt","w");			// open file to write CH5 dumps to
+	en_AFE = 0;
+	strt_tx = 0;								// do not initiate protocol trigger for now
+	
+	//// Initialization steps (perhaps should be a task) ////
+    send_cmd = 0;
+    REF_CLK = 0;
+    RST_n = 0;						// assert reset
+    repeat (2) @(posedge REF_CLK);
+    @(negedge REF_CLK);				// on negedge REF_CLK after a few REF clocks
+    RST_n = 1;						// deasert reset
+    @(negedge REF_CLK);
+end
+endtask
+
+integer i;
+task wait_pos_ack;
+begin
+	fork
+		begin: TIMEOUT1;
+			for (i = 0; i < 2333; i = i+1) begin
+				@(negedge clk);
+				if (i == 2333) begin
+				$display("ERR: timed out waiting for response from DUT");
+				$stop();
+				end
+			end
+		end
+		begin
+			@(posedge resp_rdy);
+			disable TIMEOUT1;
+			i = 0;
+			if (pos_ack) begin
+				$display ("pos ack received");
+			end else if (neg_ack) begin
+				$error ("neg ack received !! abort");
+				$stop();
+			end
+		end
+	join
+end
+endtask
+
+
+task send_command;
+begin
+    @(posedge clk);
+    send_cmd = 1;
+    @(posedge clk);
+    send_cmd = 0;
+	//////////////////////////////////////
+    // Now wait for command to be sent //
+    ////////////////////////////////////
+    @(posedge cmd_sent);
+    @(posedge clk);
+	/// should probably be checking for posAck here ///
+	//@(posedge pos_ack);
+end
+endtask
+
+// read trig config polling for capture_done bit to be set ////
+task pull_capture_done;
+begin
+    capture_done_bit = 1'b0;			// capture_done not set yet
+	loop_cnt = 0;
+	/// This whole polling for capture done should be a task ///
+  	while (!capture_done_bit)
+	  begin
+	    repeat(400) @(posedge clk);		// delay a while between reads
+	    loop_cnt = loop_cnt + 1;
+	    if (loop_cnt>200) begin
+	      $display("ERROR: capture done bit never set");
+	      $stop();
+	    end
+        host_cmd = {TRIG_CFG_RD,8'h00};	// read TRIG_CFG which has capture_done bit
+        send_command();
+	    ////////////////////////////
+	    // Now wait for response //
+	    //////////////////////////
+	    @(posedge resp_rdy)
+	    if (resp&8'h20)				// is capture_done bits set?
+	      capture_done_bit = 1'b1;
+	    clr_resp_rdy = 1;
+	    @(posedge clk);
+	    clr_resp_rdy = 0;
+	end
+	$display("INFO: capture_done bit is set");
+end
+endtask
+
+
+task write_dump_file;
+input integer ptr;
+begin
+    for (sample=0; sample<384; sample++)
+      fork
+        begin: timeout1
+	      repeat(6000) @(posedge clk);
+	      $display("ERR: Only received %d of 384 bytes on dump",sample);
+		  $stop();
+	      sample = 384;		// break out of loop
+	    end
+	    begin
+	      @(posedge resp_rdy);
+	      disable timeout1;
+          $fdisplay(ptr,"%h",resp);		// write to CH1dmp.txt
+	      clr_resp_rdy = 1;
+	      @(posedge clk);
+	      clr_resp_rdy = 0;
+	      if (sample%32==0) $display("At sample %d of dump",sample);
+	    end
+      join
+end
+endtask
+
+
+task clean;
+begin
+	repeat(10) @(posedge clk);
+	$fclose(fptr1);
+	$fclose(fptr2);
+	$fclose(fptr3);
+	$fclose(fptr4);
+	$fclose(fptr5); 
+end
+endtask
+
+
+task compare_CH1;
+begin
+  fexp = $fopen("test1_expected.txt","r");
+  fptr1 = $fopen("CH1dmp.txt","r");
+  found_res = $fscanf(fptr1,"%h",res);
+  found_expected = $fscanf(fexp,"%h",exp);
+  $display("Starting comparison for CH1");
+  sample = 1;
+  mismatches = 0;
+  while (found_expected==1) begin
+    if (res!=exp)
+	  begin
+	    $display("At sample %d the result of %h does not match expected of %h",sample,res,exp);
+		mismatches = mismatches + 1;
+		if (mismatches>150) begin
+		  $display("ERR: Too many mismatches...stopping test1");
+		  $display("Total mismatches: %d", mismatches);
+		  $stop();
+		end
+	  end
+	sample = sample + 1;
+    found_res = $fscanf(fptr1,"%h",res);
+    found_expected = $fscanf(fexp,"%h",exp);
+  end	
+  $display("YAHOO! comparison completed, test1 passed!");
+  $display("Total mismatches: %d", mismatches);
+end
+endtask
+
+task dump_all;
+begin
+	//// Now request CH1 dump ////
+    host_cmd = {DUMP_CH1,8'h00};				// dump CH1 results
+    send_command();
+
+	//// Now collect CH1 dump into a file ////
+	write_dump_file(fptr1);
+	$display("CH1 data dumped");
+	
+	//// Now request CH2 dump ////
+    host_cmd = {DUMP_CH2,8'h00};				// dump CH1 results
+    send_command();
+
+	//// Now collect CH2 dump into a file ////
+	write_dump_file(fptr2);
+	$display("CH2 data dumped");
+	
+	//// Now request CH3 dump ////
+    host_cmd = {DUMP_CH3,8'h00};				// dump CH1 results
+    send_command();
+
+	//// Now collect CH3 dump into a file ////
+	write_dump_file(fptr3);
+	$display("CH3 data dumped");
+	
+	//// Now request CH4 dump ////
+    host_cmd = {DUMP_CH4,8'h00};				// dump CH1 results
+    send_command();
+
+	//// Now collect CH4 dump into a file ////
+	write_dump_file(fptr4);
+	$display("CH4 data dumped");
+	
+	//// Now request CH5 dump ////
+    host_cmd = {DUMP_CH5,8'h00};				// dump CH1 results
+    send_command();
+
+	//// Now collect CH5 dump into a file ////
+	write_dump_file(fptr5);
+	$display("CH5 data dumped");
+end
+endtask

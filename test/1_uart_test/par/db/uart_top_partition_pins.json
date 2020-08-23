@@ -1,0 +1,33 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "TX",
+					"strict" : false
+				},
+				{
+					"name" : "RX_debug",
+					"strict" : false
+				},
+				{
+					"name" : "TX_debug",
+					"strict" : false
+				},
+				{
+					"name" : "RX",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "rst_n",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,4 @@
+alter numpy's base function: dot
+insted of using CBLAS, use the FPGA for computation
+see if it will work
+wish I remembered to use venv, or I'm funked
