@@ -28,11 +28,11 @@
 *example*
 *sopc_*
 
-*/5_ver_1.0/db/
-*/5_ver_1.0/incremental_db/
-*/5_ver_1.0/simulation/
-*/5_ver_1.0/timing/
-*/5_ver_1.0/testbench/
-*/5_ver_1.0/*_sim/
+*/5_ver_1.0/*/db/
+*/5_ver_1.0/*/incremental_db/
+*/5_ver_1.0/*/simulation/
+*/5_ver_1.0/*/timing/
+*/5_ver_1.0/*/testbench/
+*/5_ver_1.0/*/*_sim/
 
 
