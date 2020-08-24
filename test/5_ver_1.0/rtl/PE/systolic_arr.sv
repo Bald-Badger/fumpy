@@ -1,6 +1,6 @@
 `include "../param.vh"
 module systolic_arr (
-//module square_mpt_test (
+
 	//global input 
 	input clk,
 	input rst_n,

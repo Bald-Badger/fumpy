@@ -36,28 +36,30 @@ module square_mpt_test (
 	reg[7:0]	uart_rx_data;
 	logic[7:0]	uart_tx_data;
 
+	wire [31:0] fp_data;
 
 	// RAM wire define
 	wire [7:0] ram_w0_addr, ram_w1_addr;	// address wire
 	wire [7:0] ram_a0_addr, ram_a1_addr;
+	wire [10:0] ram_c_addr[`N-1:0][`N-1:0];
 
-	// wire [31:0] ram_w0_data_in, ram_w1_data_in;
-	// wire [31:0] ram_a0_data_in, ram_a1_data_in;	// data in
-	wire [31:0] fp_data;
 
 	wire [31:0] ram_w0_data_out, ram_w1_data_out;
 	wire [31:0] ram_a0_data_out, ram_a1_data_out;	// data out
+	wire [31:0] ram_c_data_out[`N-1:0][`N-1:0];
 
 	wire ram_w0_rden, ram_w1_rden;
 	wire ram_a0_rden, ram_a1_rden;	// read enable
+	wire ram_c_rden[`N-1:0][`N-1:0];
 
 	wire ram_w0_wren, ram_w1_wren;
 	wire ram_a0_wren, ram_a1_wren;	// write enable
-
+	wire ram_c_wren[`N-1:0][`N-1:0];
+	
 	// data wire define
 	wire[31:0]	a_in	[`N-1:0];			// a input
 	wire[31:0]	w_in	[`N-1:0];			// b (weight) input
-	wire[31:0] 	c_out	[`N-1:0][`N-1:0];	// result output
+	wire[31:0] 	c_out	[`N-1:0][`N-1:0];	// result output from MAC
 	
 	// MAC ctrl wire define
 	wire[`N-1:0][`N-1:0] en_mult;
@@ -206,6 +208,42 @@ module square_mpt_test (
 		.clr_mult	(clr_mult),
 		.en_accum	(en_accum),
 		.clr_accum	(clr_accum)
+	);
+	
+	RAM_32b_result c00 (
+		.address(ram_c_addr[0][0]),
+		.clock(clk),
+		.data(c_out[0][0]),
+		.rden(ram_c_rden[0][0]),
+		.wren(ram_c_wren[0][0]),
+		.q(ram_c_data_out[0][0])
+	);
+	
+	RAM_32b_result c01 (
+		.address(ram_c_addr[0][1]),
+		.clock(clk),
+		.data(c_out[0][1]),
+		.rden(ram_c_rden[0][1]),
+		.wren(ram_c_wren[0][1]),
+		.q(ram_c_data_out[0][1])
+	);
+	
+	RAM_32b_result c10 (
+		.address(ram_c_addr[1][0]),
+		.clock(clk),
+		.data(c_out[1][0]),
+		.rden(ram_c_rden[1][0]),
+		.wren(ram_c_wren[1][0]),
+		.q(ram_c_data_out[1][0])
+	);
+	
+	RAM_32b_result c11 (
+		.address(ram_c_addr[1][1]),
+		.clock(clk),
+		.data(c_out[1][1]),
+		.rden(ram_c_rden[1][1]),
+		.wren(ram_c_wren[1][1]),
+		.q(ram_c_data_out[1][1])
 	);
 
 endmodule

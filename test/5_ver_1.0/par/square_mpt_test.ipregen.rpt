@@ -1,5 +1,5 @@
 IP Upgrade report for square_mpt_test
-Sun Aug 23 10:28:38 2020
+Sun Aug 23 19:46:20 2020
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 
 
@@ -34,7 +34,7 @@ refer to the applicable agreement for further details.
 +--------------------------------------------------------------------------------+
 ; IP Upgrade Summary                                                             ;
 +------------------------------+-------------------------------------------------+
-; IP Components Upgrade Status ; Failed - Sun Aug 23 10:28:38 2020               ;
+; IP Components Upgrade Status ; Failed - Sun Aug 23 19:46:20 2020               ;
 ; Quartus Prime Version        ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
 ; Revision Name                ; square_mpt_test                                 ;
 ; Top-level Entity Name        ; square_mpt_test                                 ;
@@ -48,7 +48,7 @@ refer to the applicable agreement for further details.
 Info (23030): Evaluation of Tcl script c:/intelfpga/18.1/quartus/common/tcl/internal/ip_regen/ip_regen.tcl was successful
 Info: Quartus Prime Shell was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 4857 megabytes
-    Info: Processing ended: Sun Aug 23 10:28:38 2020
+    Info: Processing ended: Sun Aug 23 19:46:20 2020
     Info: Elapsed time: 00:00:08
     Info: Total CPU time (on all processors): 00:00:18
 
