@@ -2,7 +2,7 @@
 
 /*
 tested dimentions:
-matrix A: should all clear
+matrix A: should all pass
 matrix W:
 	h2w2: pass
 	h2w4: pass
@@ -16,6 +16,11 @@ module FSM (
 	input wire clk,
 	input wire rst_n,
 	
+	// global I/O,
+	output logic data_load_done,
+	output logic fsm_working,
+	input logic calc_done,
+	
 	// signal input
 	input wire uart_tx_done,
 	input wire uart_rx_done,
@@ -27,10 +32,7 @@ module FSM (
 	output logic [7:0] ram_a0_addr,
 	output logic [7:0] ram_a1_addr,
 	
-	output wire ram_w0_rden,
-	output wire ram_w1_rden,
-	output wire ram_a0_rden,
-	output wire ram_a1_rden,
+	input logic  [10:0] ram_c_addr[`N-1:0][`N-1:0],
 	
 	output logic ram_w0_wren,
 	output logic ram_w1_wren,

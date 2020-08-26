@@ -29,6 +29,8 @@ module systolic_arr (
 	assign a_in[0] = a_in_raw[0];
 	assign w_in[0] = w_in_raw[0];
 	
+	// delay the input of a1 and w1 by one cycle
+	// this is the key for systolic array alignment
 	dff_32b a1DelayReg_1 (
 		.clk(clk),
 		.rst_n(rst_n),

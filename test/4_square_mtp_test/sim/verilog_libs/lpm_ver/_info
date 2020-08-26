@@ -10,7 +10,7 @@ z2
 cModel Technology
 Z0 dC:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/sim
 vlpm_abs
-Z1 !s110 1598082673
+Z1 !s110 1598439413
 !i10b 1
 !s100 C1CEPTa>h1KTS35mS<k;H0
 !s11b ^b7bN9[4=I`_;L4gn[RUg0
@@ -25,7 +25,7 @@ Z6 OL;L;2019.2;69
 r1
 !s85 0
 31
-Z7 !s108 1598082673.000000
+Z7 !s108 1598439413.000000
 !s107 c:/intelfpga/18.1/quartus/eda/sim_lib/220model.v|
 Z8 !s90 -reportprogress|300|-vlog01compat|-work|lpm_ver|c:/intelfpga/18.1/quartus/eda/sim_lib/220model.v|
 !i113 0

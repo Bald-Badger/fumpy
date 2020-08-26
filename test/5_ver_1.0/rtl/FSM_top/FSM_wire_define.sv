@@ -1,43 +1,6 @@
 // major wire/reg/logic defines
 // and some immdeiate assignments
 
-// ports, commented,
-// for IDE auto-fill
-/*
-	input wire clk,
-	input wire rst_n,
-	
-	// signal input
-	input wire uart_tx_done,
-	input wire uart_rx_done,
-	input logic[7:0] uart_rx_data,
-	
-	// signal output
-	output logic [7:0] ram_w0_addr,
-	output logic [7:0] ram_w1_addr,
-	output logic [7:0] ram_a0_addr,
-	output logic [7:0] ram_a1_addr,
-	
-	output wire ram_w0_rden,
-	output wire ram_w1_rden,
-	output wire ram_a0_rden,
-	output wire ram_a1_rden,
-	
-	output logic ram_w0_wren,
-	output logic ram_w1_wren,
-	output logic ram_a0_wren,
-	output logic ram_a1_wren,
-	
-	output logic[7:0] uart_tx_data,
-	output logic uart_send_data,
-	
-	// data output
-	output logic[31:0] fp_data,
-	
-	// others
-	output logic[3:0] state_val	// for debug, feeds into seg display
-*/
-
 // parameters
 	reg[7:0]	a_height, a_width;
 	reg[7:0] 	w_height, w_width;
@@ -50,7 +13,7 @@
 	reg 		uart_tx_data_load_ack1,
 				uart_tx_data_load_ack2,
 				uart_tx_data_load_ack3;
-				
+
 
 // states
 	// define top layer states
@@ -182,12 +145,12 @@
 // sub-FSM begin/end indicators
 	reg matrix_a_rcv_start; // MATRIX_1_RCV state
 	reg matrix_w_rcv_start; // MATRIX_2_RCV state
-	reg calc_start;			// CALC state
+	reg calc_start;			// CALC state // useless? 
 	reg matrix_3_snd_start; // MATRIX_3_SND state
 	
 	reg matrix_a_rcv_done;
 	reg matrix_w_rcv_done;
-	logic calc_done;
+
 	reg matrix_3_snd_done;
 	
 	reg init_matrix_a_param;
@@ -200,6 +163,8 @@
 	wire[7:0] ram_a_select;
 	wire[7:0] ram_w_select;
 
-
+// project-global state indicators
+	assign data_load_done = matrix_w_rcv_done;
+	assign fsm_working = (state != IDLE);
 
 	

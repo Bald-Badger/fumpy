@@ -33,6 +33,7 @@ if {[file exists rtl_work]} {
 vlib rtl_work
 vmap work rtl_work
 
+vlog -vlog01compat -work work +incdir+C:/Users/Shuai/OneDrive\ -\ UW-Madison/fumpy/test/4_square_mtp_test/rtl/UART {C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/UART/posedgeDect_single.v}
 vlog -vlog01compat -work work +incdir+C:/Users/Shuai/OneDrive\ -\ UW-Madison/fumpy/test/4_square_mtp_test/rtl/UART {C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/UART/uart_TX.v}
 vlog -vlog01compat -work work +incdir+C:/Users/Shuai/OneDrive\ -\ UW-Madison/fumpy/test/4_square_mtp_test/rtl/UART {C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/UART/uart_RX.v}
 vlog -vlog01compat -work work +incdir+C:/Users/Shuai/OneDrive\ -\ UW-Madison/fumpy/test/4_square_mtp_test/rtl/UART {C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/UART/posedgeDect.v}
