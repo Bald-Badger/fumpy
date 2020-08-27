@@ -1,23 +1,22 @@
 Info: Start Nativelink Simulation process
-Info: NativeLink has detected Verilog design -- Verilog simulation models will be used
+executing command line: ip-make-simscript --nativelink-mode --output-directory=square_mpt_test_iputf_input --spd=C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/5_ver_1.0/rtl/FP/FP32_accum.spd 
+Internal error: Failed to run ip-make-simscript: 2020.08.27.08:18:34 Error: Unrecognized switch <b>1</b>
+2020.08.27.08:18:34 Error: Unrecognized switch <b>2</b>
+Internal error: Failed to run ip-make-simscript: 2020.08.27.08:18:34 Error: Unrecognized switch <b>1</b>
+2020.08.27.08:18:34 Error: Unrecognized switch <b>2</b>
+Error: NativeLink simulation flow was NOT successful
 
-========= EDA Simulation Settings =====================
 
-Sim Mode              :  RTL
-Family                :  cycloneive
-Quartus root          :  c:/intelfpga/18.1/quartus/bin64/
-Quartus sim root      :  c:/intelfpga/18.1/quartus/eda/sim_lib
-Simulation Tool       :  modelsim
-Simulation Language   :  verilog
-Simulation Mode       :  GUI
-Sim Output File       :  
-Sim SDF file          :  
-Sim dir               :  simulation\modelsim
 
-=======================================================
-
-Info: Starting NativeLink simulation with ModelSim software
-Sourced NativeLink script c:/intelfpga/18.1/quartus/common/tcl/internal/nativelink/modelsim.tcl
-Warning: File square_mpt_test_run_msim_rtl_verilog.do already exists - backing up current file as square_mpt_test_run_msim_rtl_verilog.do.bak11
-Info: Spawning ModelSim Simulation software 
-Info: NativeLink simulation flow was successful
+================The following additional information is provided to help identify the cause of error while running nativelink scripts=================
+Nativelink TCL script failed with errorCode:  1
+Nativelink TCL script failed with errorInfo:  1
+    (procedure "iputf_call_script_gen" line 1)
+    invoked from within
+"iputf_call_script_gen $spd_file_list"
+    (procedure "iputf_setup_info" line 45)
+    invoked from within
+"iputf_setup_info"
+    (procedure "run_eda_simulation_tool" line 178)
+    invoked from within
+"run_eda_simulation_tool eda_opts_hash"

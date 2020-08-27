@@ -1,0 +1,7 @@
+family_language_pairs
+cycloneive vhdl
+cycloneive vhdl
+cycloneive vhdl
+cycloneive vhdl
+cycloneive vhdl
+end family_language pairs

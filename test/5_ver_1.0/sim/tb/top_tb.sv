@@ -1,5 +1,5 @@
 `timescale 1ns / 1ns
-`include "param.vh"
+`include "../../rtl/param.vh"
 module top_tb();
 
 // wire define
@@ -84,13 +84,13 @@ send_fp(myFP);
 
 
 // send FP2
-myFP = 1.0e0;
+myFP = 5.0e0;
 send_fp(myFP);
-myFP = 2.0e0;
+myFP = 6.0e0;
 send_fp(myFP);
-myFP = 3.0e0;
+myFP = 7.0e0;
 send_fp(myFP);
-myFP = 4.0e0;
+myFP = 8.0e0;
 send_fp(myFP);
 
 /*
@@ -142,7 +142,7 @@ send_fp(myFP);
 */
 
 // wait a while
-repeat (8000) @(posedge clk);
+repeat (10000) @(posedge clk);
 $stop();
 end
 

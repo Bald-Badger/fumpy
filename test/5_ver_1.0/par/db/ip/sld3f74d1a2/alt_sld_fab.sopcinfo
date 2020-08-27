@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <EnsembleReport name="alt_sld_fab" kind="alt_sld_fab" version="1.0" fabric="QSYS">
  <!-- Format version 18.1 625 (Future versions may contain additional information.) -->
- <!-- 2020.08.26.05:47:43 -->
+ <!-- 2020.08.27.08:16:23 -->
  <!-- A collection of modules and connections -->
  <parameter name="AUTO_DEVICE_FAMILY">
   <type>java.lang.String</type>
@@ -56,7 +56,7 @@
 the requested settings for a module instance. -->
   <parameter name="DESIGN_HASH">
    <type>java.lang.String</type>
-   <value>c2b8359f2c4a0b743732</value>
+   <value>21a9d268a1f718f8eaa1</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -104,7 +104,7 @@ the requested settings for a module instance. -->
   </parameter>
   <parameter name="EP_INFOS">
    <type>java.lang.String</type>
-   <value>{hpath {RAM_32b_256:ram_w0|altsyncram:altsyncram_component|altsyncram_alh1:auto_generated|sld_mod_ram_rom:mgl_prim2} } {hpath {RAM_32b_256:ram_w1|altsyncram:altsyncram_component|altsyncram_alh1:auto_generated|sld_mod_ram_rom:mgl_prim2} } {hpath {RAM_32b_256:ram_a0|altsyncram:altsyncram_component|altsyncram_alh1:auto_generated|sld_mod_ram_rom:mgl_prim2} } {hpath {RAM_32b_256:ram_a1|altsyncram:altsyncram_component|altsyncram_alh1:auto_generated|sld_mod_ram_rom:mgl_prim2} } {hpath {RAM_32b_result:c00|altsyncram:altsyncram_component|altsyncram_72h1:auto_generated|sld_mod_ram_rom:mgl_prim2} } {hpath {RAM_32b_result:c01|altsyncram:altsyncram_component|altsyncram_72h1:auto_generated|sld_mod_ram_rom:mgl_prim2} } {hpath {RAM_32b_result:c10|altsyncram:altsyncram_component|altsyncram_72h1:auto_generated|sld_mod_ram_rom:mgl_prim2} } {hpath {RAM_32b_result:c11|altsyncram:altsyncram_component|altsyncram_72h1:auto_generated|sld_mod_ram_rom:mgl_prim2} } </value>
+   <value>{hpath {RAM_32b_256:ram_a0|altsyncram:altsyncram_component|altsyncram_alh1:auto_generated|sld_mod_ram_rom:mgl_prim2} } {hpath {RAM_32b_256:ram_a1|altsyncram:altsyncram_component|altsyncram_alh1:auto_generated|sld_mod_ram_rom:mgl_prim2} } {hpath {RAM_32b_256:ram_w0|altsyncram:altsyncram_component|altsyncram_alh1:auto_generated|sld_mod_ram_rom:mgl_prim2} } {hpath {RAM_32b_256:ram_w1|altsyncram:altsyncram_component|altsyncram_alh1:auto_generated|sld_mod_ram_rom:mgl_prim2} } {hpath {RAM_32b_result:c00|altsyncram:altsyncram_component|altsyncram_v1h1:auto_generated|sld_mod_ram_rom:mgl_prim2} } {hpath {RAM_32b_result:c01|altsyncram:altsyncram_component|altsyncram_v1h1:auto_generated|sld_mod_ram_rom:mgl_prim2} } {hpath {RAM_32b_result:c10|altsyncram:altsyncram_component|altsyncram_v1h1:auto_generated|sld_mod_ram_rom:mgl_prim2} } {hpath {RAM_32b_result:c11|altsyncram:altsyncram_component|altsyncram_v1h1:auto_generated|sld_mod_ram_rom:mgl_prim2} } </value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -5505,7 +5505,7 @@ parameters are a RESULT of the module parameters. -->
 the requested settings for a module instance. -->
   <parameter name="DESIGN_HASH">
    <type>java.lang.String</type>
-   <value>c2b8359f2c4a0b743732</value>
+   <value>21a9d268a1f718f8eaa1</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>

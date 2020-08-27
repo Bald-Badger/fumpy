@@ -145,7 +145,6 @@
 // sub-FSM begin/end indicators
 	reg matrix_a_rcv_start; // MATRIX_1_RCV state
 	reg matrix_w_rcv_start; // MATRIX_2_RCV state
-	reg calc_start;			// CALC state // useless? 
 	reg matrix_3_snd_start; // MATRIX_3_SND state
 	
 	reg matrix_a_rcv_done;
@@ -164,7 +163,12 @@
 	wire[7:0] ram_w_select;
 
 // project-global state indicators
-	assign data_load_done = matrix_w_rcv_done;
-	assign fsm_working = (state != IDLE);
+	assign data_load_done = ((state == ACK3)&&(nxt_state == CALC));
+	assign fsm_working = ((state != IDLE)&&(state != CALC));
+	
+// project-global matrix size parameter
+	assign a_seg_cnt = a_height[7:1];
+	assign w_seg_cnt = w_width[7:1];
+	assign seg_length = a_width;	// w_height also works
 
 	

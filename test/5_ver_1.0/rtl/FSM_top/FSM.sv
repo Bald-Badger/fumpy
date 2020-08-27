@@ -32,7 +32,7 @@ module FSM (
 	output logic [7:0] ram_a0_addr,
 	output logic [7:0] ram_a1_addr,
 	
-	input logic  [10:0] ram_c_addr[`N-1:0][`N-1:0],
+	input logic  [`C-1:0] ram_c_addr[`N-1:0][`N-1:0],
 	
 	output logic ram_w0_wren,
 	output logic ram_w1_wren,
@@ -45,8 +45,13 @@ module FSM (
 	// data output
 	output logic[31:0] fp_data,
 	
-	// others
-	output logic[3:0] state_val	// for debug, feeds into seg display
+	// for debug, feeds into seg display
+	output logic[3:0] state_val,
+	
+	// matrix size parameters
+	output logic[6:0] a_seg_cnt,
+	output logic[6:0] w_seg_cnt,
+	output logic [7:0] seg_length
 );
 
 `include "./FSM_wire_define.sv"

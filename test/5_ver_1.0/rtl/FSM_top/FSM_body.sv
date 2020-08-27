@@ -23,7 +23,6 @@
 		
 		matrix_a_rcv_start 		= 1'b0;
 		matrix_w_rcv_start 		= 1'b0;
-		calc_start 				= 1'b0;
 		matrix_3_snd_start 		= 1'b0;
 		
 		fp_reg_clr				= 1'b0;

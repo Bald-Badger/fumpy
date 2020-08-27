@@ -11,7 +11,7 @@ cModel Technology
 Z0 dC:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/sim
 valtera_arriav_pll
 Z1 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
-Z2 !s110 1598439415
+Z2 !s110 1598521946
 !i10b 1
 !s100 5h]c@?QJf;jn]BQSNfoYR1
 !s11b ?I=zJWM>F2KLXaCMe06E13
@@ -27,7 +27,7 @@ Z7 OL;L;2019.2;69
 r1
 !s85 0
 31
-Z8 !s108 1598439415.000000
+Z8 !s108 1598521946.000000
 !s107 c:/intelfpga/18.1/quartus/eda/sim_lib/altera_lnsim.sv|
 Z9 !s90 -reportprogress|300|-sv|-work|altera_lnsim_ver|c:/intelfpga/18.1/quartus/eda/sim_lib/altera_lnsim.sv|
 !i113 0
@@ -131,7 +131,7 @@ R10
 R11
 valtera_iopll_rotation_lcells
 R1
-R2
+Z13 !s110 1598521947
 !i10b 1
 !s100 X4`V82YcXT@b8h<U;8U^80
 !s11b kXlSV6CCE_0_40U=DoZkI1
@@ -252,7 +252,7 @@ R10
 R11
 valtera_pll
 R1
-Z13 DXx4 work 22 altera_lnsim_functions 0 22 eC3;nP18PUIT94_9L[f>f2
+Z14 DXx4 work 22 altera_lnsim_functions 0 22 eC3;nP18PUIT94_9L[f>f2
 R2
 !i10b 1
 !s100 4Sz_XCQDaLBA0Il_fMQko3
@@ -277,7 +277,7 @@ R10
 R11
 valtera_pll_dps_lcell_comb
 R1
-R2
+R13
 !i10b 1
 !s100 ffR[lR<>LGGXDHgI0f@k20
 !s11b kDagMV6a1T66>1RU5UmiJ2
@@ -757,7 +757,7 @@ R10
 R11
 vcommon_28nm_mlab_cell_core
 R1
-R13
+R14
 R2
 !i10b 1
 !s100 ;8iTZ8TYf>5NHDB0^Q>oM2
@@ -830,7 +830,7 @@ R10
 R11
 vcommon_28nm_ram_block
 R1
-R13
+R14
 R2
 !i10b 1
 !s100 @:NX29RR7PhHXlUO[6oIz2
@@ -1026,7 +1026,7 @@ R1
 R2
 !i10b 1
 !s100 4>SgFfce3XjQIDogGSgd@3
-Z14 !s11b k55NkP>8XWeYQ3XDoMBB92
+Z15 !s11b k55NkP>8XWeYQ3XDoMBB92
 Id[e>Y:;l`a04c6Si4gHW[0
 R3
 S1
@@ -1050,7 +1050,7 @@ R1
 R2
 !i10b 1
 !s100 ILfkozO`Z>WIM]:=mSLRz2
-R14
+R15
 IOWNAo0hN8kXS9@LQNGNC@2
 R3
 S1
@@ -1095,7 +1095,7 @@ R10
 R11
 Xfourteennm_iopll_functions
 R1
-R13
+R14
 R2
 !i10b 1
 !s100 k=7T>1]5@UXf^4IYPNUXh0
@@ -1120,8 +1120,8 @@ R10
 R11
 vfourteennm_simple_iopll
 R1
-R13
-Z15 DXx4 work 26 fourteennm_iopll_functions 0 22 a]=:]Pz54kUiRVOmK:0Ak3
+R14
+Z16 DXx4 work 26 fourteennm_iopll_functions 0 22 a]=:]Pz54kUiRVOmK:0Ak3
 R2
 !i10b 1
 !s100 U3I9Zc7alQj;oPHaN64OI1
@@ -1146,9 +1146,9 @@ R10
 R11
 vfourteennm_sub_iopll
 R1
+R14
+R16
 R13
-R15
-R2
 !i10b 1
 !s100 h8zPiQgS;_lOOl[ag>4ok1
 !s11b 3FEGi8glS=Sg0?^^U3dL80
@@ -1172,7 +1172,7 @@ R10
 R11
 vgeneric_14nm_mlab_cell_impl
 R1
-R13
+R14
 R2
 !i10b 1
 !s100 QKP_^ObHnDDJ2WjNMz1;Y0
@@ -1197,7 +1197,7 @@ R10
 R11
 vgeneric_28nm_hp_mlab_cell_impl
 R1
-R13
+R14
 R2
 !i10b 1
 !s100 ]3S8UU<hz]2aFhb;N_FoF0
@@ -1222,7 +1222,7 @@ R10
 R11
 vgeneric_28nm_lc_mlab_cell_impl
 R1
-R13
+R14
 R2
 !i10b 1
 !s100 L5H<HjBDic9jcY9NC8J_G3
@@ -1247,7 +1247,7 @@ R10
 R11
 vgeneric_cdr
 R1
-R13
+R14
 R2
 !i10b 1
 !s100 mUY0C`S28oF=K[Lj`5JfR1
@@ -1272,7 +1272,7 @@ R10
 R11
 vgeneric_device_pll
 R1
-R13
+R14
 R2
 !i10b 1
 !s100 jHmoB;l:UmnbE]IOP01>P1
@@ -1369,7 +1369,7 @@ R10
 R11
 vgeneric_pll
 R1
-R13
+R14
 DXx4 work 28 altera_generic_pll_functions 0 22 :QQQkBIl`:b]cP7HA_L<=3
 R2
 !i10b 1
@@ -1395,7 +1395,7 @@ R10
 R11
 viopll_bootstrap
 R1
-R2
+R13
 !i10b 1
 !s100 j0_XI4[Jif[>K;8lWaj`31
 !s11b zW=h2bkXCTE`5g6S[Xz;03
@@ -1443,7 +1443,7 @@ R10
 R11
 vtwentynm_iopll_ip
 R1
-R2
+R13
 !i10b 1
 !s100 :UZI5NclV>T[izQ1He;>z0
 !s11b KioK=R_cHmD9>mheQQ9SL1

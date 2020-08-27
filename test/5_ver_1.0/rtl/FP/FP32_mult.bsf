@@ -66,7 +66,7 @@ refer to the applicable agreement for further details.
 		(line (pt 224 48)(pt 144 48)(line_width 3))
 	)
 	(drawing
-		(text "Clock cycles: 5" (rect 143 129 365 272)(font "Arial" ))
+		(text "Clock cycles: 10" (rect 136 129 358 272)(font "Arial" ))
 		(text "Single Precision" (rect 134 145 356 304)(font "Arial" ))
 		(text "Exponent Width: 8" (rect 126 161 348 336)(font "Arial" ))
 		(text "Mantissa Width: 23" (rect 120 177 342 368)(font "Arial" ))

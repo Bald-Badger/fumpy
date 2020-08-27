@@ -51,7 +51,7 @@ set_global_assignment -name DEVICE_FILTER_SPEED_GRADE 8
 set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
 set_global_assignment -name NOMINAL_CORE_SUPPLY_VOLTAGE 1.2V
 set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim (SystemVerilog)"
-set_global_assignment -name EDA_TIME_SCALE "1 ns" -section_id eda_simulation
+set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
 set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "SYSTEMVERILOG HDL" -section_id eda_simulation
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
@@ -84,13 +84,17 @@ set_location_assignment PIN_M7 -to TX
 set_location_assignment PIN_F3 -to RX_debug
 set_location_assignment PIN_F2 -to TX_debug
 
-set_global_assignment -name EDA_NETLIST_WRITER_OUTPUT_DIR "C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/sim" -section_id eda_simulation
+set_global_assignment -name EDA_NETLIST_WRITER_OUTPUT_DIR "C:\\Users\\Shuai\\OneDrive - UW-Madison\\fumpy\\test\\5_ver_1.0\\sim" -section_id eda_simulation
 set_global_assignment -name EDA_TEST_BENCH_ENABLE_STATUS TEST_BENCH_MODE -section_id eda_simulation
 set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH top_tb -section_id eda_simulation
 set_global_assignment -name EDA_TEST_BENCH_NAME top_tb -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id top_tb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME top_tb -section_id top_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE ../sim/tb/top_tb.sv -section_id top_tb
+set_global_assignment -name VERILOG_INCLUDE_FILE ../rtl/PE/systolic_arr_ctrl_wire_define.sv
+set_global_assignment -name VERILOG_INCLUDE_FILE ../rtl/PE/systolic_arr_ctrl_ram_ctrl.sv
+set_global_assignment -name VERILOG_INCLUDE_FILE ../rtl/PE/systolic_arr_ctrl_fsm_body.sv
+set_global_assignment -name VERILOG_INCLUDE_FILE ../rtl/PE/systolic_arr_ctrl_counter_update.sv
 set_global_assignment -name VERILOG_INCLUDE_FILE ../rtl/param.vh
 set_global_assignment -name VERILOG_FILE ../rtl/UART/posedgeDect_single.v
 set_global_assignment -name SYSTEMVERILOG_FILE ../rtl/square_mpt_test.sv
@@ -119,8 +123,10 @@ set_global_assignment -name SYSTEMVERILOG_FILE ../rtl/PE/FPadd.sv
 set_global_assignment -name SYSTEMVERILOG_FILE ../rtl/PE/accum.sv
 set_global_assignment -name SYSTEMVERILOG_FILE ../rtl/DFF/dff_32b.sv
 set_global_assignment -name QIP_FILE ../rtl/FP/FP32_mult.qip
-set_global_assignment -name QIP_FILE ../rtl/FP/FP32_add.qip
 set_global_assignment -name QIP_FILE ../rtl/RAM/RAM_32b_256.qip
 set_global_assignment -name QIP_FILE ../rtl/PLL/pll.qip
 set_global_assignment -name QIP_FILE ../rtl/RAM/RAM_32b_result.qip
+set_global_assignment -name SOURCE_FILE db/square_mpt_test.cmp.rdb
+set_global_assignment -name QIP_FILE ../rtl/FP/FP32_accum.qip
+set_global_assignment -name SIP_FILE ../rtl/FP/FP32_accum.sip
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

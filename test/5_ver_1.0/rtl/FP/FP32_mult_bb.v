@@ -60,7 +60,7 @@ endmodule
 // Retrieval info: CONSTANT: INTENDED_DEVICE_FAMILY STRING "UNUSED"
 // Retrieval info: CONSTANT: LPM_HINT STRING "UNUSED"
 // Retrieval info: CONSTANT: LPM_TYPE STRING "altfp_mult"
-// Retrieval info: CONSTANT: PIPELINE NUMERIC "5"
+// Retrieval info: CONSTANT: PIPELINE NUMERIC "10"
 // Retrieval info: CONSTANT: REDUCED_FUNCTIONALITY STRING "NO"
 // Retrieval info: CONSTANT: ROUNDING STRING "TO_NEAREST"
 // Retrieval info: CONSTANT: WIDTH_EXP NUMERIC "8"

@@ -5,6 +5,10 @@
 `define SYS_CLK_FREQ 	50000000	// clock frequency after PLL
 `define SYS_UART_BPS 	115200 		// UART baud rate
 
+// pipeline delay
+`define ADDER_DELAY		7
+`define MULT_DELAY		10
+
 // scale factor
 `define N				2			// systolic arr width
 //`define W				$clog2(`N)	// log2(N)
@@ -13,10 +17,10 @@
 //uart order factor
 /*
 e.g. for fp number 0x 3f_80_00_00
-order 1 is uart send order: 3f-80-00-00
-order 0 is uart send order: 00-00-80-3f
+order 0 is uart send order: 00-00-80-3f, used in pycharm
+order 1 is uart send order: 3f-80-00-00, used in TB
 */
-`define UART_ORDER  	1'b0
+`define UART_ORDER  	1'b1
 
 // constants
 `define NULL_8B			8'b0
@@ -28,6 +32,9 @@ order 0 is uart send order: 00-00-80-3f
 `define RAM_W0			8'b0
 `define RAM_W1			8'b1
 `define RAM_W_DISABLE	8'hFF
+
+// width
+`define C				8'h10
 
 // Command: calc type
 `define MATRIX_MULT		8'h11

@@ -9,7 +9,7 @@ module mult (
 );
 
 FPmult FPmult_inst (
-	.rst	(rst_n || !clr),
+	.rst	(!rst_n || clr),
 	.en		(en),
 	.clk	(clk),
 	.a_in	(a_in),

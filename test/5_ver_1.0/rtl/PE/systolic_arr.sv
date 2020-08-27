@@ -16,7 +16,8 @@ module systolic_arr (
 	input wire[`N-1:0][`N-1:0] en_mult,
 	input wire[`N-1:0][`N-1:0] clr_mult,
 	input wire[`N-1:0][`N-1:0] en_accum,
-	input wire[`N-1:0][`N-1:0] clr_accum
+	input wire[`N-1:0][`N-1:0] clr_accum,
+	input wire[`N-1:0][`N-1:0] accum_start
 );
 
 	//wire define
@@ -58,7 +59,8 @@ module systolic_arr (
 		.en_mult	(en_mult[0][0]),
 		.clr_mult	(clr_mult[0][0]),
 		.en_accum	(en_accum[0][0]),
-		.clr_accum	(clr_accum[0][0])
+		.clr_accum	(clr_accum[0][0]),
+		.accum_start(accum_start[0][0])
 	);
 	
 	MAC MAC_01 (
@@ -72,7 +74,8 @@ module systolic_arr (
 		.en_mult	(en_mult[0][1]),
 		.clr_mult	(clr_mult[0][1]),
 		.en_accum	(en_accum[0][1]),
-		.clr_accum	(clr_accum[0][1])
+		.clr_accum	(clr_accum[0][1]),
+		.accum_start(accum_start[0][1])
 	);
 		
 	MAC MAC_10 (
@@ -86,7 +89,8 @@ module systolic_arr (
 		.en_mult	(en_mult[1][0]),
 		.clr_mult	(clr_mult[1][0]),
 		.en_accum	(en_accum[1][0]),
-		.clr_accum	(clr_accum[1][0])
+		.clr_accum	(clr_accum[1][0]),
+		.accum_start(accum_start[1][0])
 	);
 	
 	MAC MAC_11 (
@@ -100,7 +104,8 @@ module systolic_arr (
 		.en_mult	(en_mult[1][1]),
 		.clr_mult	(clr_mult[1][1]),
 		.en_accum	(en_accum[1][1]),
-		.clr_accum	(clr_accum[1][1])
+		.clr_accum	(clr_accum[1][1]),
+		.accum_start(accum_start[1][1])
 	);
 		
 endmodule

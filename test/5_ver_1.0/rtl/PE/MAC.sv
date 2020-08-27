@@ -17,7 +17,8 @@ module MAC (
 	
 	// accum IO
 	input en_accum,
-	input clr_accum
+	input clr_accum,
+	input accum_start
 );
 
 	// wire define
@@ -34,12 +35,13 @@ module MAC (
 	);
 	
 	accum accum_inst (
-		.clk	(clk),
-		.rst_n	(rst_n),
-		.en		(en_accum),
-		.clr	(clr_accum),
-		.data_in(mult_result),
-		.data_out (result_MAC)
+		.clk			(clk),
+		.rst_n			(rst_n),
+		.en				(en_accum),
+		.clr			(clr_accum),
+		.data_in		(mult_result),
+		.accum_start	(accum_start),
+		.data_out 		(result_MAC)
 	);
 	
 	// delayed FP data, propagate to next PE
