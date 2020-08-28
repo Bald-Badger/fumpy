@@ -3,7 +3,7 @@
 
 // communication
 `define SYS_CLK_FREQ 	50000000	// clock frequency after PLL
-`define SYS_UART_BPS 	115200 		// UART baud rate
+`define SYS_UART_BPS 	115200 	// UART baud rate
 
 // pipeline delay
 `define ADDER_DELAY		7

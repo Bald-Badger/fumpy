@@ -91,6 +91,9 @@ set_global_assignment -name EDA_TEST_BENCH_FILE ../sim/tb/top_tb.sv -section_id 
 set_global_assignment -name VERILOG_INPUT_VERSION SYSTEMVERILOG_2005
 set_global_assignment -name VERILOG_SHOW_LMF_MAPPING_MESSAGES OFF
 set_global_assignment -name EDA_USER_COMPILED_SIMULATION_LIBRARY_DIRECTORY "C:\\Users\\Shuai\\Desktop\\5_ver_1.0\\sim" -section_id eda_simulation
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name SYSTEMVERILOG_FILE ../rtl/fumpy_top.sv
 set_global_assignment -name SYSTEMVERILOG_FILE ../rtl/DFF/dff_1b.sv
 set_global_assignment -name VERILOG_INCLUDE_FILE ../rtl/PE/systolic_arr_ctrl_wire_define.sv
@@ -129,7 +132,4 @@ set_global_assignment -name QIP_FILE ../rtl/PLL/pll.qip
 set_global_assignment -name QIP_FILE ../rtl/RAM/RAM_32b_result.qip
 set_global_assignment -name QIP_FILE ../rtl/FP/FP32_accum.qip
 set_global_assignment -name SIP_FILE ../rtl/FP/FP32_accum.sip
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
