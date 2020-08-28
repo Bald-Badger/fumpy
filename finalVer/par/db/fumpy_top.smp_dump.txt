@@ -1,0 +1,50 @@
+
+State Machine - |fumpy_top|systolic_arr_ctrl:sys_arr_ctrl|state
+Name state.TIDY2 state.TIDY1 state.STR3 state.STR2 state.STR1 state.STALL state.CALC state.IDLE 
+state.IDLE 0 0 0 0 0 0 0 0 
+state.CALC 0 0 0 0 0 0 1 1 
+state.STALL 0 0 0 0 0 1 0 1 
+state.STR1 0 0 0 0 1 0 0 1 
+state.STR2 0 0 0 1 0 0 0 1 
+state.STR3 0 0 1 0 0 0 0 1 
+state.TIDY1 0 1 0 0 0 0 0 1 
+state.TIDY2 1 0 0 0 0 0 0 1 
+
+State Machine - |fumpy_top|FSM:fsm_core|state_snd
+Name state_snd.SND_R2 state_snd.SND_R1 state_snd.SND_R0 state_snd.IDLE_SND state_snd.SND_R3 
+state_snd.IDLE_SND 0 0 0 0 0 
+state_snd.SND_R0 0 0 1 1 0 
+state_snd.SND_R1 0 1 0 1 0 
+state_snd.SND_R2 1 0 0 1 0 
+state_snd.SND_R3 0 0 0 1 1 
+
+State Machine - |fumpy_top|FSM:fsm_core|state_rcv2
+Name state_rcv2.IDLE_RCV2 state_rcv2.RCV2_RAM1 state_rcv2.RCV2_RAM0 
+state_rcv2.IDLE_RCV2 0 0 0 
+state_rcv2.RCV2_RAM0 1 0 1 
+state_rcv2.RCV2_RAM1 1 1 0 
+
+State Machine - |fumpy_top|FSM:fsm_core|state_rcv1
+Name state_rcv1.IDLE_RCV1 state_rcv1.RCV1_RAM1 state_rcv1.RCV1_RAM0 
+state_rcv1.IDLE_RCV1 0 0 0 
+state_rcv1.RCV1_RAM0 1 0 1 
+state_rcv1.RCV1_RAM1 1 1 0 
+
+State Machine - |fumpy_top|FSM:fsm_core|state
+Name state.MATRIX_3_SND state.CALC state.ACK3 state.MATRIX_2_RCV state.MATRIX_2_RCV_INIT state.ACK2 state.MATRIX_1_RCV state.MATRIX_1_RCV_INIT state.ACK1 state.STR_W_W state.STR_W_H state.STR_A_W state.STR_A_H state.CMD_MUL state.PHRASE state.IDLE 
+state.IDLE 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+state.PHRASE 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+state.CMD_MUL 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+state.STR_A_H 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+state.STR_A_W 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+state.STR_W_H 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+state.STR_W_W 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+state.ACK1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+state.MATRIX_1_RCV_INIT 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+state.MATRIX_1_RCV 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+state.ACK2 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+state.MATRIX_2_RCV_INIT 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+state.MATRIX_2_RCV 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+state.ACK3 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.CALC 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.MATRIX_3_SND 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
