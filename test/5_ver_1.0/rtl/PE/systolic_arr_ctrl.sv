@@ -21,9 +21,9 @@ module systolic_arr_ctrl (
 	output logic [7:0] ram_w0_addr,
 	output logic [7:0] ram_w1_addr,
 	
-	output logic [`C-1:0] ram_c_addr[`N-1:0][`N-1:0],
+	output logic [`C-1:0]ram_c_addr,
 	
-	output logic ram_c_wren[`N-1:0][`N-1:0],
+	output logic [`N-1:0][`N-1:0] ram_c_wren,
 	
 	output logic ram_a0_rden,
 	output logic ram_a1_rden,
@@ -31,6 +31,7 @@ module systolic_arr_ctrl (
 	output logic ram_w1_rden,
 	
 	// MAC ctrl signal
+	output logic data_valid, // data in systolic_arr is valid
 	output logic[`N-1:0][`N-1:0] en_mult_all,
 	output logic[`N-1:0][`N-1:0] clr_mult_all,
 	output logic[`N-1:0][`N-1:0] en_accum_all,

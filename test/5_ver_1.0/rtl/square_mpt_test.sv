@@ -25,23 +25,23 @@ module square_mpt_test (
 	logic [6:0] w_seg_cnt;		// w_width / N (N = 2 in this case)
 	logic [7:0] seg_length;		// = a_width = w_height
 	
-	// global define
-	wire clk;					// clk signal out of PLL
-								// used to adjust for max freq
-	wire rst_n;					// reset signal after PLL stable
-	wire locked;				// 1 if PLL is stable
-	assign rst_n = but_rst_n & locked;	// reset signal after PLL stable
-	logic [3:0] debug_val;		// debug value fed in led seg
-	assign TX_debug = TX;
-	assign RX_debug = RX;
-	
-	
 	// global state contol wire
 	logic data_load_done;	// data done loading from FSM to RAM A/W
 	logic calc_done;		// systolic arr done calc
 	logic data_response_done;// data done sending from FSM to upper
 	
 	logic fsm_working, arr_ctrl_working;
+	
+	// global define
+	wire clk;					// clk signal out of PLL
+								// used to adjust for max freq
+	wire rst_n;					// reset signal after PLL stable
+	wire locked;				// 1 if PLL is stable
+	assign rst_n = (but_rst_n & locked) && (!data_response_done);	// reset signal after PLL stable
+	logic [3:0] debug_val;		// debug value fed in led seg
+	assign TX_debug = TX;
+	assign RX_debug = RX;
+	
 	
 	// UART define
 	wire 		uart_tx_done;
@@ -56,17 +56,17 @@ module square_mpt_test (
 	// top addr wire (before mux)
 	wire [7:0] ram_w0_addr, ram_w1_addr;
 	wire [7:0] ram_a0_addr, ram_a1_addr;
-	wire [`C-1:0] ram_c_addr[`N-1:0][`N-1:0];
+	wire [`C-1:0] ram_c_addr;
 	
 	// from FSM module
 	wire [7:0] ram_w0_addr_fsm, ram_w1_addr_fsm;
 	wire [7:0] ram_a0_addr_fsm, ram_a1_addr_fsm;
-	wire [`C-1:0] ram_c_addr_fsm[`N-1:0][`N-1:0];
+	wire [`C-1:0] ram_c_addr_fsm;
 	
 	// from systolic arr conrtol
 	wire [7:0] ram_w0_addr_arr, ram_w1_addr_arr;
 	wire [7:0] ram_a0_addr_arr, ram_a1_addr_arr;
-	wire [`C-1:0] ram_c_addr_arr[`N-1:0][`N-1:0];
+	wire [`C-1:0] ram_c_addr_arr;
 	
 	// mux addr based on working state
 	assign ram_w0_addr =	(fsm_working) ? ram_w0_addr_fsm :
@@ -99,14 +99,15 @@ module square_mpt_test (
 	wire[31:0]	ram_w_data_out	[`N-1:0];			// b (weight) input
 	wire[31:0] 	ram_c_data_out	[`N-1:0][`N-1:0];
 	
+	wire data_valid;				// data in sys_arr is valid
 	// W/R enable
 	wire ram_w0_rden, ram_w1_rden;
 	wire ram_a0_rden, ram_a1_rden;	// read enable
-	wire ram_c_rden[`N-1:0][`N-1:0];
+	wire [`N-1:0][`N-1:0] ram_c_rden;
 
 	wire ram_w0_wren, ram_w1_wren;
 	wire ram_a0_wren, ram_a1_wren;	// write enable
-	wire ram_c_wren[`N-1:0][`N-1:0];
+	wire [`N-1:0][`N-1:0] ram_c_wren;
 	
 	// MAC ctrl wire define
 	wire[`N-1:0][`N-1:0] en_mult;
@@ -214,6 +215,7 @@ module square_mpt_test (
 		.data_load_done (data_load_done),
 		.fsm_working	(fsm_working),
 		.calc_done		(calc_done),
+		.data_response_done(data_response_done),
 		
 		// signal input
 		.uart_tx_done	(uart_tx_done),
@@ -227,6 +229,7 @@ module square_mpt_test (
 		.ram_a1_addr	(ram_a1_addr_fsm),
 		
 		.ram_c_addr		(ram_c_addr_fsm),
+		.ram_c_rden_all	(ram_c_rden),
 		
 		.ram_w0_wren	(ram_w0_wren),
 		.ram_w1_wren	(ram_w1_wren),
@@ -236,8 +239,9 @@ module square_mpt_test (
 		.uart_tx_data	(uart_tx_data),
 		.uart_send_data	(uart_send_data),
 		
-		// data output to RAM
+		// data I/O
 		.fp_data		(fp_data),
+		.ram_c_data		(ram_c_data_out),
 		
 		// debug val
 		.state_val		(debug_val),
@@ -255,6 +259,7 @@ module square_mpt_test (
 		//data input
 		.a_in_raw	(ram_a_data_out),
 		.w_in_raw	(ram_w_data_out),
+		.data_valid (data_valid),
 		
 		// data output
 		.c_out		(ram_c_data_in),
@@ -298,6 +303,7 @@ module square_mpt_test (
 		.ram_w0_rden	(ram_w0_rden),
 		.ram_w1_rden	(ram_w1_rden),
 		
+		.data_valid		(data_valid),
 		.en_mult_all	(en_mult),
 		.clr_mult_all	(clr_mult),
 		.en_accum_all	(en_accum),
@@ -306,7 +312,7 @@ module square_mpt_test (
 	);
 	
 	RAM_32b_result c00 (
-		.address	(ram_c_addr[0][0]),
+		.address	(ram_c_addr),
 		.clock		(clk),
 		.data		(ram_c_data_in[0][0]),
 		.rden		(ram_c_rden[0][0]),
@@ -315,7 +321,7 @@ module square_mpt_test (
 	);
 	
 	RAM_32b_result c01 (
-		.address	(ram_c_addr[0][1]),
+		.address	(ram_c_addr),
 		.clock		(clk),
 		.data		(ram_c_data_in[0][1]),
 		.rden		(ram_c_rden[0][1]),
@@ -324,7 +330,7 @@ module square_mpt_test (
 	);
 	
 	RAM_32b_result c10 (
-		.address	(ram_c_addr[1][0]),
+		.address	(ram_c_addr),
 		.clock		(clk),
 		.data		(ram_c_data_in[1][0]),
 		.rden		(ram_c_rden[1][0]),
@@ -333,7 +339,7 @@ module square_mpt_test (
 	);
 	
 	RAM_32b_result c11 (
-		.address	(ram_c_addr[1][1]),
+		.address	(ram_c_addr),
 		.clock		(clk),
 		.data		(ram_c_data_in[1][1]),
 		.rden		(ram_c_rden[1][1]),

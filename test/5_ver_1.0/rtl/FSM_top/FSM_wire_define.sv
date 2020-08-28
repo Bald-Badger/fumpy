@@ -4,17 +4,7 @@
 // parameters
 	reg[7:0]	a_height, a_width;
 	reg[7:0] 	w_height, w_width;
-
-// load from UART to reg
-	reg 		a_height_load, a_width_load;
-	reg 		w_height_load, w_width_load;
-
-// load from reg to UART
-	reg 		uart_tx_data_load_ack1,
-				uart_tx_data_load_ack2,
-				uart_tx_data_load_ack3;
-
-
+	
 // states
 	// define top layer states
 	typedef enum reg[4:0] {
@@ -58,7 +48,65 @@
 		RCV2_RAM1
 	} state_t_rcv2;
 	state_t_rcv2 state_rcv2, nxt_state_rcv2;
+	
+	
+	// FSM for sending third matrix
+	typedef enum logic[2:0] {
+		IDLE_SND,
+		SND_R0,
+		SND_R1,
+		SND_R2,
+		SND_R3
+	} state_t_snd;
+	state_t_snd state_snd, nxt_state_snd;
+	
+	
+	// select from ack or result
+	logic uart_send_data_rcv;
+	// for timing
+	logic uart_send_data_rsp_raw; 	// from FSM
+	logic uart_send_data_rsp_r1;	// delay one cycle from raw
+	logic uart_send_data_rsp_r2;	// delay one cycle from raw
+	logic uart_send_data_rsp_r3;	// delay one cycle from raw
+	logic uart_send_data_rsp;		// delay one cycle from raw
+	dff_1b uart_data_sed_reg1 (
+		.d(uart_send_data_rsp_raw),
+		.clk(clk),
+		.rst_n(rst_n),
+		.q(uart_send_data_rsp_r1)
+	);
+	dff_1b uart_data_sed_reg2 (
+		.d(uart_send_data_rsp_r1),
+		.clk(clk),
+		.rst_n(rst_n),
+		.q(uart_send_data_rsp_r2)
+	);
+	dff_1b uart_data_sed_reg3 (
+		.d(uart_send_data_rsp_r2),
+		.clk(clk),
+		.rst_n(rst_n),
+		.q(uart_send_data_rsp_r3)
+	);
+	dff_1b uart_data_sed_reg4 (
+		.d(uart_send_data_rsp_r3),
+		.clk(clk),
+		.rst_n(rst_n),
+		.q(uart_send_data_rsp)
+	);
+	assign uart_send_data = (uart_send_data_rcv || (uart_send_data_rsp && (state_snd != IDLE_SND)));
+	
+// load from UART to reg
+	reg 		a_height_load, a_width_load;
+	reg 		w_height_load, w_width_load;
 
+// load from reg to UART
+	reg 		uart_tx_data_load_ack1,
+				uart_tx_data_load_ack2,
+				uart_tx_data_load_ack3;
+
+// load from RAM to uart
+	logic uart_tx_data_load_ram;
+	assign uart_tx_data_load_ram = (state_snd != IDLE_SND);
 
 // reg stores FP data
 // every 4 byte is packed in a FP reg
@@ -136,11 +184,15 @@
 		assign	w_seg_counter_inc = (w_height_counter == ((w_width >> 1) - 1)) &&
 				(w_height_counter_inc);
 		*/
-		// expensive !!!
+		// expensive !!!, get around bug
 		assign w_seg_counter_inc =	w_height_counter_inc &&
 									(ram_w0_addr >= w_height * ((w_width >> 1) - 1));
-									
-				
+			
+
+			
+	// matrix C counters
+		reg[2:0] fp_byte_counter;
+		logic fp_byte_counter_rst;
 	
 // sub-FSM begin/end indicators
 	reg matrix_a_rcv_start; // MATRIX_1_RCV state
@@ -161,10 +213,24 @@
 	//wire[`W-1:0] ram_a_select;	
 	wire[7:0] ram_a_select;
 	wire[7:0] ram_w_select;
-
+	
+	wire[31:0] c_data; // one of the four input RAM data bus
+	
+	// inversed index to get around bug
+	assign c_data =	(state_snd == SND_R0) ? ram_c_data[0][0] :
+					(state_snd == SND_R1) ? ram_c_data[0][1] :
+					(state_snd == SND_R2) ? ram_c_data[1][0] :
+					(state_snd == SND_R3) ? ram_c_data[1][1] :
+					32'b0;
+	logic ram_c_rden; // updated in FSM
+	assign ram_c_rden = (state_snd != IDLE_SND);
+	assign ram_c_rden_all = {{{ram_c_rden},{ram_c_rden}},
+							{{ram_c_rden},{ram_c_rden}}};	
+							
 // project-global state indicators
 	assign data_load_done = ((state == ACK3)&&(nxt_state == CALC));
 	assign fsm_working = ((state != IDLE)&&(state != CALC));
+	assign data_response_done = ((state_snd == SND_R0) && (nxt_state_snd == IDLE_SND));
 	
 // project-global matrix size parameter
 	assign a_seg_cnt = a_height[7:1];

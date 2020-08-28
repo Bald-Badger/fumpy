@@ -7,7 +7,7 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dC:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/5_ver_1.0/sim
+Z0 dC:/Users/Shuai/Desktop/5_ver_1.0/sim
 Ecycloneive_and1
 Z1 w1536815865
 Z2 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
@@ -24,9 +24,9 @@ VUSXe9kgizd;<Ic^cc`k6f2
 !s100 ?IRdo?QWa^H;Li93QQS5`2
 Z9 OL;C;2019.2;69
 31
-Z10 !s110 1598534716
+Z10 !s110 1598536707
 !i10b 1
-Z11 !s108 1598534716.000000
+Z11 !s108 1598536707.000000
 Z12 !s90 -reportprogress|300|-93|-work|cycloneive|c:/intelfpga/18.1/quartus/eda/sim_lib/cycloneive_atoms.vhd|
 Z13 !s107 c:/intelfpga/18.1/quartus/eda/sim_lib/cycloneive_atoms.vhd|
 !i113 0

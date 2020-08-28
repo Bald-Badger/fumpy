@@ -3,8 +3,7 @@ always_ff @(posedge clk or negedge rst_n)
 		state <= IDLE;
 	else
 		state <= nxt_state;
-
-		
+				  
 always_comb begin
 	//default values
 	nxt_state = IDLE;
@@ -17,16 +16,16 @@ always_comb begin
 	// MAC signal
 	en_mult = 1'b0;
 	clr_mult = 1'b0;
-	en_accum = 1'b0;
+	en_accum = 1'b1; // changed from 0 to 1
 	clr_accum = 1'b0;
 	accum_start = 1'b0;
 	
 	stall_counter_rst = 1'b0;
 	stall_counter_inc = 1'b0;
 	
-	
 	calc_done = 1'b0;
 	
+	seg_inc = 1'b0;	// indicate one seg completed calc
 	case (state)
 		IDLE: begin
 			if (data_load_done) begin
@@ -34,6 +33,7 @@ always_comb begin
 				accum_start = 1'b1;	// bug?
 			end else begin
 				nxt_state = IDLE;
+				clr_accum = 1'b1;
 			end
 		end
 		
@@ -61,7 +61,7 @@ always_comb begin
 			en_mult = 1'b1;
 			en_accum = 1'b1;
 			if (stall_counter == stall_count_target) begin
-				nxt_state = STR;
+				nxt_state = STR1;
 				stall_counter_rst = 1'b1;				
 			end	else begin
 				nxt_state = STALL;
@@ -69,14 +69,29 @@ always_comb begin
 			end
 		end
 		
-		STR: begin
-			nxt_state = TIDY;
+		STR1: begin
+			nxt_state = STR2;
+		end
+		
+		STR2: begin
+			nxt_state = STR3;
+		end
+		
+		STR3: begin
+			nxt_state = TIDY1;
+			seg_inc = 1'b1;	// timing issue?
+		end
+		
+		TIDY1: begin
+			nxt_state = TIDY2;
 			clr_mult = 1'b1;
 			clr_accum = 1'b1;
 		end
 		
-		TIDY: begin
+		TIDY2: begin
 			nxt_state = CALC;
+			en_mult = 1'b1; // ??	
+			clr_mult = 1'b1;
 			accum_start = 1'b1; // bug?
 		end
 		

@@ -1,48 +1,73 @@
 m255
 K4
 z2
-!s11f vlog 2019.2 2019.04, Apr 17 2019
+!s11f MIXED_VERSIONS
+!s11e vcom 2019.2 2019.04, Apr 17 2019
 13
 !s112 1.1
 !i10d 8192
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dC:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/sim
+Z0 dC:/Users/Shuai/Desktop/5_ver_1.0/sim
 T_opt
-!s110 1598197519
-VbT]Dl70FJAj2LGL6UAC;L1
+!s110 1598614382
+Vk7AKc<eX21hF0BL1PzkYi0
 04 6 4 work top_tb fast 0
-=70-04d9f57cecd7-5f428f0e-32e-be4
-o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work +acc
+=3-04d9f57cecd7-5f48eb6e-15e-46cc
+o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L cycloneive -L rtl_work -L work +acc
 Z1 tCvgOpt 0
 n@_opt
 OL;O;2019.2;69
-R0
 vaccum
 Z2 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
-Z3 !s110 1598197606
+Z3 !s110 1598614376
 !i10b 1
-!s100 [f0z<ZOG411W6B:Sh<OU53
-!s11b fOcnF=4C[G<=686A3V0Kd0
-I8>7:g]DI`XWjmJgBAOVhe3
+!s100 mZGYESUf=:NMUR0_KQG=j3
+!s11b >h8IDN?Zk:IjRi1iEHNUh0
+ITlQ90DEan@MDA`zJ0D5lK0
 Z4 VDg1SIo80bB@j0V0VzS_@n1
 S1
 R0
-w1597211620
-8C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/PE/accum.sv
-FC:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/PE/accum.sv
+w1598531910
+8C:/Users/Shuai/Desktop/5_ver_1.0/rtl/PE/accum.sv
+FC:/Users/Shuai/Desktop/5_ver_1.0/rtl/PE/accum.sv
 L0 1
 Z5 OL;L;2019.2;69
 r1
 !s85 0
 31
-Z6 !s108 1598197606.000000
-!s107 C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/PE/accum.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/PE|-L|mtiAvm|-L|mtiRnm|-L|mtiOvm|-L|mtiUvm|-L|mtiUPF|-L|infact|C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/PE/accum.sv|
+Z6 !s108 1598614376.000000
+!s107 C:/Users/Shuai/Desktop/5_ver_1.0/rtl/PE/accum.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Shuai/Desktop/5_ver_1.0/rtl/PE|-L|mtiAvm|-L|mtiRnm|-L|mtiOvm|-L|mtiUvm|-L|mtiUPF|-L|infact|C:/Users/Shuai/Desktop/5_ver_1.0/rtl/PE/accum.sv|
 !i113 0
 Z7 o-sv -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-Z8 !s92 -sv -work work {+incdir+C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/PE} -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z8 !s92 -sv -work work +incdir+C:/Users/Shuai/Desktop/5_ver_1.0/rtl/PE -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+vdff_1b
+R2
+R3
+!i10b 1
+!s100 z?O_kINoX]>lQI:BXDeDd3
+!s11b TgoAR1;PF5gkcl@=G4YGR0
+II?MHobXj?:fzmVe_L^eT33
+R4
+S1
+R0
+w1598588867
+8C:/Users/Shuai/Desktop/5_ver_1.0/rtl/DFF/dff_1b.sv
+FC:/Users/Shuai/Desktop/5_ver_1.0/rtl/DFF/dff_1b.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/Shuai/Desktop/5_ver_1.0/rtl/DFF/dff_1b.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Shuai/Desktop/5_ver_1.0/rtl/DFF|-L|mtiAvm|-L|mtiRnm|-L|mtiOvm|-L|mtiUvm|-L|mtiUPF|-L|infact|C:/Users/Shuai/Desktop/5_ver_1.0/rtl/DFF/dff_1b.sv|
+!i113 0
+R7
+Z9 !s92 -sv -work work +incdir+C:/Users/Shuai/Desktop/5_ver_1.0/rtl/DFF -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 R1
 vdff_32b
 R2
@@ -50,648 +75,284 @@ R3
 !i10b 1
 !s100 ]E9[Dia?PaESTjecQBl1]1
 !s11b olLXD<E]524bzfBzAbDQB0
-Im@N`D=lzN;J:<>7TAd_D`1
+IG^^cMFF;fn44P^CF65ZJ12
 R4
 S1
 R0
 w1597202754
-8C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/DFF/dff_32b.sv
-FC:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/DFF/dff_32b.sv
+8C:/Users/Shuai/Desktop/5_ver_1.0/rtl/DFF/dff_32b.sv
+FC:/Users/Shuai/Desktop/5_ver_1.0/rtl/DFF/dff_32b.sv
 L0 1
 R5
 r1
 !s85 0
 31
 R6
-!s107 C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/DFF/dff_32b.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/DFF|-L|mtiAvm|-L|mtiRnm|-L|mtiOvm|-L|mtiUvm|-L|mtiUPF|-L|infact|C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/DFF/dff_32b.sv|
+!s107 C:/Users/Shuai/Desktop/5_ver_1.0/rtl/DFF/dff_32b.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Shuai/Desktop/5_ver_1.0/rtl/DFF|-L|mtiAvm|-L|mtiRnm|-L|mtiOvm|-L|mtiUvm|-L|mtiUPF|-L|infact|C:/Users/Shuai/Desktop/5_ver_1.0/rtl/DFF/dff_32b.sv|
 !i113 0
 R7
-!s92 -sv -work work {+incdir+C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/DFF} -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-R1
-vFP32_add
-Z9 !s110 1598197611
-!i10b 1
-!s100 ?UADi>Z7ALf0WF3Tl8EU<1
-!s11b n:GcReWoT6Az2O:04GG8H3
-IB3AjzJP<[PPFm7NiFnjPU0
-R4
-R0
-Z10 w1597302881
-Z11 8C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/FP/FP32_add.v
-Z12 FC:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/FP/FP32_add.v
-L0 2607
-R5
-r1
-!s85 0
-31
-Z13 !s108 1598197611.000000
-Z14 !s107 C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/FP/FP32_add.v|
-Z15 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/FP|-L|mtiAvm|-L|mtiRnm|-L|mtiOvm|-L|mtiUvm|-L|mtiUPF|-L|infact|C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/FP/FP32_add.v|
-!i113 0
-Z16 o-vlog01compat -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-Z17 !s92 -vlog01compat -work work {+incdir+C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/FP} -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-R1
-n@f@p32_add
-vFP32_add_altbarrel_shift_35e
 R9
-!i10b 1
-!s100 `hkAiEA]Fdk>3l1=4j6[a0
-!s11b ]m@8@b<kCNMOghAX^6[KN0
-IBKQ6o<aok]bU1BLRCfWS:0
-R4
+R1
+Edspba_delay
+Z10 w1598535145
+Z11 DPx4 work 21 dspba_library_package 0 22 KTlXWShT2<@=FUf9L`nD@1
+Z12 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z13 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
 R0
-R10
+Z14 8C:/Users/Shuai/Desktop/5_ver_1.0/rtl/FP/FP32_accum_sim/dspba_library.vhd
+Z15 FC:/Users/Shuai/Desktop/5_ver_1.0/rtl/FP/FP32_accum_sim/dspba_library.vhd
+l0
+L18
+Vh_99QD]IcO`z?>TBh9:D_2
+!s100 >TY9@l4a>2O5Wd_6jF4:g0
+Z16 OL;C;2019.2;69
+32
+Z17 !s110 1598614377
+!i10b 1
+Z18 !s108 1598614377.000000
+Z19 !s90 -reportprogress|300|C:/Users/Shuai/Desktop/5_ver_1.0/rtl/FP/FP32_accum_sim/dspba_library.vhd|
+Z20 !s107 C:/Users/Shuai/Desktop/5_ver_1.0/rtl/FP/FP32_accum_sim/dspba_library.vhd|
+!i113 0
+Z21 tExplicit 1 CvgOpt 0
+Adelay
 R11
 R12
-L0 50
-R5
-r1
-!s85 0
-31
 R13
-R14
-R15
-!i113 0
+DEx4 work 11 dspba_delay 0 22 h_99QD]IcO`z?>TBh9:D_2
+l37
+L34
+VJ?aanBflNgc[^b7nS;oh72
+!s100 DAfPXKZhR<Ac>Wg8zYj1H3
 R16
+32
 R17
-R1
-n@f@p32_add_altbarrel_shift_35e
-vFP32_add_altbarrel_shift_olb
-R9
 !i10b 1
-!s100 mj6ALRF:UD<GlU;CXP>kT2
-!s11b K9P0@`UQ[59oZ[hz@<U<V2
-I:aP`Xm?7KARl;IX3:VRF71
-R4
-R0
-R10
-R11
-R12
-L0 115
-R5
-r1
-!s85 0
-31
-R13
-R14
-R15
-!i113 0
-R16
-R17
-R1
-n@f@p32_add_altbarrel_shift_olb
-vFP32_add_altfp_add_sub_s3k
-R9
-!i10b 1
-!s100 lgD=z11iS2@?VHaQK0lYo1
-!s11b BbmMbIF^FFOLijij;7k2M0
-I[@5>LSeQ4M3FnJ@BV0fm12
-R4
-R0
-R10
-R11
-R12
-L0 709
-R5
-r1
-!s85 0
-31
-R13
-R14
-R15
-!i113 0
-R16
-R17
-R1
-n@f@p32_add_altfp_add_sub_s3k
-vFP32_add_altpriority_encoder_3e8
-R9
-!i10b 1
-!s100 OA7Do7Q@:5WF6jkhPWW==2
-!s11b jzR0mG9]7;IY=4KX?8O;U0
-I71418MX4Wo1UF]H@0na232
-R4
-R0
-R10
-R11
-R12
-L0 185
-R5
-r1
-!s85 0
-31
-R13
-R14
-R15
-!i113 0
-R16
-R17
-R1
-n@f@p32_add_altpriority_encoder_3e8
-vFP32_add_altpriority_encoder_3v7
-R9
-!i10b 1
-!s100 T6W44`3aBeIhFP4b]Pa]a0
-!s11b :?gHk5RlXeA]A>KNoHcC_3
-If8McX:gO9`a?4N[>Ahn1S3
-R4
-R0
-R10
-R11
-R12
-L0 165
-R5
-r1
-!s85 0
-31
-R13
-R14
-R15
-!i113 0
-R16
-R17
-R1
-n@f@p32_add_altpriority_encoder_3v7
-vFP32_add_altpriority_encoder_6e8
-R9
-!i10b 1
-!s100 V]Se7Gj?RZ0`G_[z9<Ldd0
-!s11b hORj>cmddCb@?OciJKln53
-I[@mm19^4O@mUa`HBHI1;J1
-R4
-R0
-R10
-R11
-R12
-L0 236
-R5
-r1
-!s85 0
-31
-R13
-R14
-R15
-!i113 0
-R16
-R17
-R1
-n@f@p32_add_altpriority_encoder_6e8
-vFP32_add_altpriority_encoder_6v7
-R9
-!i10b 1
-!s100 W?VHCX<h:76CXjIiOQe]91
-!s11b eb=Zh_GKld@j5Z2T@MCA80
-I>Wl3iNjF`g12Ea79j?gne0
-R4
-R0
-R10
-R11
-R12
-L0 204
-R5
-r1
-!s85 0
-31
-R13
-R14
-R15
-!i113 0
-R16
-R17
-R1
-n@f@p32_add_altpriority_encoder_6v7
-vFP32_add_altpriority_encoder_be8
-R9
-!i10b 1
-!s100 OcNLj0fE[84_kdjo73kYg3
-!s11b :YWI6j<L<f`_96<nHk_Bb1
-If=;UaOMKOHUdmUQma1oD`1
-R4
-R0
-R10
-R11
-R12
-L0 301
-R5
-r1
-!s85 0
-31
-R13
-R14
-R15
-!i113 0
-R16
-R17
-R1
-n@f@p32_add_altpriority_encoder_be8
-vFP32_add_altpriority_encoder_bv7
-R9
-!i10b 1
-!s100 CVUSP3Y[85b84MHU`N2WQ0
-!s11b BF_NCk8>MAXng]EnVNnbJ3
-IKRIG9z5TZ_3m[ZgMEmUGm2
-R4
-R0
-R10
-R11
-R12
-L0 269
-R5
-r1
-!s85 0
-31
-R13
-R14
-R15
-!i113 0
-R16
-R17
-R1
-n@f@p32_add_altpriority_encoder_bv7
-vFP32_add_altpriority_encoder_e48
-R9
-!i10b 1
-!s100 UZNFHGm:A]jIT9=CjA6Ql0
-!s11b SE5UDzKTDf6AfUaXeW>DI0
-Ig^6Z_NQJ3TUbcPgDU:W6i0
-R4
-R0
-R10
-R11
-R12
-L0 681
-R5
-r1
-!s85 0
-31
-R13
-R14
-R15
-!i113 0
-R16
-R17
-R1
-n@f@p32_add_altpriority_encoder_e48
-vFP32_add_altpriority_encoder_f48
-R9
-!i10b 1
-!s100 Le0@56;zl2Bl=K?HzNE5S2
-!s11b 6gl<D7jiU`JPFGbccdKWd2
-I:hmkbDlIPk_m6@zf1jheC2
-R4
-R0
-R10
-R11
-R12
-L0 653
-R5
-r1
-!s85 0
-31
-R13
-R14
-R15
-!i113 0
-R16
-R17
-R1
-n@f@p32_add_altpriority_encoder_f48
-vFP32_add_altpriority_encoder_fj8
-R9
-!i10b 1
-!s100 SjUb2MUUk2=DB?OK>nonj2
-!s11b O_d?JUBcUVnIhOX2UDYbK0
-IPT^@G=Ai]@0a5@^dmVDab1
-R4
-R0
-R10
-R11
-R12
-L0 532
-R5
-r1
-!s85 0
-31
-R13
-R14
-R15
-!i113 0
-R16
-R17
-R1
-n@f@p32_add_altpriority_encoder_fj8
-vFP32_add_altpriority_encoder_n28
-R9
-!i10b 1
-!s100 f`0Qc:9<b?h8nh6TT^>Ya3
-!s11b Xdl>d8kWVA]Y5g6W5?liP0
-I`k8_R@>BV2E8gg^TmCV5g3
-R4
-R0
-R10
-R11
-R12
-L0 581
-R5
-r1
-!s85 0
-31
-R13
-R14
-R15
-!i113 0
-R16
-R17
-R1
-n@f@p32_add_altpriority_encoder_n28
-vFP32_add_altpriority_encoder_nh8
-R9
-!i10b 1
-!s100 _nHcZYBNY1mJaF_AWkVao2
-!s11b edm2SKAPoG3G]FOD`bTV:2
-I7SGjY>LiiTen6hC=FYR9K0
-R4
-R0
-R10
-R11
-R12
-L0 447
-R5
-r1
-!s85 0
-31
-R13
-R14
-R15
-!i113 0
-R16
-R17
-R1
-n@f@p32_add_altpriority_encoder_nh8
-vFP32_add_altpriority_encoder_q28
-R9
-!i10b 1
-!s100 EUSWI8cQiXHSzi;QAV4`83
-!s11b 1JGEa9aIjnB4j:5PnZVhH3
-I?74R0H^dBbAQEkgI7lT>]2
-R4
-R0
-R10
-R11
-R12
-L0 597
-R5
-r1
-!s85 0
-31
-R13
-R14
-R15
-!i113 0
-R16
-R17
-R1
-n@f@p32_add_altpriority_encoder_q28
-vFP32_add_altpriority_encoder_qb6
-R9
-!i10b 1
-!s100 L;TNL<Z63mZ_[[n^NPCAj0
-!s11b H5K_MAAU@zh1Kgf=:g3n=2
-IodXD6e6YABO]o@XTg8C2g1
-R4
-R0
-R10
-R11
-R12
-L0 399
-R5
-r1
-!s85 0
-31
-R13
-R14
-R15
-!i113 0
-R16
-R17
-R1
-n@f@p32_add_altpriority_encoder_qb6
-vFP32_add_altpriority_encoder_qh8
-R9
-!i10b 1
-!s100 ?F6f2Qnl;hKhfJ:WhLGBI2
-!s11b iiW?bdScM:W;G^aYoDm852
-IGgR;gnmnEdfEIcmh:LU<_2
-R4
-R0
-R10
-R11
-R12
-L0 466
-R5
-r1
-!s85 0
-31
-R13
-R14
-R15
-!i113 0
-R16
-R17
-R1
-n@f@p32_add_altpriority_encoder_qh8
-vFP32_add_altpriority_encoder_r08
-R9
-!i10b 1
-!s100 mcL>ARPcWZah>EAGF?2YB0
-!s11b R4bOz5O1mCKfkUYFQS3Mj0
-IYGISeB]n18?zk`1@W>fYM2
-R4
-R0
-R10
-R11
-R12
-L0 334
-R5
-r1
-!s85 0
-31
-R13
-R14
-R15
-!i113 0
-R16
-R17
-R1
-n@f@p32_add_altpriority_encoder_r08
-vFP32_add_altpriority_encoder_rf8
-R9
-!i10b 1
-!s100 B`]6liXPKEzG:6T=0QM@E2
-!s11b EQm[=ce4NnmOH_GhZX??92
-I^d<aIlk3XWn=<0j3EDF`D0
-R4
-R0
-R10
-R11
-R12
-L0 366
-R5
-r1
-!s85 0
-31
-R13
-R14
-R15
-!i113 0
-R16
-R17
-R1
-n@f@p32_add_altpriority_encoder_rf8
-vFP32_add_altpriority_encoder_v28
-R9
-!i10b 1
-!s100 ;:YK>C:b^o`1EA]`eIKiF1
-!s11b BlY2X4Vhb[@MSie68[91P0
-INB4=[g8DFSAG?XOQNbnIU0
-R4
-R0
-R10
-R11
-R12
-L0 625
-R5
-r1
-!s85 0
-31
-R13
-R14
-R15
-!i113 0
-R16
-R17
-R1
-n@f@p32_add_altpriority_encoder_v28
-vFP32_add_altpriority_encoder_vh8
-R9
-!i10b 1
-!s100 KXFbFJPNCW8Li[D54GAca2
-!s11b @ahhd`>0S3a0H54[^7dM<3
-IdBEFJLQ_;C1VJ2d@VS`BO0
-R4
-R0
-R10
-R11
-R12
-L0 499
-R5
-r1
-!s85 0
-31
-R13
-R14
-R15
-!i113 0
-R16
-R17
-R1
-n@f@p32_add_altpriority_encoder_vh8
-vFP32_mult
-R9
-!i10b 1
-!s100 VhQ;TnS0DNBd8fFk2_9T03
-!s11b =>kVMm;]o0af;iGVzLnl90
-IgRC^SHl`J8@X=DBk8j;GM1
-R4
-R0
-Z18 w1597302843
-Z19 8C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/FP/FP32_mult.v
-Z20 FC:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/FP/FP32_mult.v
-L0 518
-R5
-r1
-!s85 0
-31
-R13
-Z21 !s107 C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/FP/FP32_mult.v|
-Z22 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/FP|-L|mtiAvm|-L|mtiRnm|-L|mtiOvm|-L|mtiUvm|-L|mtiUPF|-L|infact|C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/FP/FP32_mult.v|
-!i113 0
-R16
-R17
-R1
-n@f@p32_mult
-vFP32_mult_altfp_mult_buo
-R9
-!i10b 1
-!s100 Z1TO1hWD;]mk`hb8>dEZ80
-!s11b HaLMVLZgXH;8YkCaL8iEB0
-I2?^geWU4:ZRNecMUWR1n`3
-R4
-R0
 R18
 R19
 R20
+!i113 0
+R21
+Pdspba_library_package
+R12
+R13
+R10
+R0
+8C:/Users/Shuai/Desktop/5_ver_1.0/rtl/FP/FP32_accum_sim/dspba_library_package.vhd
+FC:/Users/Shuai/Desktop/5_ver_1.0/rtl/FP/FP32_accum_sim/dspba_library_package.vhd
+l0
+L17
+VKTlXWShT2<@=FUf9L`nD@1
+!s100 @e;XE0e^oAdIdzY=Rc];H3
+R16
+32
+R17
+!i10b 1
+R18
+!s90 -reportprogress|300|C:/Users/Shuai/Desktop/5_ver_1.0/rtl/FP/FP32_accum_sim/dspba_library_package.vhd|
+!s107 C:/Users/Shuai/Desktop/5_ver_1.0/rtl/FP/FP32_accum_sim/dspba_library_package.vhd|
+!i113 0
+R21
+Edspba_pipe
+R10
+Z22 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+R12
+R13
+R0
+R14
+R15
+l0
+L343
+VI4KODRF]=ojndU_8;Qa<A0
+!s100 ko3XcgZgdPgSD;SDR?Wmi2
+R16
+32
+R17
+!i10b 1
+R18
+R19
+R20
+!i113 0
+R21
+Artl
+R22
+R12
+R13
+DEx4 work 10 dspba_pipe 0 22 I4KODRF]=ojndU_8;Qa<A0
+l362
+L356
+V04Zm]fe?nYFNSJ9@9:?0J0
+!s100 =]hA3YBJaaU9dNBMla?I?2
+R16
+32
+R17
+!i10b 1
+R18
+R19
+R20
+!i113 0
+R21
+Edspba_sync_reg
+R10
+R11
+R22
+R12
+R13
+R0
+R14
+R15
+l0
+L93
+V^:zbgnPCjHS7<>M40RfPY2
+!s100 G`[2Ci2RQWoL`zK>2h>oj2
+R16
+32
+R17
+!i10b 1
+R18
+R19
+R20
+!i113 0
+R21
+Async_reg
+R11
+R22
+R12
+R13
+DEx4 work 14 dspba_sync_reg 0 22 ^:zbgnPCjHS7<>M40RfPY2
+l136
+L117
+V4klTB7YQGR@?1BoPQPHB^1
+!s100 D5ba3Bk5_`1nL6?j<JkK81
+R16
+32
+R17
+!i10b 1
+R18
+R19
+R20
+!i113 0
+R21
+Efp32_accum
+R10
+Z23 DPx3 lpm 14 lpm_components 0 22 BPWmLcD9@3R6AG?2W<6h@2
+Z24 DPx9 altera_mf 20 altera_mf_components 0 22 ;5_QFQPAcHUOMEhEZ0A^C0
+R11
+Z25 DPx4 ieee 9 math_real 0 22 gNk<PdFJ<XNPcfef`f?Z81
+R22
+R12
+R13
+R0
+Z26 8C:/Users/Shuai/Desktop/5_ver_1.0/rtl/FP/FP32_accum_sim/FP32_accum.vhd
+Z27 FC:/Users/Shuai/Desktop/5_ver_1.0/rtl/FP/FP32_accum_sim/FP32_accum.vhd
+l0
+L34
+VjPSAAjBj9lBd`K4OcEGfa2
+!s100 UQU5MhX1gjim@Wl]1b[ge0
+R16
+32
+R17
+!i10b 1
+R18
+Z28 !s90 -reportprogress|300|C:/Users/Shuai/Desktop/5_ver_1.0/rtl/FP/FP32_accum_sim/FP32_accum.vhd|
+Z29 !s107 C:/Users/Shuai/Desktop/5_ver_1.0/rtl/FP/FP32_accum_sim/FP32_accum.vhd|
+!i113 0
+R21
+Anormal
+R23
+R24
+R11
+R25
+R22
+R12
+R13
+DEx4 work 10 fp32_accum 0 22 jPSAAjBj9lBd`K4OcEGfa2
+l307
+L48
+Vb:MNBSOSPLH8fnn6Vndb:3
+!s100 ?E`X6nOh1TlI9TDS:AMeg0
+R16
+32
+R17
+!i10b 1
+R18
+R28
+R29
+!i113 0
+R21
+vFP32_mult
+R2
+R17
+!i10b 1
+!s100 Dnj8?fSPI0P4eI]1O7eGB1
+!s11b oL^P@^bDBJf:BQjRiNNzF0
+I3Bm@o=f>Q0a@XcNek]Km82
+R4
+S1
+R0
+Z30 w1598535105
+Z31 8C:/Users/Shuai/Desktop/5_ver_1.0/rtl/FP/FP32_mult.v
+Z32 FC:/Users/Shuai/Desktop/5_ver_1.0/rtl/FP/FP32_mult.v
+L0 749
+R5
+r1
+!s85 0
+31
+R18
+Z33 !s107 C:/Users/Shuai/Desktop/5_ver_1.0/rtl/FP/FP32_mult.v|
+Z34 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Shuai/Desktop/5_ver_1.0/rtl/FP|-L|mtiAvm|-L|mtiRnm|-L|mtiOvm|-L|mtiUvm|-L|mtiUPF|-L|infact|C:/Users/Shuai/Desktop/5_ver_1.0/rtl/FP/FP32_mult.v|
+!i113 0
+R7
+Z35 !s92 -sv -work work +incdir+C:/Users/Shuai/Desktop/5_ver_1.0/rtl/FP -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+n@f@p32_mult
+vFP32_mult_altfp_mult_nvo
+R2
+R17
+!i10b 1
+!s100 a0g`P`>nUKmaM=MXlVAIj2
+!s11b QEaYAalf4CjNb2EDSShOA1
+IU[]nYB2n?3:TM6Y7zY83z0
+R4
+S1
+R0
+R30
+R31
+R32
 L0 46
 R5
 r1
 !s85 0
 31
-R13
-R21
-R22
-!i113 0
-R16
-R17
-R1
-n@f@p32_mult_altfp_mult_buo
-vFPadd
-R2
-Z23 !s110 1598197612
-!i10b 1
-!s100 k^hPBgaL4=9c0P<UaV?L11
-!s11b PGEn<DLS<i;?a=oWg@_mL0
-IUZ<YmTzLj0n9M_0AaCEno0
-R4
-S1
-R0
-w1597203423
-8C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/PE/FPadd.sv
-FC:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/PE/FPadd.sv
-L0 1
-R5
-r1
-!s85 0
-31
-Z24 !s108 1598197612.000000
-!s107 C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/PE/FPadd.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/PE|-L|mtiAvm|-L|mtiRnm|-L|mtiOvm|-L|mtiUvm|-L|mtiUPF|-L|infact|C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/PE/FPadd.sv|
+R18
+R33
+R34
 !i113 0
 R7
-R8
+R35
 R1
-n@f@padd
+n@f@p32_mult_altfp_mult_nvo
 vFPmult
 R2
-R23
+R17
 !i10b 1
 !s100 ];zK16WM>2Xm1:R;lZN>o0
 !s11b 7mUHUdK8gVR:nYKZz>Pjn2
-Ia?[_h<6=Yo0:0J_PZ<o0G1
+IhHHgDhY0=5QEl5K7JhTe91
 R4
 S1
 R0
 w1597203533
-8C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/PE/FPmult.sv
-FC:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/PE/FPmult.sv
+8C:/Users/Shuai/Desktop/5_ver_1.0/rtl/PE/FPmult.sv
+FC:/Users/Shuai/Desktop/5_ver_1.0/rtl/PE/FPmult.sv
 L0 1
 R5
 r1
 !s85 0
 31
-R24
-!s107 C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/PE/FPmult.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/PE|-L|mtiAvm|-L|mtiRnm|-L|mtiOvm|-L|mtiUvm|-L|mtiUPF|-L|infact|C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/PE/FPmult.sv|
+R18
+!s107 C:/Users/Shuai/Desktop/5_ver_1.0/rtl/PE/FPmult.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Shuai/Desktop/5_ver_1.0/rtl/PE|-L|mtiAvm|-L|mtiRnm|-L|mtiOvm|-L|mtiUvm|-L|mtiUPF|-L|infact|C:/Users/Shuai/Desktop/5_ver_1.0/rtl/PE/FPmult.sv|
 !i113 0
 R7
 R8
@@ -699,57 +360,57 @@ R1
 n@f@pmult
 vFSM
 R2
-R23
+Z36 !s110 1598614378
 !i10b 1
-!s100 ^9bkTJd47kF2TcE]^EA042
-!s11b Q?O3Y1HnMbF[P74ifC>M@2
-I:zXVU2gOMX:O2bhmnC;RY1
+!s100 EW9m=2P9;n^b937ZM4N282
+!s11b kzT`ZD8UVRnR[JYK>ZCQ=0
+I02YfeW3V<IgUPjFmhTIme3
 R4
 S1
 R0
-w1598197503
-8C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/FSM_top/FSM.sv
-FC:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/FSM_top/FSM.sv
-FC:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/FSM_top/./FSM_wire_define.sv
-FC:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/FSM_top/./debug_seg.sv
-FC:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/FSM_top/./FSM_uart_data_load.sv
-FC:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/FSM_top/./FSM_counter_update.sv
-FC:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/FSM_top/./FSM_ram_interface_ctrl.sv
-FC:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/FSM_top/./FSM_body.sv
+w1598613733
+8C:/Users/Shuai/Desktop/5_ver_1.0/rtl/FSM_top/FSM.sv
+FC:/Users/Shuai/Desktop/5_ver_1.0/rtl/FSM_top/FSM.sv
+FC:/Users/Shuai/Desktop/5_ver_1.0/rtl/FSM_top/./FSM_wire_define.sv
+FC:/Users/Shuai/Desktop/5_ver_1.0/rtl/FSM_top/./debug_seg.sv
+FC:/Users/Shuai/Desktop/5_ver_1.0/rtl/FSM_top/./FSM_uart_data_load.sv
+FC:/Users/Shuai/Desktop/5_ver_1.0/rtl/FSM_top/./FSM_counter_update.sv
+FC:/Users/Shuai/Desktop/5_ver_1.0/rtl/FSM_top/./FSM_ram_interface_ctrl.sv
+FC:/Users/Shuai/Desktop/5_ver_1.0/rtl/FSM_top/./FSM_body.sv
 L0 14
 R5
 r1
 !s85 0
 31
-R24
-!s107 C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/FSM_top/./FSM_body.sv|C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/FSM_top/./FSM_ram_interface_ctrl.sv|C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/FSM_top/./FSM_counter_update.sv|C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/FSM_top/./FSM_uart_data_load.sv|C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/FSM_top/./debug_seg.sv|C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/FSM_top/./FSM_wire_define.sv|C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/FSM_top/param.vh|C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/FSM_top/FSM.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/FSM_top|-L|mtiAvm|-L|mtiRnm|-L|mtiOvm|-L|mtiUvm|-L|mtiUPF|-L|infact|C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/FSM_top/FSM.sv|
+Z37 !s108 1598614378.000000
+!s107 C:/Users/Shuai/Desktop/5_ver_1.0/rtl/FSM_top/./FSM_body.sv|C:/Users/Shuai/Desktop/5_ver_1.0/rtl/FSM_top/./FSM_ram_interface_ctrl.sv|C:/Users/Shuai/Desktop/5_ver_1.0/rtl/FSM_top/./FSM_counter_update.sv|C:/Users/Shuai/Desktop/5_ver_1.0/rtl/FSM_top/./FSM_uart_data_load.sv|C:/Users/Shuai/Desktop/5_ver_1.0/rtl/FSM_top/./debug_seg.sv|C:/Users/Shuai/Desktop/5_ver_1.0/rtl/FSM_top/./FSM_wire_define.sv|C:/Users/Shuai/Desktop/5_ver_1.0/rtl/FSM_top/../param.vh|C:/Users/Shuai/Desktop/5_ver_1.0/rtl/FSM_top/FSM.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Shuai/Desktop/5_ver_1.0/rtl/FSM_top|-L|mtiAvm|-L|mtiRnm|-L|mtiOvm|-L|mtiUvm|-L|mtiUPF|-L|infact|C:/Users/Shuai/Desktop/5_ver_1.0/rtl/FSM_top/FSM.sv|
 !i113 0
 R7
-!s92 -sv -work work {+incdir+C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/FSM_top} -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+!s92 -sv -work work +incdir+C:/Users/Shuai/Desktop/5_ver_1.0/rtl/FSM_top -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 R1
 n@f@s@m
 vMAC
 R2
-R23
+R36
 !i10b 1
-!s100 J;QlT`]7=Bfo5G3hR_1YL1
-!s11b P>C3iKXZc>k@?U>mD8a7j2
-IKW=?OEDhU6_QoSnKQF0B52
+!s100 SUP8RQ]66nn^I;z=;_96e1
+!s11b TIG[RN9_d[n>P>lkig;<P3
+IGQW`@DL`Nm`lo9Jj==3M03
 R4
 S1
 R0
-w1597213450
-8C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/PE/MAC.sv
-FC:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/PE/MAC.sv
+w1598530998
+8C:/Users/Shuai/Desktop/5_ver_1.0/rtl/PE/MAC.sv
+FC:/Users/Shuai/Desktop/5_ver_1.0/rtl/PE/MAC.sv
 L0 3
 R5
 r1
 !s85 0
 31
-R24
-!s107 C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/PE/MAC.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/PE|-L|mtiAvm|-L|mtiRnm|-L|mtiOvm|-L|mtiUvm|-L|mtiUPF|-L|infact|C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/PE/MAC.sv|
+R37
+!s107 C:/Users/Shuai/Desktop/5_ver_1.0/rtl/PE/MAC.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Shuai/Desktop/5_ver_1.0/rtl/PE|-L|mtiAvm|-L|mtiRnm|-L|mtiOvm|-L|mtiUvm|-L|mtiUPF|-L|infact|C:/Users/Shuai/Desktop/5_ver_1.0/rtl/PE/MAC.sv|
 !i113 0
 R7
 R8
@@ -757,317 +418,360 @@ R1
 n@m@a@c
 vmult
 R2
-R23
+R36
 !i10b 1
-!s100 V`WDePQZmbbI5N@2a8Xkl0
-!s11b D=U2L5IZk8X?8J^4fUzGK1
-Ib3JQg?X1;]0ZBLDeMSeXn1
+!s100 FGf;cG>5f3O:AYJ6LNe>X2
+!s11b LICz:Pz^2=^n]5Z7>VF941
+IUWMW?0HDSRGnfIUI^Mj@I3
 R4
 S1
 R0
-w1597205051
-8C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/PE/mult.sv
-FC:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/PE/mult.sv
+w1598523080
+8C:/Users/Shuai/Desktop/5_ver_1.0/rtl/PE/mult.sv
+FC:/Users/Shuai/Desktop/5_ver_1.0/rtl/PE/mult.sv
 L0 1
 R5
 r1
 !s85 0
 31
-R24
-!s107 C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/PE/mult.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/PE|-L|mtiAvm|-L|mtiRnm|-L|mtiOvm|-L|mtiUvm|-L|mtiUPF|-L|infact|C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/PE/mult.sv|
+R37
+!s107 C:/Users/Shuai/Desktop/5_ver_1.0/rtl/PE/mult.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Shuai/Desktop/5_ver_1.0/rtl/PE|-L|mtiAvm|-L|mtiRnm|-L|mtiOvm|-L|mtiUvm|-L|mtiUPF|-L|infact|C:/Users/Shuai/Desktop/5_ver_1.0/rtl/PE/mult.sv|
 !i113 0
 R7
 R8
 R1
 vpll
-R23
+R2
+R36
 !i10b 1
-!s100 oeOm<nZGdU:9kN6cTnUaV1
-!s11b EGS>aDFQM4CoLh23iPm840
-IclM7YTYSlkF@0LjXXS6XM2
+!s100 SU0<LYaZ6LZPM5gbFLfmO1
+!s11b mKIi]QhA2Jm_EkTSK_k4b2
+I;z:kO;JXBZ]nAjUQ[7T7g2
 R4
+S1
 R0
 w1597391232
-8C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/PLL/pll.v
-FC:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/PLL/pll.v
-Z25 L0 39
+8C:/Users/Shuai/Desktop/5_ver_1.0/rtl/PLL/pll.v
+FC:/Users/Shuai/Desktop/5_ver_1.0/rtl/PLL/pll.v
+Z38 L0 39
 R5
 r1
 !s85 0
 31
-R24
-!s107 C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/PLL/pll.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/PLL|-L|mtiAvm|-L|mtiRnm|-L|mtiOvm|-L|mtiUvm|-L|mtiUPF|-L|infact|C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/PLL/pll.v|
+R37
+!s107 C:/Users/Shuai/Desktop/5_ver_1.0/rtl/PLL/pll.v|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Shuai/Desktop/5_ver_1.0/rtl/PLL|-L|mtiAvm|-L|mtiRnm|-L|mtiOvm|-L|mtiUvm|-L|mtiUPF|-L|infact|C:/Users/Shuai/Desktop/5_ver_1.0/rtl/PLL/pll.v|
 !i113 0
-R16
-!s92 -vlog01compat -work work {+incdir+C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/PLL} -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R7
+!s92 -sv -work work +incdir+C:/Users/Shuai/Desktop/5_ver_1.0/rtl/PLL -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 R1
 vpll_altpll
-R23
+R2
+R36
 !i10b 1
-!s100 ^MehI=oNWVNTz2eP[EfZW1
-!s11b ]NZaONdm5>E?MX1WSFPEM1
-I?^KjD]F9a9TOQ[h^mzV5>2
+!s100 3^AI5=4HlcY0UkE7oHbT=3
+!s11b ]dd7M^@`4Rk<EzSg4XHMa0
+IJd==ijlzHkZ8;lOd;73[L1
 R4
+S1
 R0
 w1597480796
-8C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/par/db/pll_altpll.v
-FC:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/par/db/pll_altpll.v
+8C:/Users/Shuai/Desktop/5_ver_1.0/par/db/pll_altpll.v
+FC:/Users/Shuai/Desktop/5_ver_1.0/par/db/pll_altpll.v
 L0 30
 R5
 r1
 !s85 0
 31
-R24
-!s107 C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/par/db/pll_altpll.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/par/db|-L|mtiAvm|-L|mtiRnm|-L|mtiOvm|-L|mtiUvm|-L|mtiUPF|-L|infact|C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/par/db/pll_altpll.v|
+R37
+!s107 C:/Users/Shuai/Desktop/5_ver_1.0/par/db/pll_altpll.v|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Shuai/Desktop/5_ver_1.0/par/db|-L|mtiAvm|-L|mtiRnm|-L|mtiOvm|-L|mtiUvm|-L|mtiUPF|-L|infact|C:/Users/Shuai/Desktop/5_ver_1.0/par/db/pll_altpll.v|
 !i113 0
-R16
-!s92 -vlog01compat -work work {+incdir+C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/par/db} -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R7
+!s92 -sv -work work +incdir+C:/Users/Shuai/Desktop/5_ver_1.0/par/db -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 R1
 vposedgeDect
-R23
+R2
+R36
 !i10b 1
-!s100 B=<<m6?zHaDLEnE7@3Vk=3
-!s11b 4Z=F9>1N8R3Z8K9Tiz4R63
-Ig0^ceY09=7Vk_[]T;O]550
+!s100 =0EG[_a]<LJ:cY47<QD8c1
+!s11b 0kSWIULPzjKEA6JYQ6jzG1
+IdN9=QN>llTS`kPLg`hQ_D2
 R4
+S1
 R0
 w1598181186
-8C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/UART/posedgeDect.v
-FC:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/UART/posedgeDect.v
+8C:/Users/Shuai/Desktop/5_ver_1.0/rtl/UART/posedgeDect.v
+FC:/Users/Shuai/Desktop/5_ver_1.0/rtl/UART/posedgeDect.v
 L0 5
 R5
 r1
 !s85 0
 31
-R24
-!s107 C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/UART/posedgeDect.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/UART|-L|mtiAvm|-L|mtiRnm|-L|mtiOvm|-L|mtiUvm|-L|mtiUPF|-L|infact|C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/UART/posedgeDect.v|
+R37
+!s107 C:/Users/Shuai/Desktop/5_ver_1.0/rtl/UART/posedgeDect.v|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Shuai/Desktop/5_ver_1.0/rtl/UART|-L|mtiAvm|-L|mtiRnm|-L|mtiOvm|-L|mtiUvm|-L|mtiUPF|-L|infact|C:/Users/Shuai/Desktop/5_ver_1.0/rtl/UART/posedgeDect.v|
 !i113 0
-R16
-Z26 !s92 -vlog01compat -work work {+incdir+C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/UART} -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R7
+Z39 !s92 -sv -work work +incdir+C:/Users/Shuai/Desktop/5_ver_1.0/rtl/UART -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 R1
 nposedge@dect
-vposedgeDect_single
-R23
-!i10b 1
-!s100 <eCY89=Bn0S70_UaZ^=n33
-!s11b AaeDmQ^5k6AWhWL5kAfLD3
-IiZQ>TmYJl?XX]P<j<D<OC2
-R4
-R0
-w1598082521
-8C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/UART/posedgeDect_single.v
-FC:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/UART/posedgeDect_single.v
-L0 6
-R5
-r1
-!s85 0
-31
-R24
-!s107 C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/UART/posedgeDect_single.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/UART|-L|mtiAvm|-L|mtiRnm|-L|mtiOvm|-L|mtiUvm|-L|mtiUPF|-L|infact|C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/UART/posedgeDect_single.v|
-!i113 0
-R16
-R26
-R1
-nposedge@dect_single
 vRAM_32b_256
-Z27 !s110 1598197613
+R2
+R36
 !i10b 1
-!s100 [ENm:`2[004idP0PLlg6I3
-!s11b 4HE:F=E3FFnOS=5NFiNKO0
-IcHU3YTQKZlLli;9E_Fn>n3
+!s100 [1KgSn79>NNJ:F9Ub4J8U1
+!s11b [PRR_lXT;cb8Z;5De^giP0
+I?9OUY@zn;ScY_o<IK?SO<2
 R4
+S1
 R0
-w1598196506
-8C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/RAM/RAM_32b_256.v
-FC:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/RAM/RAM_32b_256.v
-R25
+w1598586456
+8C:/Users/Shuai/Desktop/5_ver_1.0/rtl/RAM/RAM_32b_256.v
+FC:/Users/Shuai/Desktop/5_ver_1.0/rtl/RAM/RAM_32b_256.v
+R38
 R5
 r1
 !s85 0
 31
-Z28 !s108 1598197613.000000
-!s107 C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/RAM/RAM_32b_256.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/RAM|-L|mtiAvm|-L|mtiRnm|-L|mtiOvm|-L|mtiUvm|-L|mtiUPF|-L|infact|C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/RAM/RAM_32b_256.v|
+R37
+!s107 C:/Users/Shuai/Desktop/5_ver_1.0/rtl/RAM/RAM_32b_256.v|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Shuai/Desktop/5_ver_1.0/rtl/RAM|-L|mtiAvm|-L|mtiRnm|-L|mtiOvm|-L|mtiUvm|-L|mtiUPF|-L|infact|C:/Users/Shuai/Desktop/5_ver_1.0/rtl/RAM/RAM_32b_256.v|
 !i113 0
-R16
-!s92 -vlog01compat -work work {+incdir+C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/RAM} -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R7
+Z40 !s92 -sv -work work +incdir+C:/Users/Shuai/Desktop/5_ver_1.0/rtl/RAM -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 R1
 n@r@a@m_32b_256
+vRAM_32b_result
+R2
+R36
+!i10b 1
+!s100 ZRb1bjOLd@<B24fAQUbSk0
+!s11b 0^WY4e>RL><V@blh`P3GI1
+I8E3R>Ra?RIMdmJI?;Lf2N1
+R4
+S1
+R0
+w1598520725
+8C:/Users/Shuai/Desktop/5_ver_1.0/rtl/RAM/RAM_32b_result.v
+FC:/Users/Shuai/Desktop/5_ver_1.0/rtl/RAM/RAM_32b_result.v
+R38
+R5
+r1
+!s85 0
+31
+R37
+!s107 C:/Users/Shuai/Desktop/5_ver_1.0/rtl/RAM/RAM_32b_result.v|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Shuai/Desktop/5_ver_1.0/rtl/RAM|-L|mtiAvm|-L|mtiRnm|-L|mtiOvm|-L|mtiUvm|-L|mtiUPF|-L|infact|C:/Users/Shuai/Desktop/5_ver_1.0/rtl/RAM/RAM_32b_result.v|
+!i113 0
+R7
+R40
+R1
+n@r@a@m_32b_result
 vseg_led_static
 R2
-R27
+R36
 !i10b 1
 !s100 ZoOQiINJJWGzbSWV9PjQS0
 !s11b 0kIgkBjb;P]=WSSVDl2U52
-IkoTZj[8PjKceGD`aB0L<<0
+IU939><=4ok_kVL3CUcYH50
 R4
 S1
 R0
 w1597390547
-8C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/Seg/seg_led_static.sv
-FC:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/Seg/seg_led_static.sv
+8C:/Users/Shuai/Desktop/5_ver_1.0/rtl/Seg/seg_led_static.sv
+FC:/Users/Shuai/Desktop/5_ver_1.0/rtl/Seg/seg_led_static.sv
 L0 1
 R5
 r1
 !s85 0
 31
-R28
-!s107 C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/Seg/seg_led_static.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/Seg|-L|mtiAvm|-L|mtiRnm|-L|mtiOvm|-L|mtiUvm|-L|mtiUPF|-L|infact|C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/Seg/seg_led_static.sv|
+R37
+!s107 C:/Users/Shuai/Desktop/5_ver_1.0/rtl/Seg/seg_led_static.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Shuai/Desktop/5_ver_1.0/rtl/Seg|-L|mtiAvm|-L|mtiRnm|-L|mtiOvm|-L|mtiUvm|-L|mtiUPF|-L|infact|C:/Users/Shuai/Desktop/5_ver_1.0/rtl/Seg/seg_led_static.sv|
 !i113 0
 R7
-!s92 -sv -work work {+incdir+C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/Seg} -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+!s92 -sv -work work +incdir+C:/Users/Shuai/Desktop/5_ver_1.0/rtl/Seg -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 R1
 vsquare_mpt_test
 R2
-R27
+Z41 !s110 1598614379
 !i10b 1
-!s100 V=?RVB=ZBYOQkaF0bW=<53
-!s11b DmIQOlYDi:3zK<kUMYMeG3
-I66^lN^HIF9D_O[>cJIZW20
+!s100 Wc0OGGne5Cf[7@0ZUl7ch1
+!s11b SKozf^8<53:7[j`zcWAUF0
+IeZ0aZ3P3MY8fP`z]`dCZV1
 R4
 S1
 R0
-w1597502977
-8C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/square_mpt_test.sv
-FC:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/square_mpt_test.sv
+w1598614370
+8C:/Users/Shuai/Desktop/5_ver_1.0/rtl/square_mpt_test.sv
+FC:/Users/Shuai/Desktop/5_ver_1.0/rtl/square_mpt_test.sv
 L0 4
 R5
 r1
 !s85 0
 31
-R28
-!s107 C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/param.vh|C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/square_mpt_test.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl|-L|mtiAvm|-L|mtiRnm|-L|mtiOvm|-L|mtiUvm|-L|mtiUPF|-L|infact|C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/square_mpt_test.sv|
+R37
+!s107 C:/Users/Shuai/Desktop/5_ver_1.0/rtl/param.vh|C:/Users/Shuai/Desktop/5_ver_1.0/rtl/square_mpt_test.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Shuai/Desktop/5_ver_1.0/rtl|-L|mtiAvm|-L|mtiRnm|-L|mtiOvm|-L|mtiUvm|-L|mtiUPF|-L|infact|C:/Users/Shuai/Desktop/5_ver_1.0/rtl/square_mpt_test.sv|
 !i113 0
 R7
-!s92 -sv -work work {+incdir+C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl} -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+!s92 -sv -work work +incdir+C:/Users/Shuai/Desktop/5_ver_1.0/rtl -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 R1
 vsystolic_arr
 R2
-R27
+R41
 !i10b 1
-!s100 ;=;JJh:`UA3KSQOLlzFi=1
-!s11b b3XdhInUBCLY7X7WaB70_2
-IhI[CIIZz>Ezh8PaPinlDK3
+!s100 ZQT`RXi@b1:I^oB[4OCSh2
+!s11b 4]US1N4UPl8AoQGkddTEd1
+Id>G@hGEaho4X<J::<A^4T0
 R4
 S1
 R0
-w1597480697
-8C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/PE/systolic_arr.sv
-FC:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/PE/systolic_arr.sv
-L0 2
+w1598593648
+8C:/Users/Shuai/Desktop/5_ver_1.0/rtl/PE/systolic_arr.sv
+FC:/Users/Shuai/Desktop/5_ver_1.0/rtl/PE/systolic_arr.sv
+L0 11
 R5
 r1
 !s85 0
 31
-R28
-!s107 C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/PE/param.vh|C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/PE/systolic_arr.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/PE|-L|mtiAvm|-L|mtiRnm|-L|mtiOvm|-L|mtiUvm|-L|mtiUPF|-L|infact|C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/PE/systolic_arr.sv|
+Z42 !s108 1598614379.000000
+!s107 C:/Users/Shuai/Desktop/5_ver_1.0/rtl/PE/../param.vh|C:/Users/Shuai/Desktop/5_ver_1.0/rtl/PE/systolic_arr.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Shuai/Desktop/5_ver_1.0/rtl/PE|-L|mtiAvm|-L|mtiRnm|-L|mtiOvm|-L|mtiUvm|-L|mtiUPF|-L|infact|C:/Users/Shuai/Desktop/5_ver_1.0/rtl/PE/systolic_arr.sv|
+!i113 0
+R7
+R8
+R1
+vsystolic_arr_ctrl
+R2
+R41
+!i10b 1
+!s100 ^6I9HzMKWDzLX2J_?j;Z[0
+!s11b i@YY1D62OVJ=WYcdL=dh72
+II??HcbfV76:M>UNC:_ZVB0
+R4
+S1
+R0
+w1598592029
+8C:/Users/Shuai/Desktop/5_ver_1.0/rtl/PE/systolic_arr_ctrl.sv
+FC:/Users/Shuai/Desktop/5_ver_1.0/rtl/PE/systolic_arr_ctrl.sv
+FC:/Users/Shuai/Desktop/5_ver_1.0/rtl/PE/systolic_arr_ctrl_wire_define.sv
+FC:/Users/Shuai/Desktop/5_ver_1.0/rtl/PE/systolic_arr_ctrl_counter_update.sv
+FC:/Users/Shuai/Desktop/5_ver_1.0/rtl/PE/systolic_arr_ctrl_fsm_body.sv
+FC:/Users/Shuai/Desktop/5_ver_1.0/rtl/PE/systolic_arr_ctrl_ram_ctrl.sv
+L0 3
+R5
+r1
+!s85 0
+31
+R42
+!s107 C:/Users/Shuai/Desktop/5_ver_1.0/rtl/PE/systolic_arr_ctrl_ram_ctrl.sv|C:/Users/Shuai/Desktop/5_ver_1.0/rtl/PE/systolic_arr_ctrl_fsm_body.sv|C:/Users/Shuai/Desktop/5_ver_1.0/rtl/PE/systolic_arr_ctrl_counter_update.sv|C:/Users/Shuai/Desktop/5_ver_1.0/rtl/PE/systolic_arr_ctrl_wire_define.sv|C:/Users/Shuai/Desktop/5_ver_1.0/rtl/PE/../param.vh|C:/Users/Shuai/Desktop/5_ver_1.0/rtl/PE/systolic_arr_ctrl.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Shuai/Desktop/5_ver_1.0/rtl/PE|-L|mtiAvm|-L|mtiRnm|-L|mtiOvm|-L|mtiUvm|-L|mtiUPF|-L|infact|C:/Users/Shuai/Desktop/5_ver_1.0/rtl/PE/systolic_arr_ctrl.sv|
 !i113 0
 R7
 R8
 R1
 vtop_tb
 R2
-R27
+R41
 !i10b 1
-!s100 `lmnBPJhQBa5M;TL:Ncjz1
-!s11b dB5<Dk8UCcLbOlGaeO7S[3
-IdOa1iChN^?>FIM>kYgX`C0
+!s100 X`bEg0GgQc<@CbBgYUX192
+!s11b 1XY?Xa9YI>La?zCiQS]hl2
+I89281F5j]^dDgO0G[A0gB2
 R4
 S1
 R0
-w1598187107
-8C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/sim/tb/top_tb.sv
-FC:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/sim/tb/top_tb.sv
+w1598610736
+8C:/Users/Shuai/Desktop/5_ver_1.0/sim/tb/top_tb.sv
+FC:/Users/Shuai/Desktop/5_ver_1.0/sim/tb/top_tb.sv
 L0 3
 R5
 r1
 !s85 0
 31
-R28
-!s107 C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/par/../sim/tb/param.vh|C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/sim/tb/top_tb.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/par/../sim/tb|-L|mtiAvm|-L|mtiRnm|-L|mtiOvm|-L|mtiUvm|-L|mtiUPF|-L|infact|C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/sim/tb/top_tb.sv|
+R42
+!s107 C:/Users/Shuai/Desktop/5_ver_1.0/par/../sim/tb/../../rtl/param.vh|C:/Users/Shuai/Desktop/5_ver_1.0/sim/tb/top_tb.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Shuai/Desktop/5_ver_1.0/par/../sim/tb|-L|mtiAvm|-L|mtiRnm|-L|mtiOvm|-L|mtiUvm|-L|mtiUPF|-L|infact|C:/Users/Shuai/Desktop/5_ver_1.0/sim/tb/top_tb.sv|
 !i113 0
 R7
-!s92 -sv -work work {+incdir+C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/par/../sim/tb} -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+!s92 -sv -work work +incdir+C:/Users/Shuai/Desktop/5_ver_1.0/par/../sim/tb -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 R1
 vuart
 R2
-R27
+R41
 !i10b 1
 !s100 `FV6INddCF]H=VQWnjm6j2
 !s11b @5PHdncJB3=8z_Kj[aTH72
-I2G]fCmgN>ViJ8GVJaIza13
+IY]N7ejmYH>7IKhe?`CPlD2
 R4
 S1
 R0
 w1591430238
-8C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/UART/uart.sv
-FC:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/UART/uart.sv
+8C:/Users/Shuai/Desktop/5_ver_1.0/rtl/UART/uart.sv
+FC:/Users/Shuai/Desktop/5_ver_1.0/rtl/UART/uart.sv
 L0 1
 R5
 r1
 !s85 0
 31
-R28
-!s107 C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/UART/uart.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/UART|-L|mtiAvm|-L|mtiRnm|-L|mtiOvm|-L|mtiUvm|-L|mtiUPF|-L|infact|C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/UART/uart.sv|
+R42
+!s107 C:/Users/Shuai/Desktop/5_ver_1.0/rtl/UART/uart.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Shuai/Desktop/5_ver_1.0/rtl/UART|-L|mtiAvm|-L|mtiRnm|-L|mtiOvm|-L|mtiUvm|-L|mtiUPF|-L|infact|C:/Users/Shuai/Desktop/5_ver_1.0/rtl/UART/uart.sv|
 !i113 0
 R7
-!s92 -sv -work work {+incdir+C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/UART} -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R39
 R1
 vuart_RX
-R27
+R2
+R41
 !i10b 1
-!s100 ?Y6B0NP_jJ3eK_MHUPUbG2
-!s11b FT^4J9XlV9jFc>3X_e>9e0
-I;]QJ8WamihVG9dE5mQbMY2
+!s100 `L2ioX;:ci4kPYAYS6U@]3
+!s11b AWZ`1f?;?eEV8fO_MgAl?2
+I32`TVhon?:U2TC[0C;JXd1
 R4
+S1
 R0
 w1596449409
-8C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/UART/uart_RX.v
-FC:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/UART/uart_RX.v
+8C:/Users/Shuai/Desktop/5_ver_1.0/rtl/UART/uart_RX.v
+FC:/Users/Shuai/Desktop/5_ver_1.0/rtl/UART/uart_RX.v
 L0 1
 R5
 r1
 !s85 0
 31
-R28
-!s107 C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/UART/uart_RX.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/UART|-L|mtiAvm|-L|mtiRnm|-L|mtiOvm|-L|mtiUvm|-L|mtiUPF|-L|infact|C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/UART/uart_RX.v|
+R42
+!s107 C:/Users/Shuai/Desktop/5_ver_1.0/rtl/UART/uart_RX.v|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Shuai/Desktop/5_ver_1.0/rtl/UART|-L|mtiAvm|-L|mtiRnm|-L|mtiOvm|-L|mtiUvm|-L|mtiUPF|-L|infact|C:/Users/Shuai/Desktop/5_ver_1.0/rtl/UART/uart_RX.v|
 !i113 0
-R16
-R26
+R7
+R39
 R1
 nuart_@r@x
 vuart_TX
-R27
+R2
+R41
 !i10b 1
-!s100 oRB@TZMGiUE@da]3bDfn<0
-!s11b 5_X7>GY:F6=BWEcoDkKP>2
-IB[JNnT6:o>kTbaLTNe8JP1
+!s100 Xj0@E=K^a;mciRmN1?Y^F2
+!s11b 8K`3Voaz[j?b2al?i5MJI0
+ILl0@09==<`zTg2<Wl2[nZ0
 R4
+S1
 R0
 w1596449410
-8C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/UART/uart_TX.v
-FC:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/UART/uart_TX.v
+8C:/Users/Shuai/Desktop/5_ver_1.0/rtl/UART/uart_TX.v
+FC:/Users/Shuai/Desktop/5_ver_1.0/rtl/UART/uart_TX.v
 L0 1
 R5
 r1
 !s85 0
 31
-R28
-!s107 C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/UART/uart_TX.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/UART|-L|mtiAvm|-L|mtiRnm|-L|mtiOvm|-L|mtiUvm|-L|mtiUPF|-L|infact|C:/Users/Shuai/OneDrive - UW-Madison/fumpy/test/4_square_mtp_test/rtl/UART/uart_TX.v|
+R42
+!s107 C:/Users/Shuai/Desktop/5_ver_1.0/rtl/UART/uart_TX.v|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Shuai/Desktop/5_ver_1.0/rtl/UART|-L|mtiAvm|-L|mtiRnm|-L|mtiOvm|-L|mtiUvm|-L|mtiUPF|-L|infact|C:/Users/Shuai/Desktop/5_ver_1.0/rtl/UART/uart_TX.v|
 !i113 0
-R16
-R26
+R7
+R39
 R1
 nuart_@t@x

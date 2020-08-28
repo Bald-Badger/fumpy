@@ -67,25 +67,6 @@
 		end
 	end
 	
-	/*
-	always_ff @(posedge clk or negedge rst_n) begin
-		if (!rst_n)
-			ram_w_update_ok_reg <= 1'b0;
-		else
-			ram_w_update_ok_reg <= (fp_ready && (nxt_state_rcv2 == RCV2_RAM0));
-	end
-	*/
-	
-	// use posedge detect to delay update addr for 2 cycle
-	/*
-	posedgeDect ram_w_update_ok_delay2 (
-		.clk(clk),
-		.rst_n(rst_n),
-		.in(fp_ready && (nxt_state_rcv2 == RCV2_RAM0)),
-		.out(ram_w_update_ok)
-	);
-	*/
-	
 	
 	always_ff @(posedge clk or negedge rst_n) begin
 		if (!rst_n) begin
@@ -112,4 +93,14 @@
 			w_height_counter_rst = 1'b0;
 		end
 	end
+	
+	always_ff @(posedge clk or negedge rst_n) begin
+		if (!rst_n)
+			ram_c_addr <= 0;
+		else if ((state_snd == SND_R3) && (nxt_state_snd == SND_R0))
+			ram_c_addr <= (ram_c_addr + 1);
+		else 
+			ram_c_addr <= ram_c_addr;
+	end
+	
 	

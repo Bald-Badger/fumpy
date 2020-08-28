@@ -20,6 +20,7 @@ module FSM (
 	output logic data_load_done,
 	output logic fsm_working,
 	input logic calc_done,
+	output logic data_response_done,
 	
 	// signal input
 	input wire uart_tx_done,
@@ -32,7 +33,8 @@ module FSM (
 	output logic [7:0] ram_a0_addr,
 	output logic [7:0] ram_a1_addr,
 	
-	input logic  [`C-1:0] ram_c_addr[`N-1:0][`N-1:0],
+	output logic  [`C-1:0] ram_c_addr,
+	output logic [`N-1:0][`N-1:0] ram_c_rden_all,
 	
 	output logic ram_w0_wren,
 	output logic ram_w1_wren,
@@ -42,8 +44,9 @@ module FSM (
 	output logic[7:0] uart_tx_data,
 	output logic uart_send_data,
 	
-	// data output
+	// data I/O
 	output logic[31:0] fp_data,
+	input wire[31:0] ram_c_data	[`N-1:0][`N-1:0],
 	
 	// for debug, feeds into seg display
 	output logic[3:0] state_val,

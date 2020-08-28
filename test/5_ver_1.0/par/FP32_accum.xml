@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<instance entity-name="altera_fp_acc_custom" version="18.1" >
+<generic name="fp_format" value="single" />
+<generic name="frequency" value="200" />
+<generic name="gen_enable" value="true" />
+<generic name="MSBA" value="20" />
+<generic name="maxMSBX" value="12" />
+<generic name="LSBA" value="-26" />
+<generic name="selected_device_family" value="Cyclone IV E" />
+<generic name="selected_device_speedgrade" value="7" />
+</instance>

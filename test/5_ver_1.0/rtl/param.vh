@@ -20,7 +20,7 @@ e.g. for fp number 0x 3f_80_00_00
 order 0 is uart send order: 00-00-80-3f, used in pycharm
 order 1 is uart send order: 3f-80-00-00, used in TB
 */
-`define UART_ORDER  	1'b1
+`define UART_ORDER  	1'b0
 
 // constants
 `define NULL_8B			8'b0

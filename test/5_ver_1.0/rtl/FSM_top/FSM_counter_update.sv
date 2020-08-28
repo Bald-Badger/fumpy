@@ -73,3 +73,16 @@
 		else 
 			w_height_counter <= w_height_counter;
 	end
+	
+	always_ff @(posedge clk or negedge rst_n) begin
+		if (!rst_n)
+			fp_byte_counter <= 3'b0;
+		else if (fp_byte_counter_rst)
+			fp_byte_counter <= 3'b0;
+		else if (uart_tx_done) // only assert for one cycle so no problem
+			fp_byte_counter <= fp_byte_counter + 3'b1;
+		else if (fp_byte_counter == 3'd4) // count to 4
+			fp_byte_counter <= 3'b0;
+		else
+			fp_byte_counter <= fp_byte_counter;
+	end

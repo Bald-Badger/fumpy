@@ -19,7 +19,7 @@
 		uart_tx_data_load_ack2 	= 1'b0;
 		uart_tx_data_load_ack3 	= 1'b0;
 		
-		uart_send_data 			= 1'b0;
+		uart_send_data_rcv 		= 1'b0;
 		
 		matrix_a_rcv_start 		= 1'b0;
 		matrix_w_rcv_start 		= 1'b0;
@@ -90,7 +90,7 @@
 			STR_W_W: begin
 				nxt_state = ACK1;
 				uart_tx_data_load_ack1 = 1'b1;
-				uart_send_data = 1'b1;
+				uart_send_data_rcv = 1'b1;
 			end
 			
 			ACK1: begin
@@ -115,7 +115,7 @@
 				if (matrix_a_rcv_done) begin
 					nxt_state = ACK2;
 					uart_tx_data_load_ack2 = 1'b1;
-					uart_send_data = 1'b1;
+					uart_send_data_rcv = 1'b1;
 				end else begin
 					nxt_state = MATRIX_1_RCV;
 				end
@@ -142,7 +142,7 @@
 				if (matrix_w_rcv_done) begin
 					nxt_state = ACK3;
 					uart_tx_data_load_ack3 = 1'b1;
-					uart_send_data = 1'b1;
+					uart_send_data_rcv = 1'b1;
 				end else begin
 					nxt_state = MATRIX_2_RCV;
 				end
@@ -303,3 +303,88 @@
 			end
 		endcase
 	end	
+	
+	
+	// FSM for sending 3rd matrix back by UART
+	always_ff @(posedge clk or negedge rst_n)
+		if (!rst_n)
+			state_snd <= IDLE_SND;
+		else
+			state_snd <= nxt_state_snd;
+	
+	always_comb begin
+		// default assignmeng
+		nxt_state_snd = IDLE_SND;
+		uart_send_data_rsp_raw = 1'b0;
+		matrix_3_snd_done = 1'b0;
+		fp_byte_counter_rst = 1'b0;
+		case (state_snd)
+			
+			IDLE_SND: begin
+				if (calc_done) begin
+					nxt_state_snd = SND_R0;
+					uart_send_data_rsp_raw = 1'b1;
+				end else begin
+					nxt_state_snd = IDLE_SND;
+					fp_byte_counter_rst = 1'b1;
+				end
+			end
+			
+			SND_R0: begin
+				if (ram_c_addr == ((a_height * w_width / 4))) begin
+					nxt_state_snd = IDLE_SND;
+					matrix_3_snd_done = 1'b1;
+					fp_byte_counter_rst = 1'b1; 
+				end else if (fp_byte_counter == 3'd4) begin
+					nxt_state_snd = SND_R1;
+				end else begin
+					if (uart_tx_done) begin
+						uart_send_data_rsp_raw = 1'b1;
+						nxt_state_snd = SND_R0;
+					end else begin
+						nxt_state_snd = SND_R0;
+					end
+				end
+			end
+			
+			SND_R1: begin
+				if (fp_byte_counter == 3'd4) begin
+					nxt_state_snd = SND_R2;
+				end else begin
+					if (uart_tx_done) begin
+						uart_send_data_rsp_raw = 1'b1;
+						nxt_state_snd = SND_R1;
+					end else begin
+						nxt_state_snd = SND_R1;
+					end
+				end
+			end
+			
+			SND_R2: begin
+				if (fp_byte_counter == 3'd4) begin
+					nxt_state_snd = SND_R3;
+				end else begin
+					if (uart_tx_done) begin
+						uart_send_data_rsp_raw = 1'b1;
+						nxt_state_snd = SND_R2;
+					end else begin
+						nxt_state_snd = SND_R2;
+					end
+				end
+			end
+			
+			SND_R3: begin
+				if (fp_byte_counter == 3'd4) begin
+					nxt_state_snd = SND_R0;
+				end else begin
+					if (uart_tx_done) begin
+						uart_send_data_rsp_raw = 1'b1;
+						nxt_state_snd = SND_R3;
+					end else begin
+						nxt_state_snd = SND_R3;
+					end
+				end
+			end
+	
+		endcase
+	end

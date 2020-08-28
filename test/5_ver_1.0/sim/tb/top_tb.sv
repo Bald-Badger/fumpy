@@ -66,11 +66,11 @@ tempFP = 0;
 init();
 //send_byte(`START);
 send_byte(`MATRIX_MULT);
-send_byte(8'd2);	// a_height
-send_byte(8'd2);	// a_width
-send_byte(8'd2);	// h_height
-send_byte(8'd2);	// h_width
-wait_ack();			// wait fo nr ACK dat
+send_byte(8'd4);	// a_height
+send_byte(8'd4);	// a_width
+send_byte(8'd4);	// h_height
+send_byte(8'd4);	// h_width
+//wait_ack();			// wait fo nr ACK dat
 
 // send FP, fp1
 myFP = 1.0e0;
@@ -81,9 +81,6 @@ myFP = 3.0e0;
 send_fp(myFP);
 myFP = 4.0e0;
 send_fp(myFP);
-
-
-// send FP2
 myFP = 5.0e0;
 send_fp(myFP);
 myFP = 6.0e0;
@@ -92,18 +89,6 @@ myFP = 7.0e0;
 send_fp(myFP);
 myFP = 8.0e0;
 send_fp(myFP);
-
-/*
-myFP = 5.0e0;
-send_fp(myFP);
-myFP = 6.0e0;
-send_fp(myFP);
-myFP = 7.0e0;
-send_fp(myFP);
-myFP = 8.0e0;
-send_fp(myFP);
-*/
-/*
 myFP = 9.0e0;
 send_fp(myFP);
 myFP = 10.0e0;
@@ -120,26 +105,47 @@ myFP = 15.0e0;
 send_fp(myFP);
 myFP = 16.0e0;
 send_fp(myFP);
-*/
 
-/*
-myFP = 17.0e0;
+// fp2
+myFP = 1.0e0;
 send_fp(myFP);
-myFP = 18.0e0;
+myFP = 2.0e0;
 send_fp(myFP);
-myFP = 19.0e0;
+myFP = 3.0e0;
 send_fp(myFP);
-myFP = 20.0e0;
+myFP = 4.0e0;
 send_fp(myFP);
-myFP = 21.0e0;
+myFP = 5.0e0;
 send_fp(myFP);
-myFP = 22.0e0;
+myFP = 6.0e0;
 send_fp(myFP);
-myFP = 23.0e0;
+myFP = 7.0e0;
 send_fp(myFP);
-myFP = 24.0e0;
+myFP = 8.0e0;
 send_fp(myFP);
-*/
+myFP = 9.0e0;
+send_fp(myFP);
+myFP = 10.0e0;
+send_fp(myFP);
+myFP = 11.0e0;
+send_fp(myFP);
+myFP = 12.0e0;
+send_fp(myFP);
+myFP = 13.0e0;
+send_fp(myFP);
+myFP = 14.0e0;
+send_fp(myFP);
+myFP = 15.0e0;
+send_fp(myFP);
+myFP = 16.0e0;
+send_fp(myFP);
+
+
+// wait data send
+repeat (16) @(posedge uart_rx_done);
+repeat (16) @(posedge uart_rx_done);
+repeat (16) @(posedge uart_rx_done);
+repeat (16) @(posedge uart_rx_done);
 
 // wait a while
 repeat (10000) @(posedge clk);
@@ -185,7 +191,7 @@ endtask
 task wait_ack;
 begin
 	@(posedge uart_rx_done);
-	repeat (2) @(posedge clk);
+	repeat (4) @(posedge clk);
 end
 endtask
 

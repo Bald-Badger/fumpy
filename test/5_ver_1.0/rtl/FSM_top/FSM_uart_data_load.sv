@@ -53,7 +53,19 @@ always_ff @ (posedge clk or negedge rst_n) begin
 		uart_tx_data <= `ACKNOWLEDGE_2;
 	else if (uart_tx_data_load_ack3)
 		uart_tx_data <= `ACKNOWLEDGE_3;
-	else
+	else if (uart_tx_data_load_ram) begin
+		if (fp_byte_counter == 3'd0) begin
+			uart_tx_data <= c_data[31:24];
+		end else if (fp_byte_counter == 3'd1) begin
+			uart_tx_data <= c_data[23:16];
+		end else if (fp_byte_counter == 3'd2) begin
+			uart_tx_data <= c_data[15:8];
+		end else if (fp_byte_counter == 3'd3) begin
+			uart_tx_data <= c_data[7:0];
+		end else begin
+			uart_tx_data <= 8'b0;
+		end
+	end else
 		uart_tx_data <= uart_tx_data;
 end
 

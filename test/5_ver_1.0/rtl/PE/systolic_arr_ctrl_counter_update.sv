@@ -1,3 +1,7 @@
+assign w_seg_counter_inc = seg_inc;
+assign a_seg_counter_inc =	(w_seg_counter == w_seg_cnt)
+							&& arr_ctrl_working;
+
 always_ff @ (posedge clk or negedge rst_n) begin
 	if (!rst_n)
 		a_seg_counter <= 0;
@@ -6,7 +10,7 @@ always_ff @ (posedge clk or negedge rst_n) begin
 	else if (a_seg_counter_inc)
 		a_seg_counter <= (a_seg_counter + 1);
 	else if (a_seg_counter == a_seg_cnt)
-		a_seg_counter <= 0;
+		a_seg_counter <= a_seg_counter; // all finished, hold value
 	else
 		a_seg_counter <= a_seg_counter;
 end
@@ -17,9 +21,9 @@ always_ff @ (posedge clk or negedge rst_n) begin
 		w_seg_counter <= 0;
 	else if (w_seg_counter_rst)
 		w_seg_counter <= 0;
-	else if (a_seg_counter_inc)
+	else if (w_seg_counter_inc)
 		w_seg_counter <= (w_seg_counter + 1);
-	else if (a_seg_counter == w_seg_cnt)
+	else if (w_seg_counter == w_seg_cnt)
 		w_seg_counter <= 0;
 	else
 		w_seg_counter <= w_seg_counter;

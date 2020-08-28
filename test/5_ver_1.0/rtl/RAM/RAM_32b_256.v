@@ -40,6 +40,7 @@ module RAM_32b_256 (
 	address,
 	data,
 	inclock,
+	outaclr,
 	rden,
 	wren,
 	q);
@@ -47,6 +48,7 @@ module RAM_32b_256 (
 	input	[7:0]  address;
 	input	[31:0]  data;
 	input	  inclock;
+	input	  outaclr;
 	input	  rden;
 	input	  wren;
 	output	[31:0]  q;
@@ -54,6 +56,7 @@ module RAM_32b_256 (
 // synopsys translate_off
 `endif
 	tri1	  inclock;
+	tri0	  outaclr;
 	tri1	  rden;
 `ifndef ALTERA_RESERVED_QIS
 // synopsys translate_on
@@ -63,6 +66,7 @@ module RAM_32b_256 (
 	wire [31:0] q = sub_wire0[31:0];
 
 	altsyncram	altsyncram_component (
+				.aclr1 (outaclr),
 				.address_a (address),
 				.clock0 (inclock),
 				.data_a (data),
@@ -70,7 +74,6 @@ module RAM_32b_256 (
 				.wren_a (wren),
 				.q_a (sub_wire0),
 				.aclr0 (1'b0),
-				.aclr1 (1'b0),
 				.address_b (1'b1),
 				.addressstall_a (1'b0),
 				.addressstall_b (1'b0),
@@ -94,7 +97,7 @@ module RAM_32b_256 (
 		altsyncram_component.lpm_type = "altsyncram",
 		altsyncram_component.numwords_a = 256,
 		altsyncram_component.operation_mode = "SINGLE_PORT",
-		altsyncram_component.outdata_aclr_a = "NONE",
+		altsyncram_component.outdata_aclr_a = "CLEAR1",
 		altsyncram_component.outdata_reg_a = "UNREGISTERED",
 		altsyncram_component.power_up_uninitialized = "FALSE",
 		altsyncram_component.read_during_write_mode_port_a = "DONT_CARE",
@@ -112,7 +115,7 @@ endmodule
 // Retrieval info: PRIVATE: AclrAddr NUMERIC "0"
 // Retrieval info: PRIVATE: AclrByte NUMERIC "0"
 // Retrieval info: PRIVATE: AclrData NUMERIC "0"
-// Retrieval info: PRIVATE: AclrOutput NUMERIC "0"
+// Retrieval info: PRIVATE: AclrOutput NUMERIC "1"
 // Retrieval info: PRIVATE: BYTE_ENABLE NUMERIC "0"
 // Retrieval info: PRIVATE: BYTE_SIZE NUMERIC "8"
 // Retrieval info: PRIVATE: BlankMemory NUMERIC "1"
@@ -149,7 +152,7 @@ endmodule
 // Retrieval info: CONSTANT: LPM_TYPE STRING "altsyncram"
 // Retrieval info: CONSTANT: NUMWORDS_A NUMERIC "256"
 // Retrieval info: CONSTANT: OPERATION_MODE STRING "SINGLE_PORT"
-// Retrieval info: CONSTANT: OUTDATA_ACLR_A STRING "NONE"
+// Retrieval info: CONSTANT: OUTDATA_ACLR_A STRING "CLEAR1"
 // Retrieval info: CONSTANT: OUTDATA_REG_A STRING "UNREGISTERED"
 // Retrieval info: CONSTANT: POWER_UP_UNINITIALIZED STRING "FALSE"
 // Retrieval info: CONSTANT: READ_DURING_WRITE_MODE_PORT_A STRING "DONT_CARE"
@@ -159,9 +162,11 @@ endmodule
 // Retrieval info: USED_PORT: address 0 0 8 0 INPUT NODEFVAL "address[7..0]"
 // Retrieval info: USED_PORT: data 0 0 32 0 INPUT NODEFVAL "data[31..0]"
 // Retrieval info: USED_PORT: inclock 0 0 0 0 INPUT VCC "inclock"
+// Retrieval info: USED_PORT: outaclr 0 0 0 0 INPUT GND "outaclr"
 // Retrieval info: USED_PORT: q 0 0 32 0 OUTPUT NODEFVAL "q[31..0]"
 // Retrieval info: USED_PORT: rden 0 0 0 0 INPUT VCC "rden"
 // Retrieval info: USED_PORT: wren 0 0 0 0 INPUT NODEFVAL "wren"
+// Retrieval info: CONNECT: @aclr1 0 0 0 0 outaclr 0 0 0 0
 // Retrieval info: CONNECT: @address_a 0 0 8 0 address 0 0 8 0
 // Retrieval info: CONNECT: @clock0 0 0 0 0 inclock 0 0 0 0
 // Retrieval info: CONNECT: @data_a 0 0 32 0 data 0 0 32 0
