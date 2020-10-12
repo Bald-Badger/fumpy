@@ -90,9 +90,10 @@ def fumpy_dot (a, b):
     return result
 
 
-n = 22
-a = np.array(np.random.rand(n,n), dtype=np.single)
-b = np.array(np.random.rand(n,n), dtype=np.single)
+n = 28
+m = 28
+a = np.array(np.random.rand(n,m), dtype=np.single)
+b = np.array(np.random.rand(m,n), dtype=np.single)
 
 standard = np.dot(a,b)
 print("numpy result: ")
