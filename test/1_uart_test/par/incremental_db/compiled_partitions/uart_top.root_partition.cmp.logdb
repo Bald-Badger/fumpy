@@ -1,2 +1,0 @@
-v1
-PORT_SWAPPING,PORT_SWAP_TYPE_DSPMULT,FP_mult:myfpm|FP_mult_altfp_mult_cbo:FP_mult_altfp_mult_cbo_component|lpm_mult:man_product2_mult|mult_a2t:auto_generated|mac_mult5,
